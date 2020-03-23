@@ -1,0 +1,46 @@
+import { useStaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import Helmet from "react-helmet";
+
+const Layout = ({ children, title }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  );
+
+  return (
+    <React.Fragment>
+      <Helmet
+        htmlAttributes={{ lang: "en" }}
+        title={title}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+      />
+      <div>
+        <header>
+          <h1>{site.siteMetadata.title}</h1>
+        </header>
+        <main>{children}</main>
+      </div>
+    </React.Fragment>
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  children: undefined,
+  title: undefined,
+};
+
+export default Layout;

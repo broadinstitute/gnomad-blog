@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# gatsby files
+.cache/
+public
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+.yarn-integrity
+
+# macOS files
+.DS_Store
