@@ -119,13 +119,13 @@ you can start using the SV features right away with these two easy steps:
 1. Navigate to your favorite gene or region using the search bar:
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/homepage_search-1.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/homepage_search-1.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 2. Select the SV dataset by clicking the toggle button in the top-right part of the screen:
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/activate_sv_mode-2.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/activate_sv_mode-2.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 Once you’ve activated SV mode in the gnomAD Browser, you can interact with the data in multiple
@@ -135,7 +135,7 @@ The **variant track** displays all SVs currently in the view range corresponding
 coordinates, with each SV on its own row.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_track_scroll.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_track_scroll.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 In the variant track, certain symbols are assigned to specific classes of SV, such as a triangle
@@ -150,13 +150,13 @@ The **variant table** provides selected metadata for each variant displayed in t
 including allele frequencies, consequences, number of homozygotes, coordinates, and size.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_scroll.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_scroll.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 All columns in the table are sortable by clicking the column headers.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_sort.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_sort.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 There are three main options for filtering the variant track & table:
@@ -168,14 +168,14 @@ There are three main options for filtering the variant track & table:
 3. **Filter by keyword** by entering that keyword into the search field
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_variants.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_variants.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 For more details about each of these filters, there are help text pop-ups available by clicking the
 "?" next to each row of filter buttons.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_help_buttons.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_help_buttons.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 We provide two options for coloring the SV data: **color-by-consequence** and **color-by-class**.
@@ -184,7 +184,7 @@ side of the page. The current color key will be reflected by the colors used for
 filter buttons found directly below the variant track.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/change_color_mode.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/change_color_mode.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 By default, low-quality variants–such as unresolved breakends–will not be displayed in the variant
@@ -192,7 +192,7 @@ track or table. You can activate these variants using the checkbox labeled "Incl
 variants" directly above the variant table.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/show_hidden_variants.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/show_hidden_variants.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 Both the variant track and table are synchronized: any filter, sort, scroll, or highlight applied
@@ -201,7 +201,7 @@ variant table will draw a dashed box to highlighting that SV in the table, but w
 that same variant and its position in the track (and vice versa).
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/synced_table_track.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/synced_table_track.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 To find more information about an individual variant, you can click on the variant ID in the table
@@ -220,7 +220,7 @@ particularly useful for complex SVs, where each help popup gives a graphical rep
 alternate allele structure.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_page_help_popups.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_page_help_popups.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 [Multiallelic CNVs](https://www.ncbi.nlm.nih.gov/pubmed/25621458), which are sites in the genome
@@ -232,7 +232,7 @@ is represented as a histogram, which has a mouse-over tooltip to show how many i
 present at each copy state.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/mcnv_copy_state_histogram.gif" />
+   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/mcnv_copy_state_histogram.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 ## Practical considerations when using the gnomAD-SV callset
