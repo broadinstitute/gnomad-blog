@@ -2,7 +2,7 @@
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || "/blog",
   siteMetadata: {
-    title: "gnomAD",
+    title: "gnomAD blog",
     siteUrl: "https://gnomad.broadinstitute.org",
   },
   plugins: [

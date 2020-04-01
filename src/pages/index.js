@@ -12,18 +12,42 @@ const BlogIndex = ({ data }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
+          <article className="article" key={node.fields.slug}>
+            <header className="article-header">
+              <h2 className="article-title">
                 <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+              </h2>
             </header>
+
+            <div className="article-meta">
+              <span className="article-date">{node.frontmatter.date}</span>
+
+              {node.frontmatter.categories && node.frontmatter.categories.length && (
+                <span className="article-categories">
+                  {" in "}
+                  {node.frontmatter.categories.reduce((acc, category) => [
+                    ...acc,
+                    acc.length && " / ",
+                    <span key={category} className="article-category">
+                      {category}
+                    </span>,
+                  ])}
+                </span>
+              )}
+
+              <div className="article-authors">{node.frontmatter.authors.join(", ")}</div>
+            </div>
+
             <section
+              className="article-body article-excerpt"
               dangerouslySetInnerHTML={{
                 __html: node.excerpt,
               }}
             />
+
+            <footer className="article-footer">
+              <Link to={node.fields.slug}>Continue reading</Link>
+            </footer>
           </article>
         );
       })}
@@ -44,6 +68,8 @@ BlogIndex.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
+              authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+              categories: PropTypes.arrayOf(PropTypes.string),
             }).isRequired,
           }).isRequired,
         })
@@ -66,6 +92,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            authors
+            categories
           }
         }
       }
