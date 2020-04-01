@@ -26,9 +26,11 @@ elif [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
         PATH_PREFIX="/blog/preview/${pr_number}" yarn run build
         gsutil -m rsync -r "public" "gs://gnomad-blog/pulls/${pr_number}"
 
+        sha=$(jq --raw-output .pull_request.head.sha "$GITHUB_EVENT_PATH")
+
         curl \
           --request POST \
-          --url "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+          --url "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${sha}" \
           --header "authorization: Bearer ${GITHUB_TOKEN}" \
           --header "content-type: application/json" \
           --data "{
