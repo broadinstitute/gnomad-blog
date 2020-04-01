@@ -4,6 +4,7 @@ backend:
   branch: master
   base_url: https://gnomad.broadinstitute.org
   auth_endpoint: /blog/auth/
+  preview_context: actions/deploy
 
 site_url: https://gnomad.broadinstitute.org/blog/
 
@@ -18,6 +19,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
+    preview_path: "{{slug}}"
     fields:
       - label: "Title"
         name: "title"

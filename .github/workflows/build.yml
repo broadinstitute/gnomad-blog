@@ -39,3 +39,4 @@ jobs:
         run: ./.github/workflows/deploy.sh
         env:
           BUCKET_NAME: gnomad-blog
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
