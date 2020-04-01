@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: broadinstitute/gnomad-blog
+  branch: master
+  base_url: https://gnomad.broadinstitute.org
+  auth_endpoint: /blog/auth/
+
+site_url: https://gnomad.broadinstitute.org/blog/
+
+publish_mode: editorial_workflow
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
