@@ -19,7 +19,7 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
-    preview_path: "{{slug}}"
+    preview_path: "{{slug}}/"
     fields:
       - label: "Title"
         name: "title"
