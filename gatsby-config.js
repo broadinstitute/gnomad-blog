@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  pathPrefix: "/blog",
+  pathPrefix: process.env.PATH_PREFIX || "/blog",
   siteMetadata: {
     title: "gnomAD",
     siteUrl: "https://gnomad.broadinstitute.org",
