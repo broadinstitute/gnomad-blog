@@ -14,17 +14,14 @@ body {
 }
 
 a {
-  color: #428bca;
+  color: #1173bb;
   text-decoration: none;
 }
 a:visited {
-  color: #428bca;
+  color: #1173bb;
 }
-a:active,
+a:focus,
 a:hover {
-  color: #be4248;
-}
-a:focus {
   text-decoration: underline;
 }
 
