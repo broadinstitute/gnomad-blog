@@ -1,5 +1,5 @@
 /* eslint-env node */
-module.exports = {
+const config = {
   pathPrefix: process.env.PATH_PREFIX || "/blog",
   siteMetadata: {
     title: "gnomAD blog",
@@ -86,3 +86,14 @@ module.exports = {
     },
   ],
 };
+
+if (process.env.GA_TRACKING_ID) {
+  config.plugins.push({
+    resolve: "gatsby-plugin-google-analytics",
+    options: {
+      trackingId: process.env.GA_TRACKING_ID,
+    },
+  });
+}
+
+module.exports = config;
