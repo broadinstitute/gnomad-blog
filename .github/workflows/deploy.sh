@@ -23,6 +23,9 @@ elif [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
     if [ "$event_action" == "closed" ]; then
         gsutil -m rm -r "gs://gnomad-blog/pulls/${pr_number}"
     else
+        # Do not include Google Analytics in preview builds
+        unset GA_TRACKING_ID
+
         PATH_PREFIX="/blog/preview/${pr_number}" yarn run build
         gsutil -m rsync -r "public" "gs://gnomad-blog/pulls/${pr_number}"
 
