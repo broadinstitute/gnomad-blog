@@ -1,0 +1,13 @@
+*
+!content
+!src
+!static
+!.eslintignore
+!.eslintrc.js
+!.prettierignore
+!.prettierrc.js
+!gatsby-browser.js
+!gatsby-config.js
+!gatsby-node.js
+!package.json
+!yarn.lock

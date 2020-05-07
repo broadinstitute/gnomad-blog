@@ -1,0 +1,11 @@
+version: "3"
+services:
+  blog:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/blog/src
+      - node_modules:/blog/src/node_modules
+volumes:
+  node_modules:
