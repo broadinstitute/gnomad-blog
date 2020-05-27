@@ -9,6 +9,8 @@ authors:
   - Laurent Francioli
 ---
 
+Originally published on the [MacArthur Lab blog](https://macarthurlab.org/2017/02/27/the-genome-aggregation-database-gnomad/).
+
 Today, we are pleased to announce the formal release of the genome aggregation database (gnomAD).
 This release comprises two callsets: exome sequence data from 123,136 individuals and whole genome
 sequencing from 15,496 individuals. Importantly, in addition to an increased number of individuals

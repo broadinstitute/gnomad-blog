@@ -11,6 +11,8 @@ authors:
   - Mike Talkowski
 ---
 
+Originally published on the [MacArthur Lab blog](https://macarthurlab.org/2019/03/20/structural-variants-in-gnomad/).
+
 The first gnomAD structural variant (SV) callset is now available via
 [the gnomAD website](https://gnomad.broadinstitute.org/) and integrated directly into the gnomAD
 Browser.

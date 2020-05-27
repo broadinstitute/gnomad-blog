@@ -7,6 +7,8 @@ authors:
   - Daniel MacArthur
 ---
 
+Originally published on the [MacArthur Lab blog](https://macarthurlab.org/2020/05/27/the-gnomad-papers/).
+
 It is an absolute pleasure to announce the official release of the gnomAD manuscript package. In a set of seven papers, published in _Nature_, _Nature Medicine_, and _Nature Communications_, we describe a wide variety of different approaches to exploring and understanding the patterns of genetic variation revealed by exome and genome sequences from 141,456 humans.
 
 Publication announcements always feel a little strange in this new era of open science. In our case, the underlying gnomAD data set has been publicly fully available for browsing and downloading since October 2016, and we’ve had the preprints available online since early 2019. However, it’s undeniable that there is something deeply gratifying about seeing these pieces of science revealed in their final, concrete form.
