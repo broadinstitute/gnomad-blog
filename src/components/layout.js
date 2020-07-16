@@ -24,9 +24,7 @@ const Layout = ({ children, title }) => {
         htmlAttributes={{ lang: "en" }}
         title={title}
         titleTemplate={`%s | ${site.siteMetadata.title}`}
-      >
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
-      </Helmet>
+      />
       <Header siteTitle={site.siteMetadata.title} />
       <main>{children}</main>
     </React.Fragment>
