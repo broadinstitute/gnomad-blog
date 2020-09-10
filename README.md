@@ -11,9 +11,8 @@ Run a local development server. Requires [Node.js](https://nodejs.org/) and
 
 ```
 cd gnomad-blog
-npm install -g gatsby-cli
 yarn install
-gatsby develop
+yarn start
 ```
 
 ### Docker

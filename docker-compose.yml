@@ -5,7 +5,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - .:/blog/src
-      - node_modules:/blog/src/node_modules
+      - .:/blog
+      - node_modules:/blog/node_modules
 volumes:
   node_modules:
