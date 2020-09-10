@@ -35,7 +35,9 @@ const BlogIndex = ({ data }) => {
                 </span>
               )}
 
-              <div className="article-authors">{node.frontmatter.authors.join(", ")}</div>
+              {node.frontmatter.authors && node.frontmatter.authors.length && (
+                <div className="article-authors">{node.frontmatter.authors.join(", ")}</div>
+              )}
             </div>
 
             <section

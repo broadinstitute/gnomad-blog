@@ -30,7 +30,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             </span>
           )}
 
-          <div className="article-authors">{post.frontmatter.authors.join(", ")}</div>
+          {post.frontmatter.authors && post.frontmatter.authors.length && (
+            <div className="article-authors">{post.frontmatter.authors.join(", ")}</div>
+          )}
         </div>
 
         <section
