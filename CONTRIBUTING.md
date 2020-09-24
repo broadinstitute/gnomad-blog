@@ -5,6 +5,32 @@ The gnomAD blog is built with [Gatsby](https://www.gatsbyjs.org/docs/).
 Blog content can be edited either in a browser using [Netlify CMS](https://www.netlifycms.org/) or by running a local
 instance of the Gatsby development server.
 
+## Netlify CMS
+
+Login to Netlify CMS at https://gnomad.broadinstitute.org/blog/admin/.
+
+### Adding a new post
+
+Select the "Contents" tab and click the "New Posts" button.
+
+Set the title and publication data. Categories and authors should be comma separated lists.
+
+The post body can be written using either a rich text editor or in Markdown syntax. The preview pane at the right
+shows an _unstyled_ preview of the post.
+
+When finished, click the "Save" button.
+
+Saving a post opens a pull request on GitHub the post content. The post can be further edited from Netlify CMS
+(it will appear in the Drafts column on the Workflow tab) or GitHub. The PR's branch can also be pulled from GitHub
+and edited locally.
+
+When the PR is opened, a preview site containing its changes will automatically be deployed to
+`https://gnomad.broadinstitute.org/blog/preview/<PR_NUMBER>`. This may take a few minutes. To see the status of this step,
+look at the PR checks on GitHub. Once done, a "View Preview" link will show up at the top of the page in Netlify CMS.
+
+When the post is ready, click the "Publish" button in Netlify CMS or merge the PR on GitHub. Changes merged to the
+master branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
+
 ## Local development server
 
 Run a local development server with:
