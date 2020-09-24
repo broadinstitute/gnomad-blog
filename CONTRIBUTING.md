@@ -84,3 +84,15 @@ To control what is shown "above the fold" in the list of posts on the home page,
 ```
 
 Any content after that comment will only be visible by clicking the "Continue reading" link to view the full post.
+
+## Images
+
+Currently, all images used in blog posts are uploaded to the `gnomad-blog-assets` storage bucket and referenced from there.
+
+For example,
+
+```html
+<figure>
+   <img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exacv2_barplot_cut.png" />
+</figure>
+```
