@@ -197,6 +197,51 @@ a:hover {
 }
 
 /***************************************/
+/* List styles
+/***************************************/
+
+.sidebar {
+  display: none;
+}
+
+.recent-posts-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.recent-posts-list li {
+  margin-bottom: 1rem;
+}
+
+.recent-posts-list .article-date {
+  color: #666;
+}
+
+@media (min-width: 1000px) {
+  .article-list {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .article-list .article {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sidebar {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    padding: 0 1.5rem;
+  }
+}
+
+/***************************************/
 /* Tables
 /***************************************/
 
