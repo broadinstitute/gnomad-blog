@@ -1,3 +1,5 @@
+import { Link } from "gatsby";
+import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -14,7 +16,7 @@ const ArticleMeta = ({ post }) => {
               ...acc,
               acc.length > 0 && " / ",
               <span key={category} className="article-category">
-                {category}
+                <Link to={`/category/${kebabCase(category.toLowerCase())}/`}>{category}</Link>
               </span>,
             ],
             []
