@@ -25,7 +25,18 @@ const ArticleMeta = ({ post }) => {
       )}
 
       {post.frontmatter.authors && post.frontmatter.authors.length && (
-        <div className="article-authors">{post.frontmatter.authors.join(", ")}</div>
+        <div className="article-authors">
+          {post.frontmatter.authors.reduce(
+            (acc, author) => [
+              ...acc,
+              acc.length > 0 && ", ",
+              <Link key={author} to={`/author/${kebabCase(author.toLowerCase())}/`}>
+                {author}
+              </Link>,
+            ],
+            []
+          )}
+        </div>
       )}
     </div>
   );

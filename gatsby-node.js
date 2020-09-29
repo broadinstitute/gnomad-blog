@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
           categories: distinct(field: frontmatter___categories)
+          authors: distinct(field: frontmatter___authors)
         }
       }
     `
@@ -57,6 +58,19 @@ exports.createPages = async ({ graphql, actions }) => {
       component: categoryTemplate,
       context: {
         category,
+      },
+    });
+  });
+
+  // Create author pages
+  const authors = result.data.allMarkdownRemark.authors;
+  const authorTemplate = path.resolve("./src/templates/author.js");
+  authors.forEach((author) => {
+    createPage({
+      path: `/author/${_.kebabCase(author.toLowerCase())}/`,
+      component: authorTemplate,
+      context: {
+        author,
       },
     });
   });
