@@ -4,54 +4,58 @@ import React from "react";
 
 import ArticleMeta from "./article-meta";
 
-const ArticleList = ({ posts }) => {
+const ArticleList = ({ heading, posts }) => {
   return (
     <div className="article-list">
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <article className="article" key={node.fields.slug}>
-            <header className="article-header">
-              <h2 className="article-title">
-                <Link to={node.fields.slug}>{title}</Link>
-              </h2>
-            </header>
+      {heading && <h1>{heading}</h1>}
+      <div className="article-list-inner">
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug;
+          return (
+            <article className="article" key={node.fields.slug}>
+              <header className="article-header">
+                <h2 className="article-title">
+                  <Link to={node.fields.slug}>{title}</Link>
+                </h2>
+              </header>
 
-            <ArticleMeta post={node} />
+              <ArticleMeta post={node} />
 
-            <section
-              className="article-body article-excerpt"
-              dangerouslySetInnerHTML={{
-                __html: node.excerpt,
-              }}
-            />
+              <section
+                className="article-body article-excerpt"
+                dangerouslySetInnerHTML={{
+                  __html: node.excerpt,
+                }}
+              />
 
-            <footer className="article-footer">
-              <Link to={node.fields.slug}>Continue reading</Link>
-            </footer>
-          </article>
-        );
-      })}
+              <footer className="article-footer">
+                <Link to={node.fields.slug}>Continue reading</Link>
+              </footer>
+            </article>
+          );
+        })}
 
-      <aside className="sidebar">
-        <h3>Recent posts</h3>
-        <ol className="recent-posts-list">
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug;
-            return (
-              <li key={node.fields.slug}>
-                <Link to={node.fields.slug}>{title}</Link>
-                <div className="article-date">{node.frontmatter.date}</div>
-              </li>
-            );
-          })}
-        </ol>
-      </aside>
+        <aside className="sidebar">
+          <h3>Recent posts</h3>
+          <ol className="recent-posts-list">
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug;
+              return (
+                <li key={node.fields.slug}>
+                  <Link to={node.fields.slug}>{title}</Link>
+                  <div className="article-date">{node.frontmatter.date}</div>
+                </li>
+              );
+            })}
+          </ol>
+        </aside>
+      </div>
     </div>
   );
 };
 
 ArticleList.propTypes = {
+  heading: PropTypes.string,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       node: PropTypes.shape({
@@ -68,6 +72,10 @@ ArticleList.propTypes = {
       }).isRequired,
     })
   ).isRequired,
+};
+
+ArticleList.defaultProps = {
+  heading: undefined,
 };
 
 export default ArticleList;

@@ -200,6 +200,16 @@ a:hover {
 /* List styles
 /***************************************/
 
+.article-list {
+  max-width: 645px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.article-list .article {
+  padding: 0;
+}
+
 .sidebar {
   display: none;
 }
@@ -220,9 +230,12 @@ a:hover {
 
 @media (min-width: 1000px) {
   .article-list {
-    position: relative;
     max-width: 1000px;
     margin: 0 auto;
+  }
+
+  .article-list-inner {
+    position: relative;
   }
 
   .article-list .article {
