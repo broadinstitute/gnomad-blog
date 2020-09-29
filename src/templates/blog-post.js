@@ -2,6 +2,7 @@ import { Link, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
+import ArticleMeta from "../components/article-meta";
 import Layout from "../components/layout";
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -14,26 +15,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <h1 className="article-title">{post.frontmatter.title}</h1>
         </header>
 
-        <div className="article-meta">
-          <span className="article-date">{post.frontmatter.date}</span>
-
-          {post.frontmatter.categories && post.frontmatter.categories.length && (
-            <span className="article-categories">
-              {" in "}
-              {post.frontmatter.categories.reduce((acc, category) => [
-                ...acc,
-                acc.length && " / ",
-                <span key={category} className="article-category">
-                  {category}
-                </span>,
-              ])}
-            </span>
-          )}
-
-          {post.frontmatter.authors && post.frontmatter.authors.length && (
-            <div className="article-authors">{post.frontmatter.authors.join(", ")}</div>
-          )}
-        </div>
+        <ArticleMeta post={post} />
 
         <section
           className="article-body"

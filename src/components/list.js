@@ -2,6 +2,8 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
+import ArticleMeta from "./article-meta";
+
 const ArticleList = ({ posts }) => {
   return (
     <div className="article-list">
@@ -15,26 +17,7 @@ const ArticleList = ({ posts }) => {
               </h2>
             </header>
 
-            <div className="article-meta">
-              <span className="article-date">{node.frontmatter.date}</span>
-
-              {node.frontmatter.categories && node.frontmatter.categories.length && (
-                <span className="article-categories">
-                  {" in "}
-                  {node.frontmatter.categories.reduce((acc, category) => [
-                    ...acc,
-                    acc.length && " / ",
-                    <span key={category} className="article-category">
-                      {category}
-                    </span>,
-                  ])}
-                </span>
-              )}
-
-              {node.frontmatter.authors && node.frontmatter.authors.length && (
-                <div className="article-authors">{node.frontmatter.authors.join(", ")}</div>
-              )}
-            </div>
+            <ArticleMeta post={node} />
 
             <section
               className="article-body article-excerpt"
