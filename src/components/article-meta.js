@@ -9,13 +9,16 @@ const ArticleMeta = ({ post }) => {
       {post.frontmatter.categories && post.frontmatter.categories.length && (
         <span className="article-categories">
           {" in "}
-          {post.frontmatter.categories.reduce((acc, category) => [
-            ...acc,
-            acc.length && " / ",
-            <span key={category} className="article-category">
-              {category}
-            </span>,
-          ])}
+          {post.frontmatter.categories.reduce(
+            (acc, category) => [
+              ...acc,
+              acc.length > 0 && " / ",
+              <span key={category} className="article-category">
+                {category}
+              </span>,
+            ],
+            []
+          )}
         </span>
       )}
 
