@@ -273,7 +273,7 @@ Below, we list a few important rules-of-thumb to keep in mind when using the gno
   release represent false and/or misrepresented variant calls, consistent with the range of error
   rate estimates reported in the gnomAD-SV preprint (~2-12%; see Supplementary Table 4). If you
   find a variant that appears to meet these criteria, please
-  [report the variant](mailto:exomeconsortium@gmail.com).
+  [report the variant](mailto:gnomad@broadinstitute.org).
 
 ## gnomAD SV discovery methods
 
