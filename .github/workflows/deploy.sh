@@ -2,7 +2,11 @@
 
 if [ "$GITHUB_EVENT_NAME" == "push" ]; then
     PATH_PREFIX="/blog" yarn run build
-    gsutil -m rsync -r "public" "gs://gnomad-blog/master"
+
+    gsutil -m rsync -r "public" "gs://gnomad-blog/tmp"
+    gsutil -m setmeta -h "Cache-Control:private, max-age=0, no-transform" -r "gs://gnomad-blog/tmp"
+    gsutil -m rsync -r "gs://gnomad-blog/tmp" "gs://gnomad-blog/master"
+    gsutil -m rm -r "gs://gnomad-blog/tmp"
 
     curl \
       --request POST \
@@ -28,6 +32,7 @@ elif [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
 
         PATH_PREFIX="/blog/preview/${pr_number}" yarn run build
         gsutil -m rsync -r "public" "gs://gnomad-blog/pulls/${pr_number}"
+        gsutil -m setmeta -h "Cache-Control:private, max-age=0, no-transform" -r "gs://gnomad-blog/pulls/${pr_number}"
 
         sha=$(jq --raw-output .pull_request.head.sha "$GITHUB_EVENT_PATH")
 
