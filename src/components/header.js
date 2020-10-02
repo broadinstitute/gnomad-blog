@@ -25,6 +25,11 @@ const Header = ({ siteTitle }) => {
         </button>
         <ul id="nav-list" className={isExpanded ? "expanded" : undefined}>
           <li className="nav-item">
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/">
+              Browser
+            </a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/about">
               About
             </a>
