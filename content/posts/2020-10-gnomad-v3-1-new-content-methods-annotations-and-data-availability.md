@@ -98,11 +98,11 @@ By popular request, we’ve computed allele counts and allele frequencies for ma
 
 Subset-specific allele counts and allele frequencies are available on variant pages by clicking on the drop-down menu at the top-right corner of the page:
 
-![](https://lh3.googleusercontent.com/0gD7Xa0cJtvzyFIcqB7zoE1__tY-EHKCZBkvPjhXoCnrBFpuwVk_fvuKhaS-Ij_elmr5L2bH8fE06P4x8KpRywtig8vDcqpHHb9yqPB5x9iwf3OQ-pP197a8Kp3HiC_mDBTNqnpY)
+![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/drop_down_subsets_v3_1.png)
 
 Viewers will note that in addition to the gnomAD population frequencies, population frequencies specific to the HGDP and 1000 Genomes cohorts are available:
 
-![](https://lh3.googleusercontent.com/48PbeaW0oVTNrdu5tmaLBPFe5Yx6Nl_UkGzI9S0ZNch7_RdaocXNgDvXQaTzGTY-zAL-k-lvTC2ddISE7O7nX6QUJYBFINRCW0wVRqhxrQxSlyayhljee9OOfkzEVDLoX0F69EIK)
+![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/1kg_table.png)
 
 We provided allele counts and population frequencies for HGDP and 1000 Genomes to allow users to observe and compare the distribution of variant alleles across a diverse range of distinct human populations.
 
