@@ -32,9 +32,9 @@ These curations are viewable from both the gene and variant pages on the browser
 
 ![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/curation1.png)
 
-On the variant page there is an LoF curation section that also lists the flag(s) present during the curation of this variant with the verdict it received as a result of the curation (large red arrow). A popup (small red arrow) is available for a detailed explanation of these error modes from the variant page as well .
+On the variant page there is an LoF curation section that also lists the flag(s) present during the curation of this variant with the verdict it received as a result of the curation (large red arrow). A popup (small red arrow) is available for a detailed explanation of these error modes from the variant page as well.
 
-![](https://lh5.googleusercontent.com/jTHjmDnBcKQX1DaLEsXfdRIBmy80Qjaej7V5YaLd5GfUDr29selpy2Hx4g3zuNNkVOxNx-NHUh2VR9otTXkuMCGIVY0I75cSkia4MbAvlqkyVZUM94N1jnIyIkyUpAPxF7ODEb9c)
+![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/curation2.png)
 
 ### Caveats
 
