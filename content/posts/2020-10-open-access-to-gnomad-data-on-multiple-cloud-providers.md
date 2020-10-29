@@ -24,21 +24,21 @@ For further details about gnomAD and other open datasets hosted on each provider
 * [Genome Aggregation Database (gnomAD): Now available on Azure Open Datasets](https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/genome-aggregation-database-gnomad-now-available-on-azure-open/ba-p/1824798)
 * [Providing open access to the Genome Aggregation Database (gnomAD) on Google Cloud](https://cloud.google.com/blog/topics/healthcare-life-sciences/google-cloud-providing-free-access-to-genome-aggregation-database)
 
-## **How to access the data**
+### **How to access the data**
 
-### Registry of Open Data on AWS
+#### Registry of Open Data on AWS
 
 Files can be browsed and downloaded using the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/).
 
 `aws s3 ls gs://gnomad-public-us-east-1/release/`
 
-### Azure Open Datasets
+#### Azure Open Datasets
 
 Files can be browsed and downloaded using [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/).
 
 `azcopy ls https://azureopendatastorage.blob.core.windows.net/gnomad/`
 
-### Google Cloud Public Datasets
+#### Google Cloud Public Datasets
 
 Files can be browsed and downloaded using [gsutil](https://cloud.google.com/storage/docs/gsutil).
 
