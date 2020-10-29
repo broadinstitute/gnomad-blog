@@ -1,6 +1,8 @@
 ---
 title: Open access to gnomAD data on multiple cloud providers
 date: '2020-10-29'
+categories:
+  - Announcements
 authors:
   - Grace Tiao
 ---
