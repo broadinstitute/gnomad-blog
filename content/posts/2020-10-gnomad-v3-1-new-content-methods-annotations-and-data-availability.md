@@ -32,7 +32,7 @@ This is the first release for which we have a designated population label for sa
 The changes and new features in this release include:
 
 * Innovation in incremental joint calling
-* Documentation of functions and code used to generate callset
+* Documentation of functions and code used to generate the callset
 * Individual-level genotypes available for HGDP + 1KG subsets
 * Read visualizations in noncoding regions
 * New subset availability for frequency annotations
