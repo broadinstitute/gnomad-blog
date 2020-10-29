@@ -30,7 +30,7 @@ For “likely LoF” and “LoF” variants, our manual curation provides increa
 
 These curations are viewable from both the gene and variant pages on the browser. Within the gene page there is a new column that lists the curation result for all variants for which curation is available. If you hover over the curation result, you will see the error flag(s) that were identified during the curation of that variant. To date, curation has been performed on over 4,000 high-confidence pLoF variants in the gnomAD dataset, but this is a small fraction of the 444,000 total pLOF variants. As additional curations are performed, we will continue to update the gnomAD browser.
 
-![](https://lh6.googleusercontent.com/owAghqngdN_isWzLqTA-Zy_Phng7joOkyYlNt7veGHV8qgXR-D-yFw676VO5uMqbFFX0VZavTlds3blmUs8zhC_Fit65aleqTnQDc8VI4TdiJ8gG-C8jSWY1ZibKtWYNut8CrTfd)
+![](/images/curation2.png)
 
 On the variant page there is an LoF curation section that also lists the flag(s) present during the curation of this variant with the verdict it received as a result of the curation (large red arrow). A popup (small red arrow) is available for a detailed explanation of these error modes from the variant page as well .
 
