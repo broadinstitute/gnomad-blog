@@ -161,12 +161,10 @@ Additionally, samples were filtered if they had a mean coverage on chromosome 20
 The process of imputing sex was the same as the method used for gnomAD v3, with slightly modified cutoffs. In previous releases, we used cutoffs on F-stat to determine XX and XY. The current pipeline uses a rough F-stat cutoff of 0.5 to split samples into the XX and XY categories. The final X and Y ploidy cutoffs are then determined from the means and standard deviations of those XX and XY distributions. Sex was assigned based on the following cutoffs:
 
 * XY:
-
   * normalized X coverage < 1.29 &
   * normalized Y coverage > 0.1 &
   * normalized Y coverage < 1.16
 * XX:
-
   * normalized X coverage > 1.45 &
   * normalized X coverage < 2.4 &
   * normalized Y coverage < 0.1
