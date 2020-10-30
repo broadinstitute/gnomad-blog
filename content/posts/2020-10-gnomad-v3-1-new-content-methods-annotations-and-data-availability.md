@@ -150,7 +150,7 @@ Sample QC metrics were computed using Hail’s [`sample_qc()`](https://hail.is/d
 * Number of singletons: > 100k
 * Ratio of heterozygous to homozygous variants: > 3.3
 
-Hard filtering using BAM-level metrics was done for samples when such metrics were available. We removed samples that were outliers for:
+Hard filtering using BAM-level metrics was performed when such metrics were available. We removed samples that were outliers for:
 
 * Contamination: > 5%
 * Chimeras: > 5%
