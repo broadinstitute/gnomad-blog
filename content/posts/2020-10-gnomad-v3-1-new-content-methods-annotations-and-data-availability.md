@@ -25,6 +25,8 @@ In this release, we have included more than 3,000 new samples specifically chose
 | sas        | South Asian                     | 2,419   |
 | oth        | Other (population not assigned) | 1,047   |
 
+<!-- end_excerpt -->
+
 ### Topics
 
 The changes and new features in this release include:
