@@ -10,6 +10,8 @@ authors:
 ---
 Today we are pleased to announce the incorporation of manual loss-of-function (LoF) curations into the gnomAD v2.1.1 browser. As of the time of the first release, we have curated all homozygous pLoFs and a small set of recessive genes (e.g., *GAA*, *GLA*, *IDUA*, *SMPD4*, *GBA*, *FIG4*, *MCOLN1*, *AP4B1*, *AP4M1*, *AP4S1*, and *AP4E1*). These curations were performed for multiple projects including the recently published work, [Karczewski et al. 2020 Nature](https://www.nature.com/articles/s41576-020-0255-7), as well as other gene-specific projects. We are so excited to start sharing this data with you that we are including it in the gnomAD v3.1 release announcement but really these are a new gnomAD v2.1.1 feature at the moment. More datasets will be added to the browser as they are completed.
 
+<!-- end_excerpt -->
+
 ### What is loss-of-function curation?
 
 The classification of LoF variants is a result of a specialized and manual curation of predicted loss-of-function (pLoF) variants that have passed all [LOFTEE](https://github.com/konradjk/loftee) filters and other QC flags in gnomAD to determine how likely these variants are to result in loss of function. After reviewing all the high-quality homozygous pLoF variants in gnomAD, we determined that 28% may not actually result in loss-of-function, highlighting the need for careful curation of these variants. Curation results also correlated well with our biological expectation; for heterozygous variants, 60% of pLoF variants in a set of haploinsufficient disease genes—versus 25% in a set of recessive disease genes—did not appear to result in loss-of-function.
