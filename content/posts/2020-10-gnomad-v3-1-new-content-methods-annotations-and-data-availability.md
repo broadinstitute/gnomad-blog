@@ -31,14 +31,14 @@ In this release, we have included more than 3,000 new samples specifically chose
 
 The changes and new features in this release include:
 
-* [Innovation in incremental joint calling] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#incremental-joint-calling)
-* [Documentation of functions and code used to generate the callset] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#the-gnomad-python-package)
-* [Individual-level genotypes available for HGDP + 1KG subsets] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#the-gnomad-hgdp-and-1000-genomes-callset)
-* [Read visualizations in noncoding regions] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#read-visualizations-for-non-coding-regions)
-* [New subset availability for frequency annotations] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#subsets)
-* [New in-silico prediction annotations] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#in-silico-prediction-annotations)
-* [Tweaks and updates to VEP, dbSNP rsIDs, homozygous genotypes in common variants, and terminology for individuals’ chromosomal sex] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#tweaks-and-updates)
-* [Fully free access to downloadable datasets on multiple cloud providers] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#free-data-access-on-multiple-cloud-providers)
+* [Innovation in incremental joint calling](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#incremental-joint-calling)
+* [Documentation of functions and code used to generate the callset](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#the-gnomad-python-package)
+* [Individual-level genotypes available for HGDP + 1KG subsets](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#the-gnomad-hgdp-and-1000-genomes-callset)
+* [Read visualizations in noncoding regions](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#read-visualizations-for-non-coding-regions)
+* [New subset availability for frequency annotations](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#subsets)
+* [New in-silico prediction annotations](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#in-silico-prediction-annotations)
+* [Tweaks and updates to VEP, dbSNP rsIDs, homozygous genotypes in common variants, and terminology for individuals’ chromosomal sex](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#tweaks-and-updates)
+* [Fully free access to downloadable datasets on multiple cloud providers](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#free-data-access-on-multiple-cloud-providers)
 
 We’ll discuss each of these features in greater detail in the sections below and, at the end, we’ll share updated plots for v3.1 [sample and variant QC] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#sample-and-variant-quality-control).
 
