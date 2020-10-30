@@ -8,7 +8,7 @@ authors:
   - Moriel Singer-Berk
   - Anne O'Donnell-Luria
 ---
-Today we are pleased to announce the incorporation of manual loss-of-function (LoF) curations into the gnomAD v2.1.1 browser. As of the time of the first release, we have curated all homozygous pLoFs and a small set of recessive genes (e.g., *GAA*, *GLA*, *IDUA*, *SMPD4*, *GBA*, *FIG4*, *MCOLN1*, *AP4B1*, *AP4M1*, *AP4S1*, and *AP4E1*). These curations were performed for multiple projects including the recently published work, [Karczewski et al. 2020 Nature](https://www.nature.com/articles/s41576-020-0255-7), as well as other gene-specific projects. We are so excited to start sharing this data with you that we are including it in the gnomAD v3.1 release announcement but really these are a new gnomAD v2.1.1 feature at the moment. More datasets will be added to the browser as they are completed.
+Today we are pleased to announce the incorporation of manual loss-of-function (LoF) curations into the gnomAD v2.1.1 browser. As of this release, we have curated all homozygous pLoFs and a small set of recessive genes (e.g., *GAA*, *GLA*, *IDUA*, *SMPD4*, *GBA*, *FIG4*, *MCOLN1*, *AP4B1*, *AP4M1*, *AP4S1*, and *AP4E1*). These curations were performed for multiple projects including the recently published work, [Karczewski et al. 2020 Nature](https://www.nature.com/articles/s41576-020-0255-7), as well as other gene-specific projects. We are so excited to start sharing this data with you that we are including it in the gnomAD v3.1 release announcement but really these are a new gnomAD v2.1.1 feature at the moment. More datasets will be added to the browser as they are completed.
 
 <!-- end_excerpt -->
 
