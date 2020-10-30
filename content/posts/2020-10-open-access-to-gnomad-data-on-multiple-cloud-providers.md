@@ -33,7 +33,7 @@ For further details about gnomAD and other open datasets hosted on each provider
 
 Files can be browsed and downloaded using the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/).
 
-`aws s3 ls gs://gnomad-public-us-east-1/release/`
+`aws s3 ls s3://gnomad-public-us-east-1/release/`
 
 #### Azure Open Datasets
 
