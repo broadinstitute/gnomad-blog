@@ -71,11 +71,11 @@ All variants found in this cohort of samples are included, along with the varian
 All called genotypes are included in this dataset, including low-quality genotypes that we filtered before computing gnomAD allele counts, allele numbers, and allele frequencies. To reproduce gnomAD genotype filtering, users should filter to genotypes with genotype quality (GQ) >= 20, depth (DP) >=10 (5 for haploid genotypes on sex chromosomes), and allele balance (AB) >= 0.2 and <= 0.8 (for heterozygous genotypes only). Users working with the Matrix Table version of the dataset can call the [`annotate_adj()`](https://broadinstitute.github.io/gnomad_methods/api_reference/utils/annotations.html#gnomad.utils.annotations.annotate_adj) function in the gnomAD Python package to annotate and filter genotypes:
 
 ```
-mt = annotate_adj(mt)
-mt = mt.filter_entries(mt.adj)
+$ mt = annotate_adj(mt)
+$ mt = mt.filter_entries(mt.adj)
 ```
 
-The code above adds an `adj` ("adjusted" genotype, or passing) annotation using the default gnomAD thresholds and then removes any genotype whose `adj` status is `False`.
+The code above adds an `adj` ("adjusted," or passing) genotype annotation using the default gnomAD thresholds and then removes any genotype whose `adj` status is `False`.
 
 ### Read visualizations for non-coding regions
 
@@ -83,7 +83,7 @@ Since our beginning as a project, we’ve made read data visualizations availabl
 
 Consider the following numbers: to support non-coding read visualizations in this release, we generated over 2.5 billion read visualizations representing nearly 600 million unique variants observed in gnomAD v3.1. To be exact, we collected reads for 2,573,960,015 non-reference genotypes observed across 584,562,724 unique variants.
 
-We needed a creative approach to generate, store, and serve up this data efficiently on the browser. Ben Weisburd on our team conceived a process that allowed us to extract reads for multiple variants from each individual sample, thus producing an individual mini-BAM — a file containing all the sequencing reads aligning to a specified list of variants in a given individual — for each available sample in gnomAD. (Not all samples in gnomAD had available read data, which is why some variants in v3.1 are missing read visualizations.)
+We needed a creative approach to generate, store, and serve up this data efficiently on the browser. Ben Weisburd on our team conceived a process that allowed us to extract reads for multiple variants from each individual sample, thus producing an individual mini-BAM—a file containing all the sequencing reads aligning to a specified list of variants in a given individual—for each available sample in gnomAD. (Not all samples in gnomAD had available read data, which is why some variants in v3.1 are missing read visualizations.)
 
 He then combined these individual mini-BAMs into composite, multi-sample mini-BAMs comprised of data from 50 individuals each; replaced the original read group tags with hashes to anonymize the combined data; and recorded which genotypes and loci were covered in each 50-sample composite file. (Read group tags were replaced as a precaution against re-identification of individuals included in each multi-sample mini-BAM: read group tags, which are assigned to a given sequencing run, might otherwise be used to re-link genotypes across the genome for a specific individual. After replacing tags with hashes, the genotype data stored in a composite mini-BAM is completely unlinked to individuals.)
 
@@ -196,7 +196,7 @@ As with gnomAD v3, we performed variant QC using the allele-specific version of 
 
 We used the standard GATK training resources (HapMap, Omni, 1000 Genomes, Mills indels) in addition to ~19M transmitted singletons (alleles confidently observed exactly twice in gnomAD, once in a parent and once in a child) from 6,743 trios present in the raw data.
 
-The figure below shows the precision and recall curves for the allele-specific VQSR model (AS_VQSR_TS) using a truth sample ([NA12878](https://github.com/genome-in-a-bottle/giab_latest_release)) present in our data. The lines at 90 (SNVs) and 80 (indels) indicate the cutoffs we chose for filtering.
+The figure below shows the precision and recall curves for the allele-specific VQSR model (AS\_VQSR\_TS) using a truth sample ([NA12878](https://github.com/genome-in-a-bottle/giab_latest_release)) present in our data. The lines at 90 (SNVs) and 80 (indels) indicate the cutoffs we chose for filtering.
 
 ![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/variant_pr_curves_v3_1.png) The same variant hard filters were applied:
 
