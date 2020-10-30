@@ -1,6 +1,7 @@
 ---
 title: 'gnomAD v3.1 New Content, Methods, Annotations, and Data Availability'
 date: '2020-10-29'
+order: 2
 categories:
   - Announcements
   - Releases

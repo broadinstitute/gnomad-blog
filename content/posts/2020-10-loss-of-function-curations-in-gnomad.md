@@ -1,6 +1,7 @@
 ---
 title: Loss-of-Function Curations in gnomAD
 date: '2020-10-29'
+order: 3
 categories:
   - Announcements
   - Releases
