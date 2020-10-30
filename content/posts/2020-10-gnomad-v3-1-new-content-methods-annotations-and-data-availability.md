@@ -40,7 +40,7 @@ The changes and new features in this release include:
 * [Tweaks and updates to VEP, dbSNP rsIDs, homozygous genotypes in common variants, and terminology for individuals’ chromosomal sex](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#tweaks-and-updates)
 * [Fully free access to downloadable datasets on multiple cloud providers](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#free-data-access-on-multiple-cloud-providers)
 
-We’ll discuss each of these features in greater detail in the sections below and, at the end, we’ll share updated plots for v3.1 [sample and variant QC] (https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#sample-and-variant-quality-control).
+We’ll discuss each of these features in greater detail in the sections below and, at the end, we’ll share updated plots for v3.1 [sample and variant QC](https://gnomad.broadinstitute.org/blog/2020-10-gnomad-v3-1-new-content-methods-annotations-and-data-availability/#sample-and-variant-quality-control).
 
 ### Incremental joint-calling
 
