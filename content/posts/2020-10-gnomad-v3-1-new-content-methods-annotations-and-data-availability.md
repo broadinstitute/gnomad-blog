@@ -45,7 +45,7 @@ We’ll discuss each of these features in greater detail in the sections below a
 
 ### Incremental joint-calling
 
-To create gnomAD v3, the first version of this genome release, we took advantage of a new sparse (but lossless) data format developed by Chris Vittal and Cotton Seed on the Hail team to store individual genotypes in a fraction of the space required by traditional VCFs. In a previous blog [post](https://gnomad.broadinstitute.org/blog/2019-10-gnomad-v3-0/) describing this innovation, we noted that one advantage of this new format was the possibility of appending new data to existing callsets without needing to re-process samples already joint called as part of prior gnomAD releases—effectively solving the “N+1” joint calling problem.
+To create gnomAD v3, the first version of this genome release, we took advantage of a new sparse (but lossless) data format developed by Chris Vittal and Cotton Seed on the Hail team to store individual genotypes in a fraction of the space required by traditional VCFs. In a previous blog [post](/2019-10-gnomad-v3-0/) describing this innovation, we noted that one advantage of this new format was the possibility of appending new data to existing callsets without needing to re-process samples already joint called as part of prior gnomAD releases—effectively solving the “N+1” joint calling problem.
 
 For gnomAD v3.1, we made good on this promise, adding 4,598 new genomes in gVCF form to the already extant, joint-called gnomAD v3 callset stored in the sparse Hail Matrix Table format. This is, to our knowledge, the first time that this procedure has been done. Chris Vittal added the new genomes for us in six hours—shaving off almost a week of compute time (or several million core hours) that would have been required if we had created the callset from scratch.
 
@@ -137,11 +137,11 @@ Finally, we have changed the labels we use to classify individuals by chromosoma
 
 ### Free data access on multiple cloud providers
 
-One recent development we’re excited to share with users is the availability of all gnomAD data on three cloud providers: Amazon Web Services, Microsoft Azure, and Google Cloud. All VCFs and Hail Tables from each gnomAD release are now available to download or read for free from each of these providers. Working in partnership with their public data hosting programs, we hope to encourage an even wider range of individuals and institutions to make use of gnomAD data for innovative research in human genetics and for the development of translational tools and medicines to treat and cure disease. For more details on how to access gnomAD through these cloud providers, read our blog post [here](https://gnomad.broadinstitute.org/blog/2020-10-open-access-to-gnomad-data-on-multiple-cloud-providers/).
+One recent development we’re excited to share with users is the availability of all gnomAD data on three cloud providers: Amazon Web Services, Microsoft Azure, and Google Cloud. All VCFs and Hail Tables from each gnomAD release are now available to download or read for free from each of these providers. Working in partnership with their public data hosting programs, we hope to encourage an even wider range of individuals and institutions to make use of gnomAD data for innovative research in human genetics and for the development of translational tools and medicines to treat and cure disease. For more details on how to access gnomAD through these cloud providers, read our blog post [here](/2020-10-open-access-to-gnomad-data-on-multiple-cloud-providers/).
 
 ### Sample and variant quality control
 
-The overall approach to both sample and variant QC were very similar to the methods used for QC of [gnomAD v3](https://gnomad.broadinstitute.org/blog/2019-10-gnomad-v3-0/).
+The overall approach to both sample and variant QC were very similar to the methods used for QC of [gnomAD v3](/2019-10-gnomad-v3-0/).
 
 #### Sample QC hard filtering
 

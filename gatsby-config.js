@@ -31,6 +31,7 @@ const config = {
         ],
       },
     },
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-netlify-cms",
     {
