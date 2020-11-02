@@ -25,15 +25,10 @@ const config = {
               wrapperStyle: "margin-bottom: 1rem",
             },
           },
+          "gatsby-remark-autolink-headers",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
         ],
-      },
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: ["gatsby-remark-autolink-headers"],
       },
     },
     "gatsby-plugin-react-helmet",
