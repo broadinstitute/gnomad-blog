@@ -22,7 +22,7 @@ Previous gnomAD callsets have not included mtDNA variants because their properti
 
 To address these issues, we developed a new mtDNA calling pipeline and used it to create the gnomAD v3.1 mtDNA callset. Our mtDNA data include allele frequencies for heteroplasmic and homoplasmic variants, haplogroup-specific allele frequencies, predicted consequences for protein and tRNA variants, and links to mitochondrial resources.
 
-### Creating the v3.1 mtDNA Call Set
+### Creating the v3.1 mtDNA Callset
 
 #### mtDNA Calling Pipeline for Single Samples
 
@@ -34,9 +34,9 @@ We developed a mitochondria mode of GATK MuTect2 to call variants in GRCh38 chrM
 
 We would like to note that we have tested our pipeline only on WGS samples. Because many exome capture technologies specifically block mtDNA reads from being sequenced, many exomes lack sufficient mtDNA coverage to accurately call variants, particularly those with low heteroplasmy.
 
-#### mtDNA Calling Pipeline for gnomAD Call Set
+#### mtDNA Calling Pipeline for the gnomAD Callset
 
-To generate the gnomAD mtDNA call set, we combined single sample VCFs and applied stringent quality control filters for samples, variants, and genotypes as described below. Specifically, we excluded samples with low or high mtDNA copies/cell or with evidence of mtDNA contamination. For this release we also filtered out variants with heteroplasmy < 10% in order to avoid false positives derived from contamination, sequencing errors, and NUMT misalignment. Subsequent releases will include variants below 10% heteroplasmy that pass additional QC filters.
+To generate the gnomAD mtDNA callset, we combined single sample VCFs and applied stringent quality control filters for samples, variants, and genotypes as described below. Specifically, we excluded samples with low or high mtDNA copies/cell or with evidence of mtDNA contamination. For this release we also filtered out variants with heteroplasmy < 10% in order to avoid false positives derived from contamination, sequencing errors, and NUMT misalignment. Subsequent releases will include variants below 10% heteroplasmy that pass additional QC filters.
 
 *Genome Variant Calls*
 
