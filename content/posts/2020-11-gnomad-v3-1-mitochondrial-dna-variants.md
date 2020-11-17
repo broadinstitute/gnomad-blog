@@ -8,7 +8,7 @@ authors:
   - Kristen Laricchia
   - Sarah E. Calvo
 ---
-#### Overview
+### Overview
 
 Mitochondrial DNA (mtDNA) variants for gnomAD are now available for the first time! We have called mtDNA variants for 56,434 whole genome samples in the v3.1 release. This initial release includes population frequencies for 10,850 unique mtDNA variants defined at more than half of all mtDNA bases. The vast majority of variant calls (98%) are homoplasmic or near homoplasmic, whereas 2% are heteroplasmic. Variation in mitochondrial genomes contributes to many human diseases and has had unique value in human evolutionary genetics. We hope that the addition of mtDNA to gnomAD will enable researchers to better understand the role of mtDNA variation in both health and disease states.
 
@@ -20,9 +20,9 @@ Previous gnomAD callsets have not included mtDNA variants because their properti
 
 To address these issues, we developed a new mtDNA calling pipeline and used it to create the gnomAD v3.1 mtDNA callset. Our mtDNA data include allele frequencies for heteroplasmic and homoplasmic variants, haplogroup-specific allele frequencies, predicted consequences for protein and tRNA variants, and links to mitochondrial resources.
 
-#### Creating the v3.1 mtDNA Call Set
+### Creating the v3.1 mtDNA Call Set
 
-##### mtDNA Calling Pipeline for Single Samples
+#### mtDNA Calling Pipeline for Single Samples
 
 We developed a mitochondria mode of GATK MuTect2 to call variants in GRCh38 chrM (identical to the revised Cambridge Reference Sequence, rCRS, GenBankNC_012920.1) on individual samples. This pipeline, which can be run on the [Terra platform](https://terra.bio/), addresses challenges specific to calling mtDNA variants.
 
@@ -32,7 +32,7 @@ We developed a mitochondria mode of GATK MuTect2 to call variants in GRCh38 chrM
 
 We would like to note that we have tested our pipeline only on WGS samples. Because many exome capture technologies specifically block mtDNA reads from being sequenced, many exomes lack sufficient mtDNA coverage to accurately call variants, particularly those with low heteroplasmy.
 
-##### mtDNA Calling Pipeline for gnomAD Call Set
+#### mtDNA Calling Pipeline for gnomAD Call Set
 
 To generate the gnomAD mtDNA call set, we combined single sample VCFs and applied stringent quality control filters for samples, variants, and genotypes as described below. Specifically, we excluded samples with low or high mtDNA copies/cell or with evidence of mtDNA contamination. For this release we also filtered out variants with heteroplasmy < 10% in order to avoid false positives derived from contamination, sequencing errors, and NUMT misalignment. Subsequent releases will include variants below 10% heteroplasmy that pass additional QC filters.
 
@@ -84,14 +84,14 @@ To make the mtDNA data more usable, we provide multiple variant annotations on t
 
 Downloads for mtDNA variants are provided separately from the nuclear variants.
 
-#### Authors
+### Authors
 
 Kristen Laricchia, Nicole Lake, Nick Watts, Megan Shand, Andrea Haessly, Laura Gauthier, David Benjamin, Eric Banks, Jose Soto, James Emery, Grace Tiao, Daniel MacArthur, Monkol Lek, Vamsi K. Mootha, Sarah E. Calvo
 
-#### Author Contributions
+### Author Contributions
 
 This project was a major collaborative effort. Kristen Laricchia was the lead analyst. Sarah Calvo provided leadership, expert knowledge, and detailed examination of the data. Nicole Lake conducted analyses to aid in quality control. David Benjamin developed the mitochondria mode of MuTect2. Megan Shand and Andrea Haessly developed the mitochondrial pipeline and WDL with guidance from Laura Gauthier and Eric Banks and assistance from Jose Soto and James Emery. Nick Watts adapted the gnomAD browser to incorporate mitochondria-specific annotations. Grace Tiao provided oversight of the collaboration. Daniel MacArthur, Monkol Lek, and Vamsi Mootha provided leadership and analytical advice.
 
-#### Acknowledgments
+### Acknowledgments
 
 We thank Heidi Rhem and Mark Daly for gnomAD leadership; Sebastian Schoenherr for assistance in understanding Haplocheck; Konrad Karczewski for reviewing the code for callset assembly and annotation; Kiran Garimella for assistance in understanding NUMTs with long-read data; David Thorburn, John Christodoulou, and members of their labs for their feedback on displaying mtDNA variants on the browser. This work was supported in part by a Broad Institute Scientific Projects to Accelerate Research and Collaboration (SPARC) grant.
