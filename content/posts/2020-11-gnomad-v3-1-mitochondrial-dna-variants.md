@@ -14,6 +14,8 @@ Mitochondrial DNA (mtDNA) variants for gnomAD are now available for the first ti
 
 Previous gnomAD callsets have not included mtDNA variants because their properties do not fit the assumptions that we use with our nuclear variant calling pipeline. These properties include:
 
+<!-- end_excerpt -->
+
 * A circular genome: Alignment of reads from the circular mtDNA to its linear representation in the human reference assembly can cause mapping problems.
 * Heteroplasmy: Cells each contain hundreds to thousands of mtDNA copies. Most variants are homoplasmic, meaning they are present in all mtDNA molecules in a cell, and represent differences between the given individual and the reference human mitochondrial genome. However, some variants are heteroplasmic, or present in only a fraction of the cell’s mtDNA molecules. A key challenge is to call heteroplasmic variants (particularly at low fractions) and to distinguish low heteroplasmy variants from technical artifacts or contamination.
 * NUMTs: Nuclear sequences of mitochondrial origin (termed “NUMTs”) are derived from pieces of mtDNA that have integrated into the nuclear genome over the course of human evolution. Many NUMTs are part of the reference human genome assembly; however, polymorphic NUMTs exist that are present only in some individuals. Reads derived from NUMTs often mis-align to the mtDNA and generate false positive calls at low heteroplasmy. Conversely, reads genuinely arising from the mtDNA genome can be mis-aligned to the NUMTs in the reference genome.
