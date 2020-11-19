@@ -320,7 +320,7 @@ high quality set of variants:
 
 - Precision / recall against two well characterized samples:
   - NA12878 from [genome in a bottle](https://github.com/genome-in-a-bottle/giab_latest_release)
-  - CHM1\*CHM13: A mixture of DNA (est. 50.7% / 49.3%) from two haploid CHM cell lines, deep
+  - CHM1\_CHM13: A mixture of DNA (est. 50.7% / 49.3%) from two haploid CHM cell lines, deep
     sequenced with PacBio and _de novo_ assembled, available [here](https://github.com/lh3/CHM-eval).
     Note that indels of size 1 were removed because of PacBio-specific problems.
 - Number of singleton Mendelian violations in the trios (N=1 amongst all samples and is found in a
