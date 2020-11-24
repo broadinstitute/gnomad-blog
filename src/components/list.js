@@ -36,9 +36,9 @@ const ArticleList = ({ heading, posts }) => {
         })}
 
         <aside className="sidebar">
-          <h3>Recent posts</h3>
+          <h3>Latest posts</h3>
           <ol className="recent-posts-list">
-            {posts.map(({ node }) => {
+            {posts.slice(0, 5).map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug;
               return (
                 <li key={node.fields.slug}>
