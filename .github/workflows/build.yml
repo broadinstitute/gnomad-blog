@@ -31,7 +31,7 @@ jobs:
             yarn-
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive --no-progress
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@master
         with:
           service_account_email: ${{ secrets.GCS_SA_EMAIL }}
           service_account_key: ${{ secrets.GCS_SA_KEY }}
