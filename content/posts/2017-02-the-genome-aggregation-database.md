@@ -1,6 +1,6 @@
 ---
 title: The genome Aggregation Database (gnomAD)
-date: 2017-02-27
+date: '2017-02-27'
 categories:
   - Announcements
   - Releases
