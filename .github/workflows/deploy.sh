@@ -5,7 +5,7 @@ if [ "$GITHUB_EVENT_NAME" == "push" ]; then
 
     gsutil -m rsync -r "public" "gs://gnomad-blog/tmp"
     gsutil -m setmeta -h "Cache-Control:private, max-age=0, no-transform" -r "gs://gnomad-blog/tmp"
-    gsutil -m rsync -r "gs://gnomad-blog/tmp" "gs://gnomad-blog/master"
+    gsutil -m rsync -r "gs://gnomad-blog/tmp" "gs://gnomad-blog/main"
     gsutil -m rm -r "gs://gnomad-blog/tmp"
 
     curl \

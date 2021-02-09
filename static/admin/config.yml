@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: broadinstitute/gnomad-blog
-  branch: master
+  branch: main
   base_url: https://gnomad.broadinstitute.org
   auth_endpoint: /blog/auth/
   preview_context: actions/deploy

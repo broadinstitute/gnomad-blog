@@ -29,7 +29,7 @@ When the PR is opened, a preview site containing its changes will automatically 
 look at the PR checks on GitHub. Once done, a "View Preview" link will show up at the top of the page in Netlify CMS.
 
 When the post is ready, click the "Publish" button in Netlify CMS or merge the PR on GitHub. Changes merged to the
-master branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
+`main` branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
 
 ## Local development server
 
