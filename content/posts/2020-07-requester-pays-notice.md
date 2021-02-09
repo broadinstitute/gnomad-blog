@@ -1,6 +1,7 @@
 ---
 title: Requester-Pays Notice to Users
 date: '2020-07-09'
+order: 1
 categories:
   - Announcements
 authors:

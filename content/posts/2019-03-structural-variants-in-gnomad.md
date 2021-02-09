@@ -1,6 +1,7 @@
 ---
 title: Structural variants in gnomAD
 date: '2019-03-20'
+order: 1
 categories:
   - Announcements
   - Releases
