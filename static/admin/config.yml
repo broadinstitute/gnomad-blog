@@ -39,10 +39,12 @@ collections:
         default: 1
         min: 1
       - label: "Categories"
+        hint: "Comma separated list of categories for this post."
         name: "categories"
         widget: "list"
         required: false
       - label: "Authors"
+        hint: "Comma separated list of authors of this post."
         name: "authors"
         widget: "list"
       - label: "Body"
