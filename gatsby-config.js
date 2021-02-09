@@ -33,7 +33,12 @@ const config = {
     },
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms.js`,
+      },
+    },
     {
       resolve: "gatsby-plugin-feed",
       options: {
