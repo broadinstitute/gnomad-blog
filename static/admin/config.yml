@@ -32,7 +32,7 @@ collections:
         dateFormat: "YYYY-MM-DD"
         timeFormat: false
       - label: "Relative order"
-        hint: "Relative order for multiple posts published on the same date."
+        hint: "Order in which to display this post relative to other posts published on the same date."
         name: "order"
         widget: "number"
         value_type: "int"
