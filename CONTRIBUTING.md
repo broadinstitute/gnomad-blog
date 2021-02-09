@@ -1,37 +1,34 @@
 # Contributing to the gnomAD blog
 
+Login to Netlify CMS at https://gnomad.broadinstitute.org/blog/admin/. To make changes to the blog, you must have write access to the [gnomad-blog GitHub repository](https://github.com/broadinstitute/gnomad-blog)
+
+## Adding a new post
+
+1. Select the "Contents" tab and click the "New Post" button.
+
+2. Set the post's title and publication date. Add authors and categories.
+
+3. Write the body of the post using either the rich text editor or [Markdown](https://www.markdownguide.org/basic-syntax/).
+
+   - Click the "Toggle preview" button at the top right to show a preview of the post.
+
+   - To control what is shown "above the fold" in the list of posts on the home page, use Markdown mode to add a line containing an HTML comment:
+
+      ```html
+      <!-- end_excerpt -->
+      ```
+
+      Any content after that comment will only be visible by clicking the "Continue reading" link to view the full post.
+
+4. Click the "Save" button to save a draft of the post. Saving a draft opens a pull request on the [gnomad-blog GitHub repository](https://github.com/broadinstitute/gnomad-blog) GitHub with the new post. Further edits can be made in the CMS (the new post will appear in the Drafts column on the Workflow tab). This will add commits to the PR's branch. Alternatively, the branch can be edited on GitHub or pulled and edited locally.
+
+   - When the PR is opened, a preview site containing its changes will automatically be deployed to `https://gnomad.broadinstitute.org/blog/preview/<PR_NUMBER>`. This may take a few minutes. Once it is done, a "View Preview" link will appear in the top bar of the CMS next to the "Set status" and "Publish" buttons. To see progress generating the preview site, look at the PR's status checks on GitHub.
+
+5. When the post is ready, click the "Publish" button in Netlify CMS. This merges the PR. Alternatively, the PR can be merged on GitHub. Changes committed to the `main` branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
+
+## Local development
+
 The gnomAD blog is built with [Gatsby](https://www.gatsbyjs.org/docs/).
-
-Blog content can be edited either in a browser using [Netlify CMS](https://www.netlifycms.org/) or by running a local
-instance of the Gatsby development server.
-
-## Netlify CMS
-
-Login to Netlify CMS at https://gnomad.broadinstitute.org/blog/admin/.
-
-### Adding a new post
-
-Select the "Contents" tab and click the "New Posts" button.
-
-Set the title and publication data. Categories and authors should be comma separated lists.
-
-The post body can be written using either a rich text editor or in Markdown syntax. The preview pane at the right
-shows an _unstyled_ preview of the post.
-
-When finished, click the "Save" button.
-
-Saving a post opens a pull request on GitHub the post content. The post can be further edited from Netlify CMS
-(it will appear in the Drafts column on the Workflow tab) or GitHub. The PR's branch can also be pulled from GitHub
-and edited locally.
-
-When the PR is opened, a preview site containing its changes will automatically be deployed to
-`https://gnomad.broadinstitute.org/blog/preview/<PR_NUMBER>`. This may take a few minutes. To see the status of this step,
-look at the PR checks on GitHub. Once done, a "View Preview" link will show up at the top of the page in Netlify CMS.
-
-When the post is ready, click the "Publish" button in Netlify CMS or merge the PR on GitHub. Changes merged to the
-`main` branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
-
-## Local development server
 
 Run a local development server with:
 
@@ -42,30 +39,26 @@ yarn start
 
 This requires [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/).
 
-Alternatively, the development server can be run in a [Docker](https://docs.docker.com/) container with
-[Docker Compose](https://docs.docker.com/compose/):
+Alternatively, the development server can be run in a [Docker](https://docs.docker.com/) container with [Docker Compose](https://docs.docker.com/compose/):
 
 ```
 docker-compose up
 ```
 
-The gnomad-blog directory will be mounted in the container so that changes made on the host will be picked up by the
-development server.
+The gnomad-blog directory will be mounted in the container so that changes made on the host will be picked up by the development server.
 
 ### Adding a new post
 
-Create a Markdown file in the `content/posts` directory. By convention, these files are named based on the publication
-date and the title: `YYYY-MM-title-slug.md`.
+Create a Markdown file in the `content/posts` directory. By convention, these files are named based on the publication date and the title: `YYYY-MM-title-slug.md`.
 
-The first part of the file should contain [YAML frontmatter](https://www.gatsbyjs.com/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files)
-specifying the post's title and publication date, as well as optional lists of categories and authors.
+The first part of the file should contain [YAML frontmatter](https://www.gatsbyjs.com/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files) specifying the post's title and publication date, as well as optional lists of categories and authors.
 
 For example:
 
 ```yaml
 ---
 title: Adding a new post
-date: 2020-09-10 # YYYY-MM-DD format
+date: '2020-09-10' # YYYY-MM-DD format, quotes are important
 categories:
   - Documentation
   - Examples
@@ -76,14 +69,6 @@ authors:
 ```
 
 The rest of the file should contain the post content written in [Markdown](https://www.markdownguide.org/basic-syntax/).
-
-To control what is shown "above the fold" in the list of posts on the home page, add a line with an HTML comment:
-
-```html
-<!-- end_excerpt -->
-```
-
-Any content after that comment will only be visible by clicking the "Continue reading" link to view the full post.
 
 ## Images
 
