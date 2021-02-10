@@ -19,4 +19,12 @@ module.exports = {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["src/**/*.js", "gatsby-browser.js"],
+      env: {
+        browser: true,
+      },
+    },
+  ],
 };

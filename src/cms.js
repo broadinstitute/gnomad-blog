@@ -7,11 +7,23 @@ import "./styles/global.css";
 
 import { BlogPost } from "./templates/blog-post";
 
+const dateFormatter = new Intl.DateTimeFormat([], { dateStyle: "long" });
+
+// Dates in ClinVar date are formatted YYYY-MM-DD
+const formatDate = (dateString) => {
+  const [year, month, day] = dateString.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  return dateFormatter.format(date);
+};
+
 // https://www.netlifycms.org/docs/customization/#registerpreviewtemplate
 /* eslint-disable react/prop-types */
 /* eslint-disable-next-line no-unused-vars */
 const PostPreview = ({ entry, widgetFor, widgetsFor, getAsset, document, window }) => {
-  const postMedata = entry.get("data").remove("body").toJS();
+  const postMedata = {
+    ...entry.get("data").remove("body").toJS(),
+    date: formatDate(entry.getIn(["data", "date"])),
+  };
   return <BlogPost postMetadata={postMedata}>{widgetFor("body")}</BlogPost>;
 };
 

@@ -29,7 +29,7 @@ collections:
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "YYYY-MM-DD"
+        dateFormat: "MMMM DD, YYYY"
         timeFormat: false
       - label: "Relative order"
         hint: "Order in which to display this post relative to other posts published on the same date."
