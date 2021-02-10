@@ -4,7 +4,7 @@ backend:
   branch: main
   base_url: https://gnomad.broadinstitute.org
   auth_endpoint: /blog/auth/
-  preview_context: actions/deploy
+  preview_context: Preview
 
 site_url: https://gnomad.broadinstitute.org/blog/
 

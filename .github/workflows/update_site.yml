@@ -1,27 +1,24 @@
-name: Build
+name: Update site
 on:
   push:
     branches:
       - main
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - closed
 jobs:
-  deploy:
+  update-site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
+
       - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
+
       - name: Use yarn cache
         uses: actions/cache@v1
         with:
@@ -29,15 +26,25 @@ jobs:
           key: yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             yarn-
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive --no-progress
-      - uses: google-github-actions/setup-gcloud@master
+
+      - name: Build site
+        env:
+          GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+        run: |
+          PATH_PREFIX="/blog" yarn run build
+
+      - name: Setup gcloud
+        uses: google-github-actions/setup-gcloud@master
         with:
           service_account_email: ${{ secrets.GCS_SA_EMAIL }}
           service_account_key: ${{ secrets.GCS_SA_KEY }}
-      - name: Build and deploy site
-        run: ./.github/workflows/deploy.sh
-        env:
-          BUCKET_NAME: gnomad-blog
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+
+      - name: Deploy site
+        run: |
+          gsutil -mq rsync -r "public" "gs://gnomad-blog/tmp"
+          gsutil -mq setmeta -h "Cache-Control:private, max-age=0, no-transform" -r "gs://gnomad-blog/tmp"
+          gsutil -mq rsync -r "gs://gnomad-blog/tmp" "gs://gnomad-blog/main"
+          gsutil -mq rm -r "gs://gnomad-blog/tmp"

@@ -1,0 +1,92 @@
+name: Build preview
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set preview status
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          sha=$(jq --raw-output .pull_request.head.sha "$GITHUB_EVENT_PATH")
+          curl \
+            --silent --show-error \
+            --request POST \
+            --url "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${sha}" \
+            --header "authorization: Bearer ${GITHUB_TOKEN}" \
+            --header "content-type: application/json" \
+            --data "{
+              \"state\": \"pending\",
+              \"target_url\": \"https://gnomad.broadinstitute.org/blog/preview/${pr_number}\",
+              \"description\": \"Building preview\",
+              \"context\": \"Preview\"
+            }" > /dev/null
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Use yarn cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive --no-progress
+
+      - name: Build site
+        run: |
+          pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          PATH_PREFIX="/blog/preview/${pr_number}" yarn run build
+
+      - name: Setup gcloud
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_email: ${{ secrets.GCS_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCS_SA_KEY }}
+
+      - name: Deploy preview
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          gsutil -mq rsync -r "public" "gs://gnomad-blog/pulls/${pr_number}"
+          gsutil -mq setmeta -h "Cache-Control:private, max-age=0, no-transform" -r "gs://gnomad-blog/pulls/${pr_number}"
+
+      - name: Update preview status
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          sha=$(jq --raw-output .pull_request.head.sha "$GITHUB_EVENT_PATH")
+          curl \
+            --silent --show-error \
+            --request POST \
+            --url "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${sha}" \
+            --header "authorization: Bearer ${GITHUB_TOKEN}" \
+            --header "content-type: application/json" \
+            --data "{
+              \"state\": \"success\",
+              \"target_url\": \"https://gnomad.broadinstitute.org/blog/preview/${pr_number}\",
+              \"description\": \"Preview ready\",
+              \"context\": \"Preview\"
+            }" > /dev/null
