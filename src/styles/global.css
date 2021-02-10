@@ -13,6 +13,10 @@ body {
   }
 }
 
+main {
+  padding-bottom: 3em;
+}
+
 a {
   color: #1173bb;
   text-decoration: none;
@@ -202,6 +206,10 @@ a:hover {
 
 .article-nav-item {
   margin-bottom: 1em;
+}
+
+.article-nav-item:last-child {
+  margin-bottom: 0;
 }
 
 /***************************************/
