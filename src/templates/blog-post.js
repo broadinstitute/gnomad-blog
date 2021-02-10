@@ -5,49 +5,64 @@ import React from "react";
 import ArticleMeta from "../components/article-meta";
 import Layout from "../components/layout";
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+export const BlogPost = ({ children, postMetadata }) => {
+  return (
+    <article className="article">
+      <header className="article-header">
+        <h1 className="article-title">{postMetadata.title}</h1>
+      </header>
+      <ArticleMeta postMetadata={postMetadata} />
+      <section className="article-body">{children}</section>
+    </article>
+  );
+};
+
+BlogPost.propTypes = {
+  children: PropTypes.node.isRequired,
+  postMetadata: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    categories: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
+
+const BlogPostPage = ({ data, pageContext }) => {
   const post = data.markdownRemark;
 
   return (
     <Layout title={post.frontmatter.title}>
-      <article className="article">
-        <header className="article-header">
-          <h1 className="article-title">{post.frontmatter.title}</h1>
-        </header>
-
-        <ArticleMeta post={post} />
-
-        <section
-          className="article-body"
+      <BlogPost postMetadata={post.frontmatter}>
+        <div
           dangerouslySetInnerHTML={{
             __html: post.html,
           }}
         />
+      </BlogPost>
 
-        <nav className="article-nav">
-          {pageContext.previous && (
-            <div className="article-nav-item">
-              Previous post:{" "}
-              <Link id="article-nav-previous" to={pageContext.previous.fields.slug} rel="prev">
-                {pageContext.previous.frontmatter.title}
-              </Link>
-            </div>
-          )}
-          {pageContext.next && (
-            <div className="article-nav-item">
-              Next post:{" "}
-              <Link id="article-nav-next" to={pageContext.next.fields.slug} rel="next">
-                {pageContext.next.frontmatter.title}
-              </Link>
-            </div>
-          )}
-        </nav>
-      </article>
+      <nav className="article-nav">
+        {pageContext.previous && (
+          <div className="article-nav-item">
+            Previous post:{" "}
+            <Link id="article-nav-previous" to={pageContext.previous.fields.slug} rel="prev">
+              {pageContext.previous.frontmatter.title}
+            </Link>
+          </div>
+        )}
+        {pageContext.next && (
+          <div className="article-nav-item">
+            Next post:{" "}
+            <Link id="article-nav-next" to={pageContext.next.fields.slug} rel="next">
+              {pageContext.next.frontmatter.title}
+            </Link>
+          </div>
+        )}
+      </nav>
     </Layout>
   );
 };
 
-BlogPostTemplate.propTypes = {
+BlogPostPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -80,7 +95,7 @@ BlogPostTemplate.propTypes = {
   }).isRequired,
 };
 
-export default BlogPostTemplate;
+export default BlogPostPage;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

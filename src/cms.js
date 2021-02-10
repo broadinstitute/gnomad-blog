@@ -5,19 +5,14 @@ import React from "react";
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/#modulepath
 import "./styles/global.css";
 
+import { BlogPost } from "./templates/blog-post";
+
 // https://www.netlifycms.org/docs/customization/#registerpreviewtemplate
 /* eslint-disable react/prop-types */
 /* eslint-disable-next-line no-unused-vars */
 const PostPreview = ({ entry, widgetFor, widgetsFor, getAsset, document, window }) => {
-  return (
-    <article className="article">
-      <header className="article-header">
-        <h1 className="article-title">{entry.getIn(["data", "title"])}</h1>
-      </header>
-
-      <section className="article-body">{widgetFor("body")}</section>
-    </article>
-  );
+  const postMedata = entry.get("data").remove("body").toJS();
+  return <BlogPost postMetadata={postMedata}>{widgetFor("body")}</BlogPost>;
 };
 
 CMS.registerPreviewTemplate("posts", PostPreview);

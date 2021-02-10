@@ -3,15 +3,15 @@ import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
-const ArticleMeta = ({ post }) => {
+const ArticleMeta = ({ postMetadata }) => {
   return (
     <div className="article-meta">
-      <span className="article-date">{post.frontmatter.date}</span>
+      <span className="article-date">{postMetadata.date}</span>
 
-      {post.frontmatter.categories && post.frontmatter.categories.length && (
+      {postMetadata.categories && postMetadata.categories.length && (
         <span className="article-categories">
           {" in "}
-          {post.frontmatter.categories.reduce(
+          {postMetadata.categories.reduce(
             (acc, category) => [
               ...acc,
               acc.length > 0 && " / ",
@@ -24,9 +24,9 @@ const ArticleMeta = ({ post }) => {
         </span>
       )}
 
-      {post.frontmatter.authors && post.frontmatter.authors.length && (
+      {postMetadata.authors && postMetadata.authors.length && (
         <div className="article-authors">
-          {post.frontmatter.authors.reduce(
+          {postMetadata.authors.reduce(
             (acc, author) => [
               ...acc,
               acc.length > 0 && ", ",
@@ -43,13 +43,11 @@ const ArticleMeta = ({ post }) => {
 };
 
 ArticleMeta.propTypes = {
-  post: PropTypes.shape({
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      authors: PropTypes.arrayOf(PropTypes.string).isRequired,
-      categories: PropTypes.arrayOf(PropTypes.string),
-    }).isRequired,
+  postMetadata: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    categories: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
 

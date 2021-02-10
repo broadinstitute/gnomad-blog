@@ -19,7 +19,7 @@ const ArticleList = ({ heading, posts }) => {
                 </h2>
               </header>
 
-              <ArticleMeta post={node} />
+              <ArticleMeta postMetadata={node.frontmatter} />
 
               <section
                 className="article-body article-excerpt"
