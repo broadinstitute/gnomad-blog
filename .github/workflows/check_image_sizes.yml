@@ -1,0 +1,18 @@
+name: Check image sizes
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+jobs:
+  check-image-sizes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check image sizes
+        run: |
+          if [[ -n $(find static/images -type f -size +1M) ]]; then
+            exit 1
+          fi
