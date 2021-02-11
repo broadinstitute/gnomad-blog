@@ -22,7 +22,7 @@ Login to Netlify CMS at https://gnomad.broadinstitute.org/blog/admin/. To make c
 
 4. Click the "Save" button to save a draft of the post. Saving a draft opens a pull request on the [gnomad-blog GitHub repository](https://github.com/broadinstitute/gnomad-blog) GitHub with the new post. Further edits can be made in the CMS (the new post will appear in the Drafts column on the Workflow tab). This will add commits to the PR's branch. Alternatively, the branch can be edited on GitHub or pulled and edited locally.
 
-   - When the PR is opened, a preview site containing its changes will automatically be deployed to `https://gnomad.broadinstitute.org/blog/preview/<PR_NUMBER>`. This may take a few minutes. Once it is done, a "View Preview" link will appear in the top bar of the CMS next to the "Set status" and "Publish" buttons. To see progress generating the preview site, look at the PR's status checks on GitHub.
+   - When the PR is opened, a preview site containing its changes will automatically be deployed to `https://gnomad.broadinstitute.org/blog/preview/<PR_NUMBER>`. This may take a few minutes. While it is building, a "Check for preview" button will appear in the top bar of the CMS next to the "Set status" and "Publish" buttons. Once the preview site is finished building, clicking that button will cause it to change to a "View Preview" link. To see progress generating the preview site, look at the PR's status checks on GitHub.
 
 5. When the post is ready, click the "Publish" button in Netlify CMS. This merges the PR. Alternatively, the PR can be merged on GitHub. Changes committed to the `main` branch will automatically be deployed to `https://gnomad.broadinstitute.org/blog/`.
 
