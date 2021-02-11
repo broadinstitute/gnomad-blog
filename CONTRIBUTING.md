@@ -35,7 +35,7 @@ Images uploaded through the CMS will be place in the [`static/images` directory]
 - Because of their display size on the blog, images should not be larger than 1200 pixels wide.
 - JPEG may be much for efficient than PNG for some types of images.
 
-When the site is built, the `images` folder is copied to the root directory of the site. Thus, URLs to images will look like `/images/file.png` instead of `/static/images/file.png`.
+When the site is built, the `images` folder is copied to the root directory of the site. Thus, a URL to an image from a post will look like `../images/file.png`.
 
 There are multiple ways to add an image to a post:
 
@@ -48,7 +48,7 @@ There are multiple ways to add an image to a post:
    Select Markdown mode.
 
    ```md
-   ![alt text](/images/file.png)
+   ![alt text](../images/file.png)
    ```
 
 - HTML
@@ -57,7 +57,7 @@ There are multiple ways to add an image to a post:
 
    ```html
    <figure>
-      <img alt="alt text" src="/images/file.png" />
+      <img alt="alt text" src="../images/file.png" />
       <figcaption>Caption text</figcaption>
    </figure>
    ```

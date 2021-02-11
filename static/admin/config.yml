@@ -11,7 +11,7 @@ site_url: https://gnomad.broadinstitute.org/blog/
 publish_mode: editorial_workflow
 
 media_folder: static/images
-public_folder: /images
+public_folder: ../images
 
 collections:
   - name: "posts"
