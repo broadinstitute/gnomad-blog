@@ -20,9 +20,10 @@ const formatDate = (dateString) => {
 /* eslint-disable react/prop-types */
 /* eslint-disable-next-line no-unused-vars */
 const PostPreview = ({ entry, widgetFor, widgetsFor, getAsset, document, window }) => {
+  const data = entry.get("data").remove("body").toJS();
   const postMedata = {
-    ...entry.get("data").remove("body").toJS(),
-    date: formatDate(entry.getIn(["data", "date"])),
+    ...data,
+    date: data.date ? formatDate(data.date) : null,
   };
   return <BlogPost postMetadata={postMedata}>{widgetFor("body")}</BlogPost>;
 };
