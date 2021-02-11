@@ -28,12 +28,12 @@ some important practical considerations when using it. You can get more details,
 generation and analyses, in the full [gnomad-SV preprint](https://broad.io/gnomad_sv) available on
 bioRxiv.
 
+<!-- end_excerpt -->
+
 <figure>
    <img src="/images/2019/03/structural-variants-in-gnomad/fig1bcd.png" />
    <figcaption>Overview of the gnomAD-SV cohort and callset</figcaption>
 </figure>
-
-<!-- end_excerpt -->
 
 We jointly analyzed 14,891 genomes, 14,216 (95.5%) of which passed initial data quality thresholds,
 using a multi-algorithm consensus approach (details below) to construct the initial gnomAD SV

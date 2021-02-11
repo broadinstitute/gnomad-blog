@@ -18,11 +18,11 @@ sequencing from 15,496 individuals. Importantly, in addition to an increased num
 of each of the populations in ExAC, we now additionally provide allele frequencies across over 5000
 Ashkenazi Jewish (ASJ) individuals.
 
+<!-- end_excerpt -->
+
 The population breakdown is detailed in the table below.
 
 ![](/images/2017/02/the-genome-aggregation-database/exacv2_barplot_cut.png)
-
-<!-- end_excerpt -->
 
 | Population | Description                     | Genomes | Exomes  | Total   |
 | ---------- | ------------------------------- | ------- | ------- | ------- |
