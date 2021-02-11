@@ -28,12 +28,36 @@ Login to Netlify CMS at https://gnomad.broadinstitute.org/blog/admin/. To make c
 
 ## Images
 
-Currently, all images used in blog posts are uploaded to the `gnomad-blog-assets` storage bucket and referenced from there.
+Images uploaded through the CMS will be place in the [`static/images` directory](https://github.com/broadinstitute/gnomad-blog/tree/main/static/images). Netlify CMS does not yet support folders in the media library, so images from all posts will be uploaded in the same directory. Thus, please use descriptive file names that reference the post the image belongs to. Alternatively, images can be organized in directories by adding them locally and pushing to GitHub. However, images added this way will not appear in the CMS's media library.
 
-For example,
+**To improve performance of the website, please [optimize images](https://web.dev/uses-optimized-images/) before uploading them.**
 
-```html
-<figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exacv2_barplot_cut.png" />
-</figure>
-```
+- Because of their display size on the blog, images should not be larger than 1200 pixels wide.
+- JPEG may be much for efficient than PNG for some types of images.
+
+When the site is built, the `images` folder is copied to the root directory of the site. Thus, URLs to images will look like `/images/file.png` instead of `/static/images/file.png`.
+
+There are multiple ways to add an image to a post:
+
+- Media library
+
+   Select Rich Text mode, click the Plus button, and select Image. Only images uploaded through the CMS or in `static/images` (not in a nested directory) can be selected this way.
+
+- Markdown
+
+   Select Markdown mode.
+
+   ```md
+   ![alt text](/images/file.png)
+   ```
+
+- HTML
+
+   Works in either Rich Text or Markdown mode. Useful for adding captions.
+
+   ```html
+   <figure>
+      <img alt="alt text" src="/images/file.png" />
+      <figcaption>Caption text</figcaption>
+   </figure>
+   ```

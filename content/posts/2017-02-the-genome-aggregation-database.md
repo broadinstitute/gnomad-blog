@@ -20,9 +20,7 @@ Ashkenazi Jewish (ASJ) individuals.
 
 The population breakdown is detailed in the table below.
 
-<figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exacv2_barplot_cut.png" />
-</figure>
+![](/images/2017/02/the-genome-aggregation-database/exacv2_barplot_cut.png)
 
 <!-- end_excerpt -->
 
@@ -62,27 +60,25 @@ These few notes describe important changes from the ExAC dataset.
 The gnomAD browser is very similar to the ExAC browser with a few modifications to support
 integration of genome data. The coverage plot now has a green line to display genome coverage. In
 the variant table, a `source` column indicates whether the variant belongs to the exome callset
-(<img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exomes_icon.png" style="height:16px;vertical-align:middle;" />),
+(<img src="/images/2017/02/the-genome-aggregation-database/exomes_icon.png" style="height:16px;vertical-align:middle;" />),
 genome callset
-(<img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/genomes_icon.png" style="height:16px;vertical-align:middle;" />),
+(<img src="/images/2017/02/the-genome-aggregation-database/genomes_icon.png" style="height:16px;vertical-align:middle;" />),
 or both callsets
-(<img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exomes_icon.png" style="height:16px;vertical-align:middle;" />
-and <img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/genomes_icon.png" style="height:16px;vertical-align:middle;" />).
+(<img src="/images/2017/02/the-genome-aggregation-database/exomes_icon.png" style="height:16px;vertical-align:middle;" />
+and <img src="/images/2017/02/the-genome-aggregation-database/genomes_icon.png" style="height:16px;vertical-align:middle;" />).
 Variants present in both datasets have combined summary statistics (allele count, allele frequency,
 etc). We have added checkboxes for specifying which data to display on the page. Users can choose
 to include or exclude SNPs, indels, exome variants, genome variants, or filtered (non-pass)
 variants and the table statistics update accordingly. If filtered (non-pass) variants are included,
 the data source icons will be distinguished with reduced opacity and a dotted border to indicate
 lower reliability
-(<img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/exomes_filtered_icon.png" style="height:16px;vertical-align:middle;" />).
+(<img src="/images/2017/02/the-genome-aggregation-database/exomes_filtered_icon.png" style="height:16px;vertical-align:middle;" />).
 Variants present in both datasets have combined summary statistics (allele count, allele frequency,
 etc). A variant’s filter status can be discovered by hovering over the icon (e.g. `AC0`, `RF`). Be
 careful when including filtered variants: some poor quality variants (and summary statistics) will
 be added to the table. This feature should be used with caution.
 
-<figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2017/02/the-genome-aggregation-database/browser1.png" />
-</figure>
+![](/images/2017/02/the-genome-aggregation-database/browser1.png)
 
 On the variant page, the population frequency table has been modified such that exome and genome
 population statistics can be included or excluded. By default, filtered variants are not included

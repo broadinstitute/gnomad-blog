@@ -29,7 +29,7 @@ generation and analyses, in the full [gnomad-SV preprint](https://broad.io/gnoma
 bioRxiv.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/fig1bcd.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/fig1bcd.png" />
    <figcaption>Overview of the gnomAD-SV cohort and callset</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ allset (for more details, see the supplementary information for the
 We subdivided samples into four continental populations and one “other” category, as follows:
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/samples_table.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/samples_table.png" />
    <figcaption>Distribution of samples by population in gnomAD-SV</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ In gnomAD, our working definition of SVs includes all genomic rearrangements inv
 signature(s) and/or changes in copy number.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/sv_types.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/sv_types.png" />
    <figcaption>Classes of SV considered in gnomAD-SV</figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ categorized SVs into the following mutational classes (note: numbers correspond 
 SVs from 12,549 unrelated genomes used in the gnomAD SV preprint):
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/master_callset_summary.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/master_callset_summary.png" />
    <figcaption>Summary of variants catalogued in gnomAD-SV by mutational class</figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ class, position, and overlap with exons from canonical transcripts of
 be graphically summarized below for four main categories SV-gene interactions:
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/gene_annotation_schematics.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/gene_annotation_schematics.png" />
    <figcaption>Criteria used in gnomAD-SV for annotating genic consequences of SVs</figcaption>
 </figure>
 
@@ -122,13 +122,13 @@ you can start using the SV features right away with these two easy steps:
 1. Navigate to your favorite gene or region using the search bar:
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/homepage_search-1.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/homepage_search-1.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 2. Select the SV dataset by clicking the toggle button in the top-right part of the screen:
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/activate_sv_mode-2.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/activate_sv_mode-2.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 Once you’ve activated SV mode in the gnomAD Browser, you can interact with the data in multiple
@@ -138,7 +138,7 @@ The **variant track** displays all SVs currently in the view range corresponding
 coordinates, with each SV on its own row.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_track_scroll.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/variant_track_scroll.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 In the variant track, certain symbols are assigned to specific classes of SV, such as a triangle
@@ -146,20 +146,20 @@ for insertions (denoting the position at which sequence was inserted), or a ligh
 breakpoints of chromosomal translocations or unresolved breakends.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/ins_bnd_symbols.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/ins_bnd_symbols.png" />
 </figure>
 
 The **variant table** provides selected metadata for each variant displayed in the variant track,
 including allele frequencies, consequences, number of homozygotes, coordinates, and size.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_scroll.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/variant_table_scroll.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 All columns in the table are sortable by clicking the column headers.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_table_sort.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/variant_table_sort.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 There are three main options for filtering the variant track & table:
@@ -171,14 +171,14 @@ There are three main options for filtering the variant track & table:
 3. **Filter by keyword** by entering that keyword into the search field
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_variants.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/filter_variants.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 For more details about each of these filters, there are help text pop-ups available by clicking the
 "?" next to each row of filter buttons.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/filter_help_buttons.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/filter_help_buttons.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 We provide two options for coloring the SV data: **color-by-consequence** and **color-by-class**.
@@ -187,7 +187,7 @@ side of the page. The current color key will be reflected by the colors used for
 filter buttons found directly below the variant track.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/change_color_mode.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/change_color_mode.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 By default, low-quality variants–such as unresolved breakends–will not be displayed in the variant
@@ -195,7 +195,7 @@ track or table. You can activate these variants using the checkbox labeled "Incl
 variants" directly above the variant table.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/show_hidden_variants.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/show_hidden_variants.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 Both the variant track and table are synchronized: any filter, sort, scroll, or highlight applied
@@ -204,7 +204,7 @@ variant table will draw a dashed box to highlighting that SV in the table, but w
 that same variant and its position in the track (and vice versa).
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/synced_table_track.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/synced_table_track.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 To find more information about an individual variant, you can click on the variant ID in the table
@@ -214,7 +214,7 @@ its allele frequencies across continental populations, and a full list of all pr
 consequences.
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/example_variant_page.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/example_variant_page.png" />
 </figure>
 
 If you’re ever unsure about what a given SV represents or what its functional consequences mean,
@@ -223,7 +223,7 @@ particularly useful for complex SVs, where each help popup gives a graphical rep
 alternate allele structure.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/variant_page_help_popups.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/variant_page_help_popups.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 [Multiallelic CNVs](https://www.ncbi.nlm.nih.gov/pubmed/25621458), which are sites in the genome
@@ -235,7 +235,7 @@ is represented as a histogram, which has a mouse-over tooltip to show how many i
 present at each copy state.
 
 <figure>
-   <video src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/mcnv_copy_state_histogram.mp4" type="video/mp4" controls autoplay loop />
+   <video src="/images/2019/03/structural-variants-in-gnomad/mcnv_copy_state_histogram.mp4" type="video/mp4" controls autoplay loop />
 </figure>
 
 ## Practical considerations when using the gnomAD-SV callset
@@ -279,7 +279,7 @@ Below, we list a few important rules-of-thumb to keep in mind when using the gno
 ## gnomAD SV discovery methods
 
 <figure>
-   <img src="https://storage.googleapis.com/gnomad-blog-assets/2019/03/structural-variants-in-gnomad/gnomad-sv_supplementary_figure2.png" />
+   <img src="/images/2019/03/structural-variants-in-gnomad/gnomad-sv_supplementary_figure2.png" />
 </figure>
 
 To discover and genotype SVs in this cohort, we extended a multi-algorithm consensus framework from

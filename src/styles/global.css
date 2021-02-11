@@ -175,7 +175,8 @@ a:hover {
   line-height: 1.5;
 }
 
-.article-body figure {
+.article-body figure,
+.article-body p > img:only-child {
   margin: 2em 0;
   text-align: center;
 }

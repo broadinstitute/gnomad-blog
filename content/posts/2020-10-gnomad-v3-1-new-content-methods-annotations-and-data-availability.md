@@ -106,11 +106,11 @@ By popular request, we’ve computed allele counts and allele frequencies for ma
 
 Subset-specific allele counts and allele frequencies are available on variant pages by clicking on the drop-down menu at the top-right corner of the page:
 
-![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/drop_down_subsets_v3_1.png)
+![](/images/2020/10/drop_down_subsets_v3_1.png)
 
 Viewers will note that in addition to the gnomAD population frequencies, population frequencies specific to the HGDP and 1000 Genomes cohorts are available:
 
-![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/1kg_table.png)
+![](/images/2020/10/1kg_table.png)
 
 We provided allele counts and population frequencies for HGDP and 1000 Genomes to allow users to observe and compare the distribution of variant alleles across a diverse range of distinct human populations.
 
@@ -174,7 +174,7 @@ The process of imputing sex was the same as the method used for gnomAD v3, with 
 
 The plot below overlays the new v3.1 samples onto the normalized X coverage vs. normalized Y coverage plot with gnomAD v3 samples displayed in grey.
 
-![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/sex_ploidy_v3_1.png)
+![](/images/2020/10/sex_ploidy_v3_1.jpg)
 
 #### Ancestry inference
 
@@ -182,7 +182,7 @@ The method for ancestry assignment was the same as the method used for v3, with 
 
 The figure below shows a 2D uniform manifold approximation and projection [(UMAP)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1008432) of ancestry principal components 1-6 and 8-16, colored by the inferred ancestries of the samples. Note that long-range distances in this projection do not reflect genetic distance between populations.
 
-![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/gnomAD_v3.1_umap_pops.png)
+![](/images/2020/10/gnomAD_v3.1_umap_pops.jpg)
 
 #### Sample QC metric outlier filtering
 
@@ -199,7 +199,7 @@ We used the standard GATK training resources (HapMap, Omni, 1000 Genomes, Mills 
 
 The figure below shows the precision and recall curves for the allele-specific VQSR model (AS\_VQSR\_TS) using a truth sample ([NA12878](https://github.com/genome-in-a-bottle/giab_latest_release)) present in our data. The lines at 90 (SNVs) and 80 (indels) indicate the cutoffs we chose for filtering.
 
-![](https://storage.googleapis.com/gnomad-blog-assets/2020/10/variant_pr_curves_v3_1.png) The same variant hard filters were applied:
+![](/images/2020/10/variant_pr_curves_v3_1.jpg) The same variant hard filters were applied:
 
 * No high-quality genotype (GQ>=20, DP>=10, and AB>=0.2 for heterozygotes) called for the variant
 * InbreedingCoeff < -0.3
