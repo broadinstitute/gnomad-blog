@@ -293,3 +293,16 @@ td {
   border-top: 1px solid #ededed;
   padding: 0.25em 2em 0.25em 0;
 }
+
+/***************************************/
+/* Other pages
+/***************************************/
+
+.category-list {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.category-list li {
+  margin-bottom: 0.5em;
+}
