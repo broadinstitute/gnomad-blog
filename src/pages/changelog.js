@@ -4,9 +4,9 @@ import React from "react";
 
 import Layout from "../components/layout";
 
-const ChangelogPage = ({ pageContext, data }) => {
+const ChangelogPage = ({ data }) => {
   return (
-    <Layout title={pageContext.category}>
+    <Layout title="Changelog">
       <div className="article-list no-sidebar">
         <h1>Changelog</h1>
         <div className="article-list-inner">
@@ -44,9 +44,6 @@ const ChangelogPage = ({ pageContext, data }) => {
 };
 
 ChangelogPage.propTypes = {
-  pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }).isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
