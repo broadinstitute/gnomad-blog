@@ -227,6 +227,10 @@ a:hover {
   padding: 0;
 }
 
+.article-list.no-sidebar .article {
+  max-width: none;
+}
+
 .sidebar {
   display: none;
 }

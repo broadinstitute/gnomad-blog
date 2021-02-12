@@ -29,3 +29,4 @@ const PostPreview = ({ entry, widgetFor, widgetsFor, getAsset, document, window 
 };
 
 CMS.registerPreviewTemplate("posts", PostPreview);
+CMS.registerPreviewTemplate("changelog", PostPreview);

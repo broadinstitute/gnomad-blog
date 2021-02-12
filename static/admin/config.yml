@@ -50,3 +50,29 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - name: "changelog"
+    label: "Changelog"
+    folder: "content/changelog"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    preview_path: "{{slug}}/"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "MMMM DD, YYYY"
+        timeFormat: false
+      - label: "Relative order"
+        hint: "Order in which to display this post relative to other posts published on the same date."
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        default: 1
+        min: 1
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

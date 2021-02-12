@@ -15,6 +15,13 @@ const config = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/content/changelog`,
+        name: "changelog",
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         excerpt_separator: "<!-- end_excerpt -->",
