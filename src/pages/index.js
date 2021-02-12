@@ -15,14 +15,14 @@ const BlogIndex = ({ data }) => {
           <>
             <h3>Categories</h3>
             <ul className="sidebar-list">
-              {data.allMarkdownRemark.group.map(
-                ({ fieldValue: category, totalCount: numPosts }) => (
+              {data.allMarkdownRemark.group
+                .sort((groupA, groupB) => groupB.totalCount - groupA.totalCount)
+                .map(({ fieldValue: category, totalCount: numPosts }) => (
                   <li key={category}>
                     <Link to={`/category/${kebabCase(category.toLowerCase())}/`}>{category}</Link>
                     <div className="item-description">{numPosts} posts</div>
                   </li>
-                )
-              )}
+                ))}
             </ul>
           </>
         }

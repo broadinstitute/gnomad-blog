@@ -11,13 +11,15 @@ const Categories = ({ data }) => {
       <div className="article-list">
         <h1>Categories</h1>
         <ul className="category-list">
-          {data.allMarkdownRemark.group.map(({ fieldValue: category, totalCount: numPosts }) => (
-            <li key={category}>
-              <Link to={`/category/${kebabCase(category.toLowerCase())}/`}>{category}</Link>
-              <br />
-              {numPosts} posts
-            </li>
-          ))}
+          {data.allMarkdownRemark.group
+            .sort((groupA, groupB) => groupB.totalCount - groupA.totalCount)
+            .map(({ fieldValue: category, totalCount: numPosts }) => (
+              <li key={category}>
+                <Link to={`/category/${kebabCase(category.toLowerCase())}/`}>{category}</Link>
+                <br />
+                {numPosts} posts
+              </li>
+            ))}
         </ul>
       </div>
     </Layout>
