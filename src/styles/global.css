@@ -227,8 +227,8 @@ a:hover {
   padding: 0;
 }
 
-.article-list.no-sidebar .article {
-  max-width: none;
+.article-list.no-sidebar {
+  max-width: 645px;
 }
 
 .sidebar {
