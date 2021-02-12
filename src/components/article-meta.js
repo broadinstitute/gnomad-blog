@@ -46,7 +46,7 @@ ArticleMeta.propTypes = {
   postMetadata: PropTypes.shape({
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    authors: PropTypes.arrayOf(PropTypes.string),
     categories: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };
