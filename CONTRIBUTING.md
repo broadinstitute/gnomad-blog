@@ -61,3 +61,23 @@ There are multiple ways to add an image to a post:
       <figcaption>Caption text</figcaption>
    </figure>
    ```
+
+## Videos
+
+To add a video, place the file in the `static/images` directory and add the following HTML:
+
+```html
+<figure>
+   <video src="../images/file.mp4" type="video/mp4" controls autoplay loop />
+</figure>
+```
+
+To reduce the file size of videos produced by screen recording, use [ffmpeg](https://ffmpeg.org/) ([available through Homebrew](https://formulae.brew.sh/formula/ffmpeg)).
+
+```shell
+ffmpeg -i input.mov \
+   -vcodec h264 \ # Convert to MP4
+   -an \ # Drop audio
+   -filter_complex "scale=iw*min(1\,1200/iw):-1" \ # Resize to a max width of 1200px
+   output.mp4
+```
