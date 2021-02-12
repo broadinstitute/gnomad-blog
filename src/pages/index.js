@@ -1,4 +1,5 @@
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
+import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -8,7 +9,24 @@ import Layout from "../components/layout";
 const BlogIndex = ({ data }) => {
   return (
     <Layout title="Home">
-      <ArticleList posts={data.allMarkdownRemark.edges} />
+      <ArticleList
+        posts={data.allMarkdownRemark.edges}
+        extraSidebarContent={
+          <>
+            <h3>Categories</h3>
+            <ul className="sidebar-list">
+              {data.allMarkdownRemark.group.map(
+                ({ fieldValue: category, totalCount: numPosts }) => (
+                  <li key={category}>
+                    <Link to={`/category/${kebabCase(category.toLowerCase())}/`}>{category}</Link>
+                    <div className="item-description">{numPosts} posts</div>
+                  </li>
+                )
+              )}
+            </ul>
+          </>
+        }
+      />
     </Layout>
   );
 };
@@ -17,6 +35,12 @@ BlogIndex.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.object).isRequired,
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        })
+      ).isRequired,
     }).isRequired,
   }).isRequired,
 };
@@ -39,6 +63,10 @@ export const pageQuery = graphql`
             categories
           }
         }
+      }
+      group(field: frontmatter___categories) {
+        fieldValue
+        totalCount
       }
     }
   }

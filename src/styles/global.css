@@ -231,17 +231,17 @@ a:hover {
   display: none;
 }
 
-.recent-posts-list {
+.sidebar-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.recent-posts-list li {
+.sidebar-list li {
   margin-bottom: 1rem;
 }
 
-.recent-posts-list .article-date {
+.sidebar-list .item-description {
   color: #666;
 }
 

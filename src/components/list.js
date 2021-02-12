@@ -4,7 +4,7 @@ import React from "react";
 
 import ArticleMeta from "./article-meta";
 
-const ArticleList = ({ heading, posts }) => {
+const ArticleList = ({ heading, posts, extraSidebarContent }) => {
   return (
     <div className="article-list">
       {heading && <h1>{heading}</h1>}
@@ -37,17 +37,18 @@ const ArticleList = ({ heading, posts }) => {
 
         <aside className="sidebar">
           <h3>Latest posts</h3>
-          <ol className="recent-posts-list">
+          <ol className="sidebar-list">
             {posts.slice(0, 5).map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug;
               return (
                 <li key={node.fields.slug}>
                   <Link to={node.fields.slug}>{title}</Link>
-                  <div className="article-date">{node.frontmatter.date}</div>
+                  <div className="item-description">{node.frontmatter.date}</div>
                 </li>
               );
             })}
           </ol>
+          {extraSidebarContent}
         </aside>
       </div>
     </div>
@@ -72,10 +73,12 @@ ArticleList.propTypes = {
       }).isRequired,
     })
   ).isRequired,
+  extraSidebarContent: PropTypes.node,
 };
 
 ArticleList.defaultProps = {
   heading: undefined,
+  extraSidebarContent: undefined,
 };
 
 export default ArticleList;
