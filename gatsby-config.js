@@ -33,7 +33,6 @@ const config = {
             },
           },
           "gatsby-remark-autolink-headers",
-          "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
           "gnomad-blog-image-paths",
         ],
