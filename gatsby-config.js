@@ -78,6 +78,7 @@ const config = {
             query: `
               {
                 allMarkdownRemark(
+                  filter: { fileAbsolutePath: { regex: "/posts/" } }
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
