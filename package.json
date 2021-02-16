@@ -1,6 +1,9 @@
 {
   "name": "gnomad-blog",
   "private": true,
+  "workspaces": [
+    "plugins/*"
+  ],
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",

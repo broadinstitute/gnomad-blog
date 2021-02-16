@@ -1,0 +1,10 @@
+{
+  "name": "gnomad-blog-image-paths",
+  "version": "0.0.0",
+  "private": true,
+  "main": "image-paths.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "unist-util-visit": "^2.0.3"
+  }
+}

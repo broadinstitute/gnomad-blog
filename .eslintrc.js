@@ -26,5 +26,11 @@ module.exports = {
         browser: true,
       },
     },
+    {
+      files: ["plugins/**/*.js", "gatsby-config.js", "gatsby-node.js"],
+      env: {
+        node: true,
+      },
+    },
   ],
 };
