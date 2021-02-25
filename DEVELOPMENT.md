@@ -2,16 +2,23 @@
 
 The gnomAD blog is built with [Gatsby](https://www.gatsbyjs.org/docs/).
 
+## Set up environment
+
+[Install pre-commit](https://pre-commit.com/#install) and hooks (`pre-commit install`).
+
+To run a development server locally, install [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/). Install dependencies with `yarn install`.
+
+Alternatively, a development server can be run in a [Docker](https://docs.docker.com/) container.
+
+## Run development server
+
 Run a local development server with:
 
 ```
-yarn install
 yarn start
 ```
 
-This requires [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/).
-
-Alternatively, the development server can be run in a [Docker](https://docs.docker.com/) container with [Docker Compose](https://docs.docker.com/compose/):
+Or in Docker with [Docker Compose](https://docs.docker.com/compose/):
 
 ```
 docker-compose up
@@ -30,7 +37,7 @@ For example:
 ```yaml
 ---
 title: Adding a new post
-date: '2020-09-10' # YYYY-MM-DD format, quotes are important
+date: "2020-09-10" # YYYY-MM-DD format, quotes are important
 categories:
   - Documentation
   - Examples
@@ -38,7 +45,7 @@ authors:
   - Alice
   - Bob
 ---
+
 ```
 
 The rest of the file should contain the post content written in [Markdown](https://www.markdownguide.org/basic-syntax/).
-
