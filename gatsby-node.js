@@ -11,7 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/posts/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
           limit: 1000
         ) {
           edges {
@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/changelog/" } }
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
           limit: 1000
         ) {
           edges {
