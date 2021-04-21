@@ -5,6 +5,7 @@ import React from "react";
 
 import ArticleList from "../components/list";
 import Layout from "../components/layout";
+import RSSIcon from "../components/rss-icon";
 
 const BlogIndex = ({ data }) => {
   return (
@@ -23,6 +24,19 @@ const BlogIndex = ({ data }) => {
                     <div className="item-description">{numPosts} posts</div>
                   </li>
                 ))}
+            </ul>
+            <h3>Subscribe</h3>
+            <ul className="sidebar-list">
+              <li>
+                <Link to="/rss.xml">
+                  <RSSIcon /> RSS feed
+                </Link>
+              </li>
+              <li>
+                <Link to="/changelog.xml">
+                  <RSSIcon /> Changelog RSS feed
+                </Link>
+              </li>
             </ul>
           </>
         }
