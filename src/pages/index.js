@@ -1,4 +1,4 @@
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
@@ -28,14 +28,14 @@ const BlogIndex = ({ data }) => {
             <h3>Subscribe</h3>
             <ul className="sidebar-list">
               <li>
-                <Link to="/rss.xml">
+                <a href={withPrefix("/rss.xml")}>
                   <RSSIcon /> RSS feed
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/changelog.xml">
+                <a href={withPrefix("/changelog.xml")}>
                   <RSSIcon /> Changelog RSS feed
-                </Link>
+                </a>
               </li>
             </ul>
           </>
