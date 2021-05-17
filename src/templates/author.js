@@ -28,7 +28,7 @@ AuthorPage.propTypes = {
 export default AuthorPage;
 
 export const pageQuery = graphql`
-  query($author: String!) {
+  query ($author: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { authors: { in: [$author] } } }
       sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }

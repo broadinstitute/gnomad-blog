@@ -27,7 +27,7 @@ CategoryPage.propTypes = {
 export default CategoryPage;
 
 export const pageQuery = graphql`
-  query($category: String!) {
+  query ($category: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { categories: { in: [$category] } } }
       sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
