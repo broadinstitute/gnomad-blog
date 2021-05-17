@@ -29,8 +29,8 @@ collections:
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "MMMM DD, YYYY"
-        timeFormat: false
+        date_format: "MMMM DD, YYYY"
+        time_format: false
       - label: "Relative order"
         hint: "Order in which to display this post relative to other posts published on the same date."
         name: "order"
@@ -64,8 +64,8 @@ collections:
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DD"
-        dateFormat: "MMMM DD, YYYY"
-        timeFormat: false
+        date_format: "MMMM DD, YYYY"
+        time_format: false
       - label: "Relative order"
         hint: "Order in which to display this post relative to other posts published on the same date."
         name: "order"
