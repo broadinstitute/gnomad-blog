@@ -5,7 +5,7 @@ import React from "react";
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/#modulepath
 import "./styles/global.css";
 
-import { BlogPost } from "./templates/blog-post";
+import BlogPost from "./components/blog-post";
 
 const dateFormatter = new Intl.DateTimeFormat([], { dateStyle: "long" });
 
