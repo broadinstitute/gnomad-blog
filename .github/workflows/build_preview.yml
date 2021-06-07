@@ -27,7 +27,7 @@ jobs:
             --header "content-type: application/json" \
             --data "{
               \"state\": \"pending\",
-              \"target_url\": \"https://gnomad.broadinstitute.org/blog/preview/${pr_number}\",
+              \"target_url\": \"https://gnomad.broadinstitute.org/news/preview/${pr_number}\",
               \"description\": \"Building preview\",
               \"context\": \"Preview\"
             }" > /dev/null
@@ -55,7 +55,7 @@ jobs:
       - name: Build site
         run: |
           pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-          PATH_PREFIX="/blog/preview/${pr_number}" yarn run build
+          PATH_PREFIX="/news/preview/${pr_number}" yarn run build
 
       - name: Setup gcloud
         if: github.event.pull_request.head.repo.full_name == github.repository
@@ -86,7 +86,7 @@ jobs:
             --header "content-type: application/json" \
             --data "{
               \"state\": \"success\",
-              \"target_url\": \"https://gnomad.broadinstitute.org/blog/preview/${pr_number}\",
+              \"target_url\": \"https://gnomad.broadinstitute.org/news/preview/${pr_number}\",
               \"description\": \"Preview ready\",
               \"context\": \"Preview\"
             }" > /dev/null

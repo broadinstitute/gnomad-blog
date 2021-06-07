@@ -2,7 +2,7 @@
 
 Blog for the [gnomAD project](https://gnomad.broadinstitute.org/)
 
-https://gnomad.broadinstitute.org/blog/
+https://gnomad.broadinstitute.org/news/
 
 ## Contributing
 

@@ -3,10 +3,10 @@ backend:
   repo: broadinstitute/gnomad-blog
   branch: main
   base_url: https://gnomad.broadinstitute.org
-  auth_endpoint: /blog/auth/
+  auth_endpoint: /news/auth/
   preview_context: Preview
 
-site_url: https://gnomad.broadinstitute.org/blog/
+site_url: https://gnomad.broadinstitute.org/news/
 
 publish_mode: editorial_workflow
 

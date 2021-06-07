@@ -1,10 +1,10 @@
 /* eslint-env node */
 const config = {
-  pathPrefix: process.env.PATH_PREFIX || "/blog",
+  pathPrefix: process.env.PATH_PREFIX || "/news",
   siteMetadata: {
-    title: "gnomAD blog",
+    title: "gnomAD news",
     description: "Announcements from the gnomAD project",
-    siteUrl: "https://gnomad.broadinstitute.org/blog",
+    siteUrl: "https://gnomad.broadinstitute.org/news",
   },
   plugins: [
     {
