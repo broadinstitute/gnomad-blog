@@ -10,4 +10,4 @@ Over the last year, we’ve worked with major cloud providers to [make these VCF
 
 <!-- end_excerpt -->
 
-For many months, the download links for VCFs on our browser have pointed to copies hosted by our cloud partners, sousers won’t experience any disruption or notice any differences when they navigate to the browser to download gnomAD data. Users who were previously accessing VCF files by browsing our public bucket will need to change the bucket from which they pull files. These buckets are listed at https://gnomad.broadinstitute.org/downloads.
+For many months, the download links for VCFs on our browser have pointed to copies hosted by our cloud partners, so users won’t experience any disruption or notice any differences when they navigate to the browser to download gnomAD data. Users who were previously accessing VCF files by browsing our public bucket will need to change the bucket from which they pull files. These buckets are listed at https://gnomad.broadinstitute.org/downloads.
