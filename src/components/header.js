@@ -55,8 +55,8 @@ const Header = ({ siteTitle }) => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/contact">
-              Contact
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/feedback">
+              Feedback
             </a>
           </li>
           <li className="nav-item">
