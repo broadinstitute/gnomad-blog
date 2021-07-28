@@ -9,6 +9,7 @@ authors:
   - Michael Guo
   - Laurent Francioli
   - Nick Watts
+  - Julia Goodrich
 ---
 Today, we are pleased to announce the incorporation of variant co-occurrence (inferred phasing) information in the gnomAD v2 browser. Phase refers to the genetic relationship between a pair of variants; that is, whether the variants are on the same copy of the gene (*cis*) or on different copies of the gene (*trans*). We are releasing inferred phasing data for all pairs of variants within a gene where both variants have a global allele frequency in gnomAD exomes < 5% and are either coding or in the 5’/3’ UTRs (20,921,100 pairs of variants across 19,685 genes). We envision that this data will be of tremendous help to the medical genetics community in identifying and interpreting co-occurring  variants in the context of recessive conditions. 
 
