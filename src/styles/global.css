@@ -287,15 +287,30 @@ table {
   line-height: 2;
 }
 
+td,
 th {
   padding: 0.25em 2em 0.25em 0;
+  border-top: 1px solid #ccc;
+}
+
+th {
   font-weight: bold;
   text-align: left;
 }
 
-td {
-  border-top: 1px solid #ededed;
-  padding: 0.25em 2em 0.25em 0;
+thead td,
+thead th {
+  border-top: none;
+}
+
+thead tr:last-child td,
+thead tr:last-child th {
+  border-bottom: 1px solid #000;
+}
+
+tfoot tr:first-child td,
+tfoot tr:first-child th {
+  border-top: 1px solid #000;
 }
 
 /***************************************/
