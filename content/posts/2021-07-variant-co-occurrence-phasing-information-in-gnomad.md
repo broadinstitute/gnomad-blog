@@ -40,19 +40,87 @@ We then determined the phase of every pair of variants within each gene in gnomA
 
 We validated this approach using 4,992 trios, leveraging the fact that we can uniquely phase variants using trios as a “truth” set. For this experiment, we removed individuals in gnomAD that were part of or related to the individuals in the trios. We found that we are 93-99% accurate for variants when they are on the same haplotype (*cis*) and 90-97% accurate for variants when they are on different haplotypes (*trans*), depending on the population. This remains the case even for extremely rare variants (<0.5% MAF), where we see similar accuracies. 
 
-| Population              | Different haplotypes | Same haplotype |
-
-| Allele frequency cutoff | <5% | <0.5% | <5% | <0.5% |
-| ----------------------- | --- | ----- | --- | ----- |
-| African/African-American | 0.930 | 0.968| 0.946 | 0.971 |
-| Latino/Admixed American | 0.929 | 0.955 | 0.959 | 0.962 |
-| Ashkenazi Jewish | 0.967 | 0.994 | 0.992 | 0.996 |
-| East Asian | 0.896 | 0.954 | 0.948 | 0.957 |
-| European (Finnish) | 0.963 | 0.986 | 0.989 | 0.991 |
-| European (non-Finnish) | 0.904 | 0.919 | 0.933 | 0.935 |
-| South Asian | 0.958 | 0.959 | 0.967 | 0.962 |
-| All | 0.773 | 0.777 | 0.835 | 0.804 |
-
+<table>
+   <colgroup>
+      <col>
+      <col span="2">
+      <col span="2">
+   </colgroup>
+   <thead>
+      <tr>
+         <th></th>
+         <th colspan="2" scope="colgroup">Different haplotypes</th>
+         <th colspan="2" scope="colgroup">Same haplotypes</th>
+      </tr>
+      <tr>
+         <th scope="col">Population</th>
+         <th scope="col">AF &lt; 5%</th>
+         <th scope="col">AF &lt; 0.5%</th>
+         <th scope="col">AF &lt; 5%</th>
+         <th scope="col">AF &lt; 0.5%</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th scope="row">African/African-American</th>
+         <td>0.930</td>
+         <td>0.968</td>
+         <td>0.946</td>
+         <td>0.971</td>
+      </tr>
+      <tr>
+         <th scope="row">Latino/Admixed American</th>
+         <td>0.929</td>
+         <td>0.955</td>
+         <td>0.959</td>
+         <td>0.962</td>
+      </tr>
+      <tr>
+         <th scope="row">Ashkenazi Jewish</th>
+         <td>0.967</td>
+         <td>0.994</td>
+         <td>0.992</td>
+         <td>0.996</td>
+      </tr>
+      <tr>
+         <th scope="row">East Asian</th>
+         <td>0.896</td>
+         <td>0.954</td>
+         <td>0.948</td>
+         <td>0.957</td>
+      </tr>
+      <tr>
+         <th scope="row">European (Finnish)</th>
+         <td>0.963</td>
+         <td>0.986</td>
+         <td>0.989</td>
+         <td>0.991</td>
+      </tr>
+      <tr>
+         <th scope="row">European (non-Finnish)</th>
+         <td>0.904</td>
+         <td>0.919</td>
+         <td>0.933</td>
+         <td>0.935</td>
+      </tr>
+      <tr>
+         <th scope="row">South Asian</th>
+         <td>0.958</td>
+         <td>0.959</td>
+         <td>0.967</td>
+         <td>0.962</td>
+      </tr>
+   </tbody>
+   <tfoot>
+      <tr>
+         <th scope="row">All</th>
+         <td>0.773</td>
+         <td>0.777</td>
+         <td>0.835</td>
+         <td>0.804</td>
+      </tr>
+   </tfoot>
+</table>
 
 ### How to use the browser
 
