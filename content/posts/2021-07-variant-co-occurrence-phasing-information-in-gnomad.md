@@ -21,7 +21,7 @@ A pair of variants in a gene can occur in *cis* (same copy of the gene) or *tran
 
 ![](../images/2021/08/phasing_schematic.png)
 
-However, based on the child’s DNA sequencing alone, these two scenarios are indistinguishable in the vast majority of scenarios when short read next generation sequencing data is used. This is because most pairs of variants are further apart from each other than the length of a single sequencing read and thus their phase cannot be determined based on the child’s sequencing data itself. (See the [“Multinucleotide Variants”] (#multinucleotide-variants) section below for more details on how we handle coding variants that occur within 3 bp.) To overcome this challenge, clinical geneticists often sequence parental DNA. If the two variants are in *cis*, they should be both present in one parent. If they are in *trans*, each variant will be seen in a different parent. However, sequencing parental DNA increases cost, and parental DNA is not always available. Occasionally, we can apply long read sequencing to help infer phase, but this is still quite expensive to perform.
+However, based on the child’s DNA sequencing alone, these two scenarios are indistinguishable in the vast majority of scenarios when short read next generation sequencing data is used. This is because most pairs of variants are further apart from each other than the length of a single sequencing read and thus their phase cannot be determined based on the child’s sequencing data itself. (See the [“Multinucleotide Variants”](#multinucleotide-variants) section below for more details on how we handle coding variants that occur within 3 bp.) To overcome this challenge, clinical geneticists often sequence parental DNA. If the two variants are in *cis*, they should be both present in one parent. If they are in *trans*, each variant will be seen in a different parent. However, sequencing parental DNA increases cost, and parental DNA is not always available. Occasionally, we can apply long read sequencing to help infer phase, but this is still quite expensive to perform.
 
 There are a number of accurate and efficient algorithms for determining phase for variants that are common in the population. However, phasing is not trivial for rare variants, which are the variants that are likely to be of greatest importance in Mendelian conditions. Additionally, exome sequencing data, in which the vast majority of the genome is not covered, does not provide enough density of surrounding variants to allow for accurate phasing. Phasing is also computationally intensive and can be technically challenging. Finally, phasing requires full variant data (i.e., more than what is available in a clinical genetic report), which is often not available to end users. 
 
@@ -40,7 +40,19 @@ We then determined the phase of every pair of variants within each gene in gnomA
 
 We validated this approach using 4,992 trios, leveraging the fact that we can uniquely phase variants using trios as a “truth” set. For this experiment, we removed individuals in gnomAD that were part of or related to the individuals in the trios. We found that we are 93-99% accurate for variants when they are on the same haplotype (*cis*) and 90-97% accurate for variants when they are on different haplotypes (*trans*), depending on the population. This remains the case even for extremely rare variants (<0.5% MAF), where we see similar accuracies. 
 
-[INSERT TABLE HERE]
+| Population              | Different haplotypes | Same haplotype |
+
+| Allele frequency cutoff | <5% | <0.5% | <5% | <0.5% |
+| ----------------------- | --- | ----- | --- | ----- |
+| African/African-American | 0.930 | 0.968| 0.946 | 0.971 |
+| Latino/Admixed American | 0.929 | 0.955 | 0.959 | 0.962 |
+| Ashkenazi Jewish | 0.967 | 0.994 | 0.992 | 0.996 |
+| East Asian | 0.896 | 0.954 | 0.948 | 0.957 |
+| European (Finnish) | 0.963 | 0.986 | 0.989 | 0.991 |
+| European (non-Finnish) | 0.904 | 0.919 | 0.933 | 0.935 |
+| South Asian | 0.958 | 0.959 | 0.967 | 0.962 |
+| All | 0.773 | 0.777 | 0.835 | 0.804 |
+
 
 ### How to use the browser
 
