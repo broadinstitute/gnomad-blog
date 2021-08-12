@@ -49,16 +49,16 @@ We validated this approach using 4,992 trios, leveraging the fact that we can un
    <thead>
       <tr>
          <th></th>
-         <th colspan="3" scope="colgroup">Different haplotypes</th>
-         <th colspan="3" scope="colgroup">Same haplotypes</th>
+         <th colspan="3" scope="colgroup" style="text-align:center">Different haplotypes</th>
+         <th colspan="3" scope="colgroup" style="text-align:center">Same haplotypes</th>
       </tr>
       <tr>
          <th scope="col">Population</th>
-         <th scope="col">AF &lt; 5%</th>
-         <th scope="col">AF &lt; 0.5%</th>
+         <th scope="col">AF&lt;5%</th>
+         <th scope="col">AF&lt;0.5%</th>
          <th scope="col">Singleton</th>
-         <th scope="col">AF &lt; 5%</th>
-         <th scope="col">AF &lt; 0.5%</th>
+         <th scope="col">AF&lt;5%</th>
+         <th scope="col">AF&lt;0.5%</th>
          <th scope="col">Singleton</th>
       </tr>
    </thead>
