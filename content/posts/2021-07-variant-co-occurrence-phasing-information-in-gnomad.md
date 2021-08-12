@@ -158,7 +158,7 @@ Based on the haplotype estimates, we also calculate probabilities that a pair of
 
 ![](../images/2021/08/em_probability_distribution.png)
 
-**We caution users to not overinterpret the provided probabilities for whether variants are more likely on same or different haplotypes.** These are not well calibrated and often based on small numbers of exomes, and we intentionally do not assign statistical significance to these numbers. 
+**We caution users not to overinterpret the provided probabilities for whether variants are more likely on the same or different haplotypes.** These are not well calibrated and often based on small numbers of exomes, and we intentionally do not assign statistical significance to these numbers. 
 
 ### Multinucleotide Variants
 
@@ -166,8 +166,10 @@ This isn’t the first time that we have looked at patterns of co-occurrence in 
 
 ### Caveats and limitations
 
-A key limitation to our current approach is that a pair of variants needs to be seen in gnomAD at least twice in order to provide any phasing information. However, many Mendelian disease variants are exceedingly rare in the general population and thus may not be present in gnomAD. Additionally, variants in a given individual are most accurately phased when based on data from the corresponding ancestral population. However, the sample sizes for some ancestral populations in gnomAD are still relatively small, limiting the accuracy of the phasing for these populations. As additional, ancestrally diverse samples are added in future gnomAD releases, we will be able to update our calculations to improve our accuracy; and we will also be able to phase a greater number of variant pairs.
+A key limitation to our current approach is that many Mendelian disease variants are exceedingly rare in the general population, and phasing accuracy for extremely rare variants is generally lower. Additionally, variants in a given individual are most accurately phased when based on data from the corresponding ancestral population. However, the sample sizes for some ancestral populations in gnomAD are still relatively small, limiting the accuracy of the phasing for these populations. As additional, ancestrally diverse samples are added in future gnomAD releases, we will be able to update our calculations to improve our accuracy; and we will also be able to phase a greater number of variant pairs.
 
 The accuracy of phasing also depends on recombination and mutation rates, as alluded to above. If there is a recombination hotspot between a pair of variants, or they are far apart (as can happen in a very long gene), then recombination can disrupt the genetic relationships and render this approach less accurate. Also, if a variant is recurrently mutating (and thus arising recurrently on multiple haplotypes), our approach will be less accurate.
+
+### Conclusion
 
 In summary, we leverage the size of gnomAD to provide a new resource to the medical genetics community on the phase of rare variants. We hope that the variant co-occurrence information now displayed in the gnomAD browser will greatly aid in the interpretation of co-occurring variants, and we encourage users to write to [gnomad@broadinstitute.org](mailto:gnomad@broadinstitute.org) with comments and suggestions for improving this feature.
