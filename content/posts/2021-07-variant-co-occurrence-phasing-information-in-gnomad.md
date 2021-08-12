@@ -11,7 +11,7 @@ authors:
   - Nick Watts
   - Julia Goodrich
 ---
-Today, we are pleased to announce the incorporation of variant co-occurrence (inferred phasing) information in the gnomAD v2 browser. Phase refers to the genetic relationship between a pair of variants; that is, whether the variants are on the same copy of the gene (*cis*) or on different copies of the gene (*trans*). We are releasing inferred phasing data for all pairs of variants within a gene where both variants have a global allele frequency in gnomAD exomes <5% and are either coding, flanking intronic (from position -1 to -3 in acceptor sites, and +1 to +8 in donor sites) or in the 5’/3’ UTRs. This encompasses 16,753,522 pairs of variants across 19,612 genes. We envision that this data will be of tremendous help to the medical genetics community in identifying and interpreting co-occurring variants in the context of recessive conditions. 
+Today, we are pleased to announce the incorporation of variant co-occurrence (inferred phasing) information in the gnomAD v2 browser. Phase refers to the genetic relationship between a pair of variants; that is, whether the variants are on the same copy of the gene (*cis*) or on different copies of the gene (*trans*). We are releasing inferred phasing data for all pairs of variants within a gene where both variants have a global allele frequency in gnomAD exomes <5% and are either coding, flanking intronic (from position -1 to -3 in acceptor sites, and +1 to +8 in donor sites) or in the 5’/3’ UTRs. This encompasses 20,921,100 pairs of variants across 19,685 genes. We envision that this data will be of tremendous help to the medical genetics community in identifying and interpreting co-occurring variants in the context of recessive conditions. 
 
 <!-- end_excerpt -->
 
@@ -43,81 +43,99 @@ We validated this approach using 4,992 trios, leveraging the fact that we can un
 <table>
    <colgroup>
       <col>
-      <col span="2">
-      <col span="2">
+      <col span="3">
+      <col span="3">
    </colgroup>
    <thead>
       <tr>
          <th></th>
-         <th colspan="2" scope="colgroup">Different haplotypes</th>
-         <th colspan="2" scope="colgroup">Same haplotypes</th>
+         <th colspan="3" scope="colgroup">Different haplotypes</th>
+         <th colspan="3" scope="colgroup">Same haplotypes</th>
       </tr>
       <tr>
          <th scope="col">Population</th>
          <th scope="col">AF &lt; 5%</th>
          <th scope="col">AF &lt; 0.5%</th>
+         <th scope="col">Singleton</th>
          <th scope="col">AF &lt; 5%</th>
          <th scope="col">AF &lt; 0.5%</th>
+         <th scope="col">Singleton</th>
       </tr>
    </thead>
    <tbody>
       <tr>
          <th scope="row">African/African-American</th>
-         <td>0.930</td>
-         <td>0.968</td>
-         <td>0.946</td>
-         <td>0.971</td>
+         <td>0.928</td>
+         <td>0.960</td>
+         <td>0.853</td>
+         <td>0.943</td>
+         <td>0.962</td>
+         <td>0.853</td>
       </tr>
       <tr>
          <th scope="row">Latino/Admixed American</th>
-         <td>0.929</td>
-         <td>0.955</td>
-         <td>0.959</td>
-         <td>0.962</td>
+         <td>0.928</td>
+         <td>0.952</td>
+         <td>0.893</td>
+         <td>0.956</td>
+         <td>0.958</td>
+         <td>0.893</td>
       </tr>
       <tr>
          <th scope="row">Ashkenazi Jewish</th>
          <td>0.967</td>
-         <td>0.994</td>
          <td>0.992</td>
-         <td>0.996</td>
+         <td>0.965</td>
+         <td>0.992</td>
+         <td>0.994</td>
+         <td>0.965</td>
       </tr>
       <tr>
          <th scope="row">East Asian</th>
          <td>0.896</td>
-         <td>0.954</td>
-         <td>0.948</td>
-         <td>0.957</td>
+         <td>0.947</td>
+         <td>0.897</td>
+         <td>0.942</td>
+         <td>0.949</td>
+         <td>0.897</td>
       </tr>
       <tr>
          <th scope="row">European (Finnish)</th>
          <td>0.963</td>
-         <td>0.986</td>
-         <td>0.989</td>
-         <td>0.991</td>
+         <td>0.984</td>
+         <td>0.960</td>
+         <td>0.988</td>
+         <td>0.990</td>
+         <td>0.960</td>
       </tr>
       <tr>
          <th scope="row">European (non-Finnish)</th>
-         <td>0.904</td>
-         <td>0.919</td>
-         <td>0.933</td>
-         <td>0.935</td>
+         <td>0.896</td>
+         <td>0.908</td>
+         <td>0.811</td>
+         <td>0.924</td>
+         <td>0.922</td>
+         <td>0.811</td>
       </tr>
       <tr>
          <th scope="row">South Asian</th>
-         <td>0.958</td>
-         <td>0.959</td>
-         <td>0.967</td>
-         <td>0.962</td>
+         <td>0.954</td>
+         <td>0.947</td>
+         <td>0.841</td>
+         <td>0.963</td>
+         <td>0.950</td>
+         <td>0.841</td>
       </tr>
    </tbody>
    <tfoot>
       <tr>
          <th scope="row">All</th>
-         <td>0.773</td>
-         <td>0.777</td>
-         <td>0.835</td>
-         <td>0.804</td>
+         <td>0.774</td>
+         <td>0.780</td>
+         <td>0.803</td>
+         <td>0.833</td>
+         <td>0.805</td>
+         <td>0.803</td>
       </tr>
    </tfoot>
 </table>
