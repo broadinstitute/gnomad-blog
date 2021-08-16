@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:lts
 
 WORKDIR /blog
 COPY package.json .
