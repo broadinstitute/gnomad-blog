@@ -2,8 +2,11 @@ version: "3"
 services:
   blog:
     build: .
+    environment:
+      - INTERNAL_STATUS_PORT=35729
     ports:
       - 8000:8000
+      - 35729:35729
     volumes:
       - .:/blog
       - node_modules:/blog/node_modules
