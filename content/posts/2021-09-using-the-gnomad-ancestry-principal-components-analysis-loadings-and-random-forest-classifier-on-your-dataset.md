@@ -18,7 +18,7 @@ Details on ancestry assignment are available in the blog posts for gnomAD [v2](h
 The loadings and RF model can be used for ancestry assignment on another dataset by first projecting the dataset’s genotypes onto pre-computed PCs, which can be done using Hail’s [pc_project](https://hail.is/docs/0.2/experimental/index.html#hail.experimental.pc_project) module with the gnomAD loadings. Following this projection, ancestry assignments can be made using the RF model and the projected PC scores -- for example, by supplying the [gnomAD Hail utilities](https://pypi.org/project/gnomad/) [assign_population_pcs](https://broadinstitute.github.io/gnomad_methods/api_reference/sample_qc/ancestry.html?highlight=assign_population_pcs#gnomad.sample_qc.ancestry.assign_population_pcs) function with the gnomAD RF model as the \`fit\` parameter. 
 
 #### Example code:
-```
+```python
 import pickle
 import hail as hl
 from gnomad.sample_qc.ancestry import assign_population_pcs 
