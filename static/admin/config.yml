@@ -5,6 +5,7 @@ backend:
   base_url: https://gnomad.broadinstitute.org
   auth_endpoint: /news/auth/
   preview_context: Preview
+  squash_merges: true
 
 site_url: https://gnomad.broadinstitute.org/news/
 
