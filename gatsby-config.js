@@ -34,6 +34,7 @@ const config = {
           },
           "gatsby-remark-autolink-headers",
           "gatsby-remark-smartypants",
+          "gatsby-remark-prismjs",
           "gnomad-blog-image-paths",
         ],
       },

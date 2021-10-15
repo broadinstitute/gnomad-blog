@@ -325,3 +325,16 @@ tfoot tr:first-child th {
 .category-list li {
   margin-bottom: 0.5em;
 }
+
+/***************************************/
+/* Code blocks
+/***************************************/
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 0.25em;
+}
