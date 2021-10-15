@@ -81,3 +81,11 @@ ffmpeg -i input.mov \
    -filter_complex "scale=iw*min(1\,1200/iw):-1" \ # Resize to a max width of 1200px
    output.mp4
 ```
+
+## Linking to other posts
+
+To link to another post, the link URL is based on the name of the post's source file. For example, to link to the post for `2021-10-linking-example.md`, the link would be `[link text](/2021-10-linking-example/)`.
+
+Linking to sections within a page can be done by linking to the section heading's anchor. The anchor ID is the section heading in all lower case with spaces replaced by dashes.
+
+For example, to link to a section with heading `### An example section of a gnomAD blog post` in `2021-10-linking-example.md`, the link would be `[link text](/2021-10-linking-example/#an-example-section-of-a-gnomad-blog-post)`. For links to a section on the same page as the link (for example, a table of contents at the beginning of a page) the URL path can be omitted (for example, `[link text](#an-example-section-of-a-gnomad-blog-post)`).
