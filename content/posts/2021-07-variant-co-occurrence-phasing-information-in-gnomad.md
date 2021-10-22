@@ -64,7 +64,7 @@ We validated this approach using 4,992 trios, leveraging the fact that we can un
    </thead>
    <tbody>
       <tr>
-         <th scope="row">African/African-American</th>
+         <th scope="row">African/African American</th>
          <td>0.928</td>
          <td>0.960</td>
          <td>0.853</td>

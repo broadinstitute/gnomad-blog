@@ -15,7 +15,7 @@ In this release, we have included more than 3,000 new samples specifically chose
 
 | Population | Description                     | Genomes |
 | ---------- | ------------------------------- | ------- |
-| afr        | African/African-American        | 20,744  |
+| afr        | African/African American        | 20,744  |
 | ami        | Amish                           | 456     |
 | amr        | Latino/Admixed American         | 7,647   |
 | asj        | Ashkenazi Jewish                | 1,736   |
