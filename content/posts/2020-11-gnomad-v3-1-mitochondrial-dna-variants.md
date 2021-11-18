@@ -97,4 +97,4 @@ This project was a major collaborative effort. Kristen Laricchia was the lead an
 
 ### Acknowledgments
 
-We thank Heidi Rhem and Mark Daly for gnomAD leadership; Sebastian Schoenherr for assistance in understanding Haplocheck; Konrad Karczewski for reviewing the code for callset assembly and annotation; Kiran Garimella for assistance in understanding NUMTs with long-read data; David Thorburn, John Christodoulou, and members of their labs for their feedback on displaying mtDNA variants on the browser. This work was supported in part by a Broad Institute Scientific Projects to Accelerate Research and Collaboration (SPARC) grant.
+We thank Heidi Rehm and Mark Daly for gnomAD leadership; Sebastian Schoenherr for assistance in understanding Haplocheck; Konrad Karczewski for reviewing the code for callset assembly and annotation; Kiran Garimella for assistance in understanding NUMTs with long-read data; David Thorburn, John Christodoulou, and members of their labs for their feedback on displaying mtDNA variants on the browser. This work was supported in part by a Broad Institute Scientific Projects to Accelerate Research and Collaboration (SPARC) grant.
