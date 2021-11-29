@@ -82,7 +82,7 @@ Local ancestry inference is useful in resolving allele frequencies for rare vari
 
 ## Conclusion
 
-Local ancestry inference in admixed individuals provides higher resolution and more accurate allele frequencies for each continental ancestry. We hope this data can be used to enhance the scientific community’s ability to understand the origin of human variation as well as clinically interpret variation and better identify those populations at highest risk for certain diseases.
+Local ancestry inference in admixed individuals provides higher resolution and more accurate allele frequencies for each continental ancestry. This release of local ancestry-informed frequency data is only available for the Latino/Admixed American sample. We plan to continue this effort for the African/African American sample within gnomAD in the near future. We hope this data can be used to enhance the scientific community’s ability to understand the origin of human variation as well as clinically interpret variation and better identify those populations at highest risk for certain diseases.
 
 ## Acknowledgments
 
