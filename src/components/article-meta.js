@@ -8,7 +8,7 @@ const ArticleMeta = ({ postMetadata }) => {
     <div className="article-meta">
       <span className="article-date">{postMetadata.date}</span>
 
-      {postMetadata.categories && postMetadata.categories.length && (
+      {postMetadata.categories && postMetadata.categories.length > 0 && (
         <span className="article-categories">
           {" in "}
           {postMetadata.categories.reduce(
@@ -24,7 +24,7 @@ const ArticleMeta = ({ postMetadata }) => {
         </span>
       )}
 
-      {postMetadata.authors && postMetadata.authors.length && (
+      {postMetadata.authors && postMetadata.authors.length > 0 && (
         <div className="article-authors">
           {postMetadata.authors.reduce(
             (acc, author) => [
