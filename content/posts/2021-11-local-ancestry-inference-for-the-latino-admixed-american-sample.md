@@ -72,13 +72,13 @@ We have also made the gnomAD LAI data available as a [VCF](https://gnomad.broadi
 
 With this data, we expect to find some disease-relevant variants to occur at elevated frequencies within specific ancestral components because of bottleneck events in a population's history. An example of this is the gnomAD variant [17-7043011-C-T](https://gnomad.broadinstitute.org/variant/17-7043011-C-T?dataset=gnomad_r3) in the SLC16A11 gene. Variants within this gene have been shown to be a [common risk factor for type 2 diabetes](https://www.nature.com/articles/nature12828) in Mexico by the SIGMA consortium. 
 
-![](../images/lai_amr_slc_ex.gif)
+![](../images/lai_amr_slc_ex.png)
 
 In this table of gnomAD global population allele frequencies, a variant associated with this increased risk of diabetes is elevated within the Latino/Admixed American population at a 14% allele frequency compared to the global gnomAD allele frequency of 2%. Viewing the local ancestry data for the Latino/Admixed American population, we can see that the variant actually occurs at a 45% allele frequency in Amerindigenous regions and closer to 0% in the African and European regions, highlighting that the elevated frequency is driven by one ancestral component.
 
 Local ancestry inference is useful in resolving allele frequencies for rare variants as well as common variants. A variant in the COL27A1 gene has been shown to cause [Steel syndrome and suggest a founder mutation effect in the Puerto Rican population](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4326704/). This causal variant has 0.3% allele frequency within the Latino/Admixed American population while gnomAD’s global allele frequency is 0.03%. Separating this variant’s gnomAD Latino/Admixed American frequency into LAI allele frequency estimates, we see that the variant occurs at  ~1% allele frequency in Amerindigenous regions and closer to 0% in African and European regions, reinforcing this founder effect hypothesis and again showing the usefulness of refined local ancestry informed frequencies in large genomic datasets.
 
-![](../images/lai_amr_col27a_ex.gif)
+![](../images/lai_amr_col27a_ex.png)
 
 ## Conclusion
 
