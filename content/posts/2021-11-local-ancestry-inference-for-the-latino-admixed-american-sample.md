@@ -1,6 +1,6 @@
 ---
-title: Local Ancestry Inference for the Latino/Admixed American Sample
-date: 2021-11-30
+title: Local Ancestry Inference for Latino/Admixed American Samples in gnomAD
+date: 2021-12-01
 order: 1
 categories: []
 authors:
@@ -14,13 +14,13 @@ We are happy to share, for the first time, local ancestry-informed frequency dat
 
 <!-- end_excerpt -->
 
-Local ancestry-informed frequency data is available for bi-allelic variants with high call rates and an allele frequency greater than 0.1% within the Latino/Admixed American gnomAD population. The 7,612 samples contain all samples classified as Latino/Admixed American within gnomAD v3.1 with the exception of samples from the Human Genome Diversity Project, which were used in the local ancestry reference panel for training purposes. We anticipate this finer resolution of allele frequencies will improve the interpretation of variation in individuals with similar genetic ancestries by contextualizing variants to the appropriate continental reference population.
+Local ancestry-informed frequency data is available for bi-allelic variants with low genotype missingness (i.e., call rate > 0.9) and an allele frequency greater than 0.1% within the Latino/Admixed American gnomAD population. The 7,612 samples contain all samples classified as Latino/Admixed American within gnomAD v3.1 with the exception of samples from the Human Genome Diversity Project, which were used in the local ancestry reference panel for training purposes. We anticipate this finer resolution of allele frequencies will improve the interpretation of variation in individuals with similar genetic ancestries by contextualizing variants to the appropriate continental reference population.
 
 ## Background
 
 ### gnomAD’s Latino/Admixed American population is incredibly diverse
 
-Admixed American populations have a complex ancestry makeup resulting from historical admixture events from several continental areas. In the case of Latin American populations, this admixture is a consequence of the long-distance migration of ancient populations through the Bering Strait from East Asia around 15,000 years ago, European colonization in the Americas (late 15th through 18th century CE), and the transatlantic slave trade from primarily west Africa (16th to 19th century CE), as shown in the map below. The figure also demonstrates two admixture events and what a modern day chromosome from a Latin American individual may look like multiple generations after these events. gnomAD’s global ancestry inference assigns this individual to the Latino/Admixed American population, but we know these demographic histories create extremely diverse mosaic genomes across individuals within this broader population grouping.
+Admixed American populations have a complex ancestry makeup resulting from historical admixture events from several continental areas. In the case of Latino populations of the Americas, this admixture is a consequence of the long-distance migration of ancient populations through the Bering Strait from East Asia around 15,000 years ago, European colonization in the Americas (late 15th through 18th century CE), and the transatlantic slave trade from primarily west Africa (16th to 19th century CE), as shown in the map below. The figure also demonstrates two admixture events and what a modern day chromosome from a Latin American individual may look like multiple generations after these events. gnomAD’s global ancestry inference assigns this individual to the Latino/Admixed American population, but we know these demographic histories create extremely diverse mosaic genomes across individuals within this broader population grouping.
 
 ![](../images/lai_amr_migration_map.png)
 
