@@ -1,6 +1,6 @@
 ---
-title: 'gnomAD v3.1 New Content, Methods, Annotations, and Data Availability'
-date: '2020-10-29'
+title: gnomAD v3.1 New Content, Methods, Annotations, and Data Availability
+date: 2020-10-29
 order: 2
 categories:
   - Announcements
@@ -65,7 +65,7 @@ Users can access the entire repository with a simple command:
 
 We’re delighted to provide, for the first time, [downloads](https://gnomad.broadinstitute.org/downloads) with individual-level genotypes for a subset of gnomAD that is available to the public with no access restrictions. We hope this resource will be useful for a broad range of research applications — serving as a diverse reference panel for haplotype phasing and genotype imputation, for example, or as a training set for ancestry inference.
 
-The samples included in this subset are drawn from the [1000 Genomes Project](https://www.nature.com/articles/nature15393) (n=2,435) and the [Human Genome Diversity Project](https://science.sciencemag.org/content/367/6484/eaay5012) (n=780), which contain some of the most genetically diverse populations present in gnomAD. Collectively they represent human genetic diversity sampled across >60 distinct populations from Africa, Europe, the Middle East, South and Central Asia, East Asia, Oceania, and the Americas.
+The samples included in this subset are drawn from the [1000 Genomes Project](https://www.nature.com/articles/nature15393) (n=2,435) and the [Human Genome Diversity Project](https://science.sciencemag.org/content/367/6484/eaay5012) (n=780), which contain some of the most genetically diverse populations present in gnomAD. Collectively they represent human genetic diversity sampled across >60 distinct populations from Africa, Europe, the Middle East, South and Central and South Asia, East Asia, Oceania, and the Americas.
 
 To create this callset, we re-processed raw data from the 1000 Genomes Project and HGDP to meet the [functional equivalence](https://www.nature.com/articles/s41467-018-06159-4) standard and joint-called the re-processed data with the rest of the gnomAD callset. (See “Incremental joint calling” above for more details on the joint-calling process.) The callset contains all high-quality samples (n=3942) from these projects that passed gnomAD sample QC filters. These files therefore contain data for individuals (n=662) that we did not ultimately include in the gnomAD v3.1 aggregate allele frequencies, as these individuals were found to be second-degree related (or closer) to other individuals in 1000 Genomes, HGDP, or the larger gnomAD callset. We have provided a sample metadata table containing each sample’s status of inclusion or exclusion in the v3.1 release, along with sample-level quality control metrics and ancestry labels to accompany the VCF. (This information is directly annotated as column annotations in the Matrix Table version of the callset.)
 
@@ -178,7 +178,12 @@ The plot below overlays the new v3.1 samples onto the normalized X coverage vs. 
 
 #### Ancestry inference
 
-The method for ancestry assignment was the same as the method used for v3, with some slight changes in parameters. Principal components analysis (PCA) was run using the [`hwe_normalized_pca()`](https://hail.is/docs/0.2/methods/genetics.html#hail.methods.hwe_normalized_pca) Hail function on 76,419 high-quality variants. A random forests classifier was trained using 16 principal components (PCs) as features on samples with known ancestry. Many of the new samples in v3.1 had known ancestry labels, increasing the total samples used for training from 32,955 in v3 to 36,882 for this release. Ancestry was then assigned to all samples for which the probability of that ancestry was > 75% according to the random forests model, and all remaining samples were assigned as “other” (oth). 
+The method for ancestry assignment was similar to the method used for v3, with some slight changes in parameters and evaluation. 30 principal components (PCs) were computed using principal components analysis (PCA) as implemented by the [`hwe_normalized_pca()`](https://hail.is/docs/0.2/methods/genetics.html#hail.methods.hwe_normalized_pca) Hail function on 76,419 high-quality variants selected as follows:
+1. We took all sites that were used for gnomAD v2.1 and lifted them over to GRCh38
+2. We added [~5k sites](https://www.nature.com/articles/nature12975) widely used for quality control of GWAS data defined by Shaun Purcell and lifted these sites over to GRCh38
+3. From these two sets of sites, we then selected all bi-allelic SNVs with an Inbreeding coefficient > -0.25 (no excess of heterozygotes)
+
+The 30 PCs were visually inspected to determine which PCs were capturing variance explained by available ”known” population labels, which are obtained from a variety of sources, including labels captured by prior research studies as well as individual self-reported population labels. We determined that the first 16 PCs captured global ancestry variation with a clear drop in information content for higher PCs. We then trained a random forests classifier using those first 16 PCs as features on the samples with “known” population labels. Many of the new samples in v3.1 had “known” population labels, increasing the total samples used for training from 32,955 in v3 to 36,882 for this release. Ancestry labels were then assigned to all samples for which the random forest probability of that population assignment was > 75% according to the random forests model, and all remaining samples were given a population label of “other” (oth). The 75% cutoff was determined by holding back 20% of the samples with “known” population labels for evaluation of the model. We want to expressly acknowledge that this method of global ancestry assignment using self-reported population labels as a training set does not account for differences between genetic ancestry and self-reported population labels that are [known to exist](https://www.nature.com/articles/nature12975).
 
 The figure below shows a 2D uniform manifold approximation and projection [(UMAP)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1008432) of ancestry principal components 1-6 and 8-16, colored by the inferred ancestries of the samples. Note that long-range distances in this projection do not reflect genetic distance between populations.
 
@@ -205,3 +210,5 @@ The figure below shows the precision and recall curves for the allele-specific V
 * InbreedingCoeff < -0.3
 
 These filtering criteria excluded 12.2% of SNVs and 32.5% of indels, resulting in 569,860,911 SNVs and 74,407,067 indels that passed all filters in the v3.1 release.
+
+**Updated on December 17, 2021 to provide additional details to the [Ancestry inference section](#ancestry-inference) of this post.**
