@@ -211,4 +211,4 @@ The figure below shows the precision and recall curves for the allele-specific V
 
 These filtering criteria excluded 12.2% of SNVs and 32.5% of indels, resulting in 569,860,911 SNVs and 74,407,067 indels that passed all filters in the v3.1 release.
 
-**Updated on December 17, 2021 to provide additional details to the [Ancestry inference section](#ancestry-inference) of this post.**
+**Updated on December 17, 2021 to provide additional details to the [ancestry inference section](#ancestry-inference) of this post.**
