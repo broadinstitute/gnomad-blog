@@ -1,3 +1,5 @@
+# https://www.netlifycms.org/docs/configuration-options/
+
 backend:
   name: github
   repo: broadinstitute/gnomad-blog

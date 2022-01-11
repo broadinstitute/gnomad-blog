@@ -3,9 +3,11 @@ services:
   blog:
     build: .
     environment:
+      - HOST=0.0.0.0
       - INTERNAL_STATUS_PORT=35729
     ports:
       - 8000:8000
+      - 8081:8081
       - 35729:35729
     volumes:
       - .:/blog

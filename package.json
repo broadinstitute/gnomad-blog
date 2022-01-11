@@ -5,7 +5,7 @@
     "plugins/*"
   ],
   "scripts": {
-    "start": "gatsby develop",
+    "start": "concurrently \"gatsby develop\" \"netlify-cms-proxy-server\"",
     "build": "gatsby build --prefix-paths",
     "clean": "gatsby clean"
   },
@@ -31,12 +31,14 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "gatsby-cli": "^3.5.0",
+    "netlify-cms-proxy-server": "^1.3.23",
     "prettier": "^2.0.1"
   }
 }

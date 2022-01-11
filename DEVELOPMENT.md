@@ -49,3 +49,5 @@ authors:
 ```
 
 The rest of the file should contain the post content written in [Markdown](https://www.markdownguide.org/basic-syntax/).
+
+Alternatively, use Netlify CMS (at http://localhost:8000/admin/) to add/edit content (see instructions in [CONTRIBUTING.md](./CONTRIBUTING.md)). In development, Netlify CMS uses a local backend which writes directly to the file system instead of going through GitHub.

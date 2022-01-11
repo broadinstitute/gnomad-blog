@@ -1,4 +1,5 @@
 /* eslint-env node */
+const fs = require("fs");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const _ = require("lodash");
@@ -137,4 +138,29 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.onCreateDevServer = async ({ app }) => {
+  const configPath = path.join(__dirname, "public", "admin", "config.yml");
+  if (fs.existsSync(configPath)) {
+    fs.unlinkSync(configPath);
+  }
+
+  app.get("/admin/config.yml", (req, res, next) => {
+    fs.readFile("netlify-cms-config.yml", { encoding: "utf8" }, (err, data) => {
+      if (err) {
+        next(err);
+      }
+      res.setHeader("content-type", "text/plain");
+      res.send(data + "\n\nlocal_backend: true\n");
+    });
+  });
+};
+
+exports.onPostBuild = async () => {
+  await fs.promises.mkdir(path.join(__dirname, "public", "admin"), { recursive: true });
+  await fs.promises.copyFile(
+    "netlify-cms-config.yml",
+    path.join(__dirname, "public", "admin", "config.yml")
+  );
 };
