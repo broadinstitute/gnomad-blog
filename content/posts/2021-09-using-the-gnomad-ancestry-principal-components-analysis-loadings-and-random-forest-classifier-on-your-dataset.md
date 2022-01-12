@@ -24,7 +24,6 @@ import hail as hl
 from gnomad.sample_qc.ancestry import assign_population_pcs
 
 # Load MatrixTable for projection and gnomAD loadings Hail Table
-# Reading the v2 loadings requires Hail version 0.2.70 or earlier
 mt_to_project = hl.read_matrix_table(path_to_matrix_table)
 loadings_ht = hl.read_table(path_to_gnomad_loadings)
 
@@ -36,7 +35,6 @@ ht = hl.experimental.pc_project(
 )
 
 # Assign global ancestry using the gnomAD RF model and PC project scores
-# Loading of the v2 RF model requires an older version of scikit-learn, this can be installed using pip install -U scikit-learn==0.21.3
 with hl.hadoop_open(path_to_gnomad_rf, "rb") as f:
     fit = pickle.load(f)
 
@@ -66,3 +64,5 @@ ht, rf_model = assign_population_pcs(
 
 ### Use of the HGDP + 1KG subset to build a custom RF
 As an alternate option to directly using the gnomAD loadings and RF model, a custom RF model can be designed by combining a dataset with the [HGDP + 1KG subset](https://gnomad.broadinstitute.org/downloads#v3-hgdp-1kg). After combining the two datasets, either new variants can be chosen for an ancestry [PCA](https://broadinstitute.github.io/gnomad_methods/api_reference/sample_qc/ancestry.html?highlight=run_pca_with_relateds#gnomad.sample_qc.ancestry.run_pca_with_relateds) (limiting to high call rate within the reference panel and one’s own dataset, thereby avoiding the shrinkage problem), or the [PC projection](https://hail.is/docs/0.2/experimental/index.html#hail.experimental.pc_project) described above can be used, but with the same caveats associated with using the gnomAD loadings. An RF model can then be trained using the HGDP + 1KG known global ancestry labels, and applied to the samples to obtain global ancestry assignments using [gnomAD Hail utilities](https://pypi.org/project/gnomad/) [`assign_population_pcs`](https://broadinstitute.github.io/gnomad_methods/api_reference/sample_qc/ancestry.html?highlight=assign_population_pcs#gnomad.sample_qc.ancestry.assign_population_pcs) with no `fit` parameter and the HGDP + 1KG known ancestry supplied as the `known_col` parameter. When training a new RF model on the known labels, you can measure performance by holding back labeled samples in the training and assessing accuracy on the set that is withheld (using the `prop_train` parameter in [`assign_population_pcs`](https://broadinstitute.github.io/gnomad_methods/api_reference/sample_qc/ancestry.html?highlight=assign_population_pcs#gnomad.sample_qc.ancestry.assign_population_pcs)). **Note that this method will still only work for classifying ancestries that are well represented by the HGDP + 1KG subset, and this subset is also only available for the GRCh38 reference genome.**
+
+*Updated on January 12, 2022. The gnomAD v2 loadings Hail Table and v2 RF model pkl were rewritten and are now compatible with newer versions of Hail and scikit-learn*
