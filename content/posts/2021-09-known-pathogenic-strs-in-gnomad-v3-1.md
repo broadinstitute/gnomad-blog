@@ -1,49 +1,62 @@
 ---
-title: Known Pathogenic STRs in gnomAD v3.1
-date: 2021-10-01
+title: The Addition of Short Tandem Repeat Calls to gnomAD
+date: 2022-01-21
 order: 1
 categories:
   - Announcements
 authors:
   - Ben Weisburd
+  - Grace VanNoy
   - Nick Watts
 ---
-
-
 ### Overview
 
-We have generated Short Tandem Repeat (STR) calls for 60 known pathogenic loci by running ExpansionHunter on 20,344 whole genome samples from gnomAD v3.1. This data can be explored through the 60 STR variant pages listed in the Table of STR Loci \[link].
+We have generated short tandem repeat (STR) calls for 59 disease associated loci by running ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 19,241 whole genome samples from gnomAD v3.1. 
 
-The release includes:
+This release includes:
 
-* Distributions of STR genotypes at these loci in the general population. These distributions can be subsetted by 10 gnomAD subpopulations, sex, and/or the repeat unit (for loci where more than one repeat unit exists in the population).
-* Read visualizations for all samples above the pathogenic threshold of each locus \[TODO is this accurate?].
-* Reference information for each known pathogenic STR locus - including its pathogenic threshold, disease association, and inheritance mode.
-* Downloadable variant catalog \[link] in .json format which can be used to run ExpansionHunter using the same parameters as the ones used to generate this callset.
+* Distributions of STR genotypes in the general population, with subsets by ancestry group and sex
+* Visualizations of the read data for all samples at all 59 loci
+* Collected reference information including disease associations and inheritance modes
+* [Downloadable variant catalogs](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) for running ExpansionHunter on these 59 loci for either GRCh38 or GRCh37, with or without off-target regions.
+* A specialized approach for calling loci such as RFC1 where the pathogenic motif(s) differ from the motif in the reference genome
+* Downloadable data underlying the displayed distributions, as well as additional results not displayed in the browser - such as genotypes called using off-target regions [**TODO link**]
 
-<!-- end_excerpt -->
+
 
 ### Background
 
 About STRs
 
-### Details
+### Disease-Associated Loci
 
-Details
+Disease-Associated Loci
 
-### Navigating the STR Page
+### Technical Details
 
-Walk-through
+Technical Details
 
-### REViewer Visualizations
+### Loci with Non-Reference Pathogenic Motifs
+
+Loci with Non-Reference Pathogenic Motifs
+
+### Read Visualizations
 
 Read Visualizations
 
-### In Summary
+### Navigating STR Pages in the gnomAD Browser
 
-Summaray
+Navigating STR Pages in the gnomAD Browser
+
+### Discussion
+
+Discussion
+
 
 ### Acknowledgments
 
 We thank Stephanie DiTroia, Grace VanNoy, and Nehir Kurtas for reviewing the list of known pathogenic loci and evaluating disease associations; Egor Dolzhenko for consultations on various topics related to ExpansionHunter, REViewer, and STRs; Depienne et al. and Halman et al. authors for the very helpful resources; Yossi Farjoun for mentorship during the initial stages of the project; Jackie Goldstein, Daniel King, Cotton Seed and the rest of the hail team for building Hail Batch and other tools that made it much easier to generate this callset.
 
+### Supplemental Details for Examining Read Visualizations
+
+Supplemental Details for Examining Read Visualizations
