@@ -22,15 +22,21 @@ This release includes:
 * A specialized approach for calling loci such as RFC1 where the pathogenic motif(s) differ from the motif in the reference genome
 * Downloadable data underlying the displayed distributions, as well as additional results not displayed in the browser - such as genotypes called using off-target regions [**TODO link**]
 
-
-
 ### Background
 
-About STRs
+Short tandem repeats (STRs) are nucleotide sequences that consist of a short motif that repeats consecutively. For example, the HTT gene contains an STR locus at [chr4:3074877-3074933](https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr4%3A3074877%2D3074933&hgsid=1232944787_Aj84fZJCMhu3R1w3kBZGgLqXAaqW) where the CAG motif (also known as the “repeat unit”) occurs 19 times. The human genome has millions of STR loci with various motifs. These loci can mutate through mechanisms such as strand slippage during replication, resulting in either an increase (i.e., expansion) or decrease (i.e., contraction) in the number of repeats. Collectively, STRs have a very high mutation rate, contributing approximately the same number of de novo mutations per generation as single nucleotide variants (SNVs), indels, and structural variants (SVs) combined \[1]. During the last 30 years, approximately 60 STR loci have been identified as causal for monogenic diseases. In most cases, these loci cause disease only if they expand beyond a certain pathogenic threshold. For example, the CAG STR in the HTT gene causes [Huntington Disease](https://omim.org/entry/143100?search=Huntington%20Disease&highlight=disease%20huntington) when it expands beyond 40 repeats. Some of the disease-associated STR loci also have an intermediate range below the pathogenic threshold that is associated with milder disease or reduced penetrance. For example, the intermediate range for HTT is between 36 and 40 CAG repeats. For some disease-associated loci such as RFC1 and DAB1, individuals may differ not only in the number of repeats, but also in the motif(s) that are present at the locus. Additionally, only a subset of these motifs may be disease-causing. For example, most individuals have AAAAG repeats within the RFC1 locus at [chr4:39348425-39348479](https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr4%3A39348425%2D39348479&hgsid=1179869963_NhDZlzqODCQBWm5vvpmhXBdovC3N). However, some individuals have AAGGG repeats instead. Biallelic expansions of the AAGGG motif cause [CANVAS](https://www.omim.org/entry/614575), while expansions of the AAAAG motif do not cause disease.
+
+1. [[Steely 2021](https://www.biorxiv.org/content/10.1101/2021.11.22.469627v1.full)] estimates 85 de novo changes in repeat length at STR loci per generation. [[Trost 2021](https://academic.oup.com/hmg/article/30/R2/R174/6325570)] reviews de novo mutation rate estimates for other variant classes.
 
 ### Disease-Associated Loci
 
-Disease-Associated Loci
+We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 59 unique loci with the following characteristics:
+
+
+
+
+
+
 
 ### Technical Details
 
@@ -51,7 +57,6 @@ Navigating STR Pages in the gnomAD Browser
 ### Discussion
 
 Discussion
-
 
 ### Acknowledgments
 
