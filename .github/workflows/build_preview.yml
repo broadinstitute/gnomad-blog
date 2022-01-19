@@ -87,6 +87,6 @@ jobs:
             --data "{
               \"state\": \"success\",
               \"target_url\": \"https://gnomad.broadinstitute.org/news/preview/${pr_number}\",
-              \"description\": \"Preview ready\",
+              \"description\": \"Preview ready, click 'Details' to view\",
               \"context\": \"Preview\"
             }" > /dev/null
