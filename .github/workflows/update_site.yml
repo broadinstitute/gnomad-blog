@@ -37,7 +37,7 @@ jobs:
           PATH_PREFIX="/news" yarn run build
 
       - name: Setup gcloud
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v0.3
         with:
           service_account_email: ${{ secrets.GCS_SA_EMAIL }}
           service_account_key: ${{ secrets.GCS_SA_KEY }}

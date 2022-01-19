@@ -59,7 +59,7 @@ jobs:
 
       - name: Setup gcloud
         if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v0.3
         with:
           service_account_email: ${{ secrets.GCS_SA_EMAIL }}
           service_account_key: ${{ secrets.GCS_SA_KEY }}
