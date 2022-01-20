@@ -91,7 +91,7 @@ This distribution for the PABPN1 locus appears to show that all alleles are in t
 
 The normal and pathogenic ranges are indicated by horizontal arrows at the top of the plot, as well as by dashed vertical lines at the thresholds. It should be noted that compared with larger expansions,  OPMD caused by 7 repeats has been shown to present with reduced  penetrance, later onset, or milder disease unless identified in homozygosity [[Richard 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5272966/)]. Because the **Allele Size Distribution** counts each allele independently, it does not tell us diplotypes (e.g. how many individuals have a 6/7 compound heterozygous genotype vs a 7/7 homozygous genotype). However, if we scroll down to the **Genotype Distribution** and look at bin x=7, y=6, we see that it’s darker than the bin at x=7, y=7, which means more individuals have the 6/7 genotype. If we mouse over the bins, we can see the exact counts: 67 individuals have a 6/7 genotype and 1 individual has a 7/7 genotype. 
 
-<img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_allele_size_distribution_screenshot2.png" />
+<img alt="PABPN1 Genotype Distribution Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_genotype_distribution_screenshot.png" />
 
 Given that the prevalence of OMPD in the general population is estimated at 1 in 100,000, we expect to see fewer than 2 individuals in the pathogenic range, especially since the gnomAD dataset attempts to exclude cases with rare disease.
 
