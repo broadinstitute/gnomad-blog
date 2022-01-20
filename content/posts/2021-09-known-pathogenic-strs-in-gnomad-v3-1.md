@@ -42,11 +42,6 @@ We collected and curated known pathogenic loci from sources such as [[Depienne 2
    <img alt="STR Loci Genomic Regions" src="/news/preview/38/images/2022/01/str_genomic_region_pie_chart.png" height=300 />
 </figure>
 
-<figure>
-   <figcaption>STR Loci Motif Sizes</figcaption>
-   <img alt="STR Loci Motif Sizes" src="/news/preview/38/images/2022/01/str_motif_length_histogram.png" width=480 />
-</figure>
-
 
 
 ### Technical Details
