@@ -47,8 +47,6 @@ We collected and curated known pathogenic loci from sources such as [[Depienne 2
    <img alt="STR Loci Motif Sizes" src="/news/preview/38/images/2022/01/str_motif_length_histogram.png" width=480 />
 </figure>
 
-
-
 ### Technical Details
 
 To genotype the 59 STR loci with disease associations, we chose to use ExpansionHunter [[Dolzhenko 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668946/)] because 1) we found that it had the best accuracy among existing tools for detecting expansions at disease-associated loci across a wide range of repeat sizes - both shorter and longer than read length, and 2) it’s now widely used for STR research and diagnosis in rare disease cohorts, including in [[Ibanez 2020](https://www.biorxiv.org/content/10.1101/2020.11.06.371716v1)], [[Stranneheim 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00855-5)], [[van der Sanden 2021](https://pubmed.ncbi.nlm.nih.gov/33846582/)]. 
@@ -85,18 +83,19 @@ The STR page shows reference information about the locus and the associated dise
 
 <img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_top_section_screenshot.png" />
 
-\
-\[TODO add 2 images]
+<img alt="PABPN1 Allele Size Distribution Screenshot #1" src="/news/preview/38/images/2022/01/str_PABPN1_page_allele_size_distribution_screenshot1.png" />
 
 This distribution for the PABPN1 locus appears to show that all alleles are in the Normal range: ≤ 6 repeats. However, we can switch the scale from “Linear” to “Log” using the drop-down in the bottom right. This allows us to see the long tail of alleles with 7 or more repeats:
 
-\[TODO add image]
+<img alt="PABPN1 Allele Size Distribution Screenshot #2" src="/news/preview/38/images/2022/01/str_PABPN1_page_allele_size_distribution_screenshot2.png" />
 
-The normal and pathogenic ranges are indicated by horizontal arrows at the top of the plot, as well as by dashed vertical lines at the thresholds. It should be noted that compared with larger expansions,  OPMD caused by 7 repeats has been shown to present with reduced  penetrance, later onset, or milder disease unless identified in homozygosity \[Richard 2017]. Because the Allele Size Distribution counts each allele independently, it does not tell us diplotypes (e.g. how many individuals have a 6/7 compound heterozygous genotype vs a 7/7 homozygous genotype). However, if we scroll down to the Genotype Distribution and look at bin x=7, y=6, we see that it’s darker than the bin at x=7, y=7, which means more individuals have the 6/7 genotype. If we mouse over the bins, we can see the exact counts: 67 individuals have a 6/7 genotype and 1 individual has a 7/7 genotype. 
+The normal and pathogenic ranges are indicated by horizontal arrows at the top of the plot, as well as by dashed vertical lines at the thresholds. It should be noted that compared with larger expansions,  OPMD caused by 7 repeats has been shown to present with reduced  penetrance, later onset, or milder disease unless identified in homozygosity [[Richard 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5272966/)]. Because the **Allele Size Distribution** counts each allele independently, it does not tell us diplotypes (e.g. how many individuals have a 6/7 compound heterozygous genotype vs a 7/7 homozygous genotype). However, if we scroll down to the **Genotype Distribution** and look at bin x=7, y=6, we see that it’s darker than the bin at x=7, y=7, which means more individuals have the 6/7 genotype. If we mouse over the bins, we can see the exact counts: 67 individuals have a 6/7 genotype and 1 individual has a 7/7 genotype. 
+
+<img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_allele_size_distribution_screenshot2.png" />
 
 Given that the prevalence of OMPD in the general population is estimated at 1 in 100,000, we expect to see fewer than 2 individuals in the pathogenic range, especially since the gnomAD dataset attempts to exclude cases with rare disease.
 
-However, the typical age of onset for OPMD is 40 to 60 years old, so genotype positive individuals are less likely to be affected when recruited and therefore less likely to be excluded from gnomAD. If we scroll down to the Age Distribution, we see a plot where the y-axis represents age bins. 
+However, the typical age of onset for OPMD is 40 to 60 years old, so genotype positive individuals are less likely to be affected when recruited and therefore less likely to be excluded from gnomAD. If we scroll down to the **Age Distribution**, we see a plot where the y-axis represents age bins. 
 
 \[TODO add image]
 
