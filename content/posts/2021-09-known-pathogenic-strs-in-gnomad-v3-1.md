@@ -35,8 +35,13 @@ Short tandem repeats (STRs) are nucleotide sequences that consist of a short mot
 We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 59 unique loci with the following characteristics:
 
 <figure>
-   <img alt="STR Loci by Genomic Region" src="../images/2022/01/str_genomic_region_pie_chart.png" />
+   <img alt="STR Loci by Genomic Region" src="/news/preview/38/images/2022/01/str_genomic_region_pie_chart.png" />
    <figcaption>STR Loci by Genomic Region</figcaption>
+</figure>
+
+<figure>
+   <img alt="STR Loci by Inheritance Mode" src="/news/preview/38/images/2022/01/str_inheritance_mode_pie_chart.png" />
+   <figcaption>STR Loci by Inheritance Mode</figcaption>
 </figure>
 
 ### Technical Details
