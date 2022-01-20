@@ -61,61 +61,59 @@ ExpansionHunter allows users to optionally specify off-target regions. Specifyin
 
 After considering the trade-offs, we chose not to include off-target regions for any of the results shown in the browser.  In our experience with STR genotyping in rare disease cohorts, we have found that it is best to run ExpansionHunter without off-target regions on the first pass, even for loci such as DMPK or C9orf72 where we see very large expansions. Although this produces underestimated genotypes in highly-expanded samples, these genotypes are still outliers relative to other individuals in the cohort, and can therefore be flagged and re-genotyped later using off-target regions for the few cases where we suspect a very large (> ~350bp) expansion. 
 
-Although we display only the results generated without off-target regions in the browser, we provide an additional [variant catalog](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) that does include off-target regions for all loci. We also provide the results of running this catalog on all gnomAD samples as a downloadable data file \[link]. 
-
+Although we display only the results generated without off-target regions in the browser, we provide an additional [variant catalog](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) that does include off-target regions for all loci. We also provide the results of running this catalog on all gnomAD samples as a downloadable data file \[TODO link]. 
 
 ### Loci with Non-Reference Pathogenic Motifs
 
-Nine out of the 59 STR loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [Halman 2021]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif is not predefined. Other tools such as ExpansionHunterDenovo and STRling do not have this limitation, but are not sufficiently accurate at these loci. As a temporary solution, we previously developed a specialized script - call_non_ref_pathogenic_motifs.py - which first detects the one or two motifs present at each of these loci in a given individual and then runs ExpansionHunter for each motif to estimate its allele size. The approach used by this script is, coincidentally, a simpler version of the approach used by STRling. Unbiased comparisons are difficult given the small number of positive controls and the fact that we designed the script based on these positive controls. However, we found that the script has good sensitivity on a handful of positive RFC1 controls and relatively high specificity, flagging fewer than 10 likely-false-negative samples in a cohort of over 4,000 rare disease WGS samples. A more detailed description of the approach is available on github [link] and in a separate blog post [link]. 
+Nine out of the 59 STR loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [[Halman 2021](https://www.biorxiv.org/content/10.1101/2021.06.13.448220v1)]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif is not predefined. Other tools such as [ExpansionHunterDenovo](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02017-z) and [STRling](https://www.biorxiv.org/content/10.1101/2021.11.18.469113v1) do not have this limitation, but are not sufficiently accurate at these loci. As a temporary solution, we previously developed a specialized script - [call_non_ref_pathogenic_motifs.py](https://github.com/broadinstitute/str-analysis/blob/main/str_analysis/call_non_ref_pathogenic_motifs.py) - which first detects the one or two motifs present at each of these loci in a given individual and then runs ExpansionHunter for each motif to estimate its allele size. The approach used by this script is, coincidentally, a simpler version of the approach used by STRling. Unbiased comparisons are difficult given the small number of positive controls and the fact that we designed the script based on these positive controls. However, we found that the script has good sensitivity on a handful of positive RFC1 controls and relatively high specificity, flagging fewer than 10 likely-false-negative samples in a cohort of over 4,000 rare disease WGS samples. A more detailed description of the approach is available on github \[TODO link] and in a separate blog post \[TODO link].  
 
 ### Read Visualizations
 
-We used the REViewer tool to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. Please note that we have included a section below on “Supplemental Details for Examining Read Visualizations” that users may find helpful. 
+We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. Please note that we have included a section below on **“Supplemental Details for Examining Read Visualizations”** that users may find helpful. 
 
 ### Navigating STR Pages in the gnomAD Browser
 
-The STR table [update link] is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s). 
+The STR table \[update link] is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s). 
 
-As an example, we can look at the PABPN1 locus (chr14:23321473-23321490), which causes autosomal dominant oculopharyngeal muscular dystrophy (OPMD) when the number of GCG repeats expands to 7 or more on one allele. It should be noted that immediately to the right of the main GCG repeat sequence are 3 GCA repeats followed by a GCG. As GCA and GCG both code for alanine, early publications include these adjacent repeats in their definition of the locus, and therefore place the pathogenic threshold at  ≥ 11 repeats. Recent reviews such as [Depienne 2021] also use this definition. On the other hand, for technical reasons involving better ExpansionHunter accuracy on pure vs. non-pure repeats, we and others include only the 6 pure GCG repeats in our definition of the locus, and therefore define the pathogenic threshold as ≥ 7 repeats.
+As an example, we can look at the PABPN1 locus (chr14:23321473-23321490), which causes autosomal dominant oculopharyngeal muscular dystrophy (OPMD) when the number of GCG repeats expands to 7 or more on one allele. It should be noted that immediately to the right of the main GCG repeat sequence are 3 GCA repeats followed by a GCG. As GCA and GCG both code for alanine, early publications include these adjacent repeats in their definition of the locus, and therefore place the pathogenic threshold at  ≥ 11 repeats. Recent reviews such as \[Depienne 2021] also use this definition. On the other hand, for technical reasons involving better ExpansionHunter accuracy on pure vs. non-pure repeats, we and others include only the 6 pure GCG repeats in our definition of the locus, and therefore define the pathogenic threshold as ≥ 7 repeats.
 
 To see the PABPN1 STR page, we can scroll down in the table and click on “PABPN1”. Another option is to search the gnomAD browser for “PABPN1” and click on this note at the top of the PABPN1 gene page:
 
-[TODO add image]
+\[TODO add image]
 
 The STR page shows reference information about the locus and the associated disease, followed by the Allele Size Distribution. This histogram summarizes the numbers of GCG repeats found in gnomAD individuals. The y-axis represents alleles, so each individual contributes 2 counts to the distribution, except for STR loci on the X chromosome where male genotypes are hemizygous and thus contribute only 1 count.
 
-[TODO add 2 images]
+\[TODO add 2 images]
 
 This distribution for the PABPN1 locus appears to show that all alleles are in the Normal range: ≤ 6 repeats. However, we can switch the scale from “Linear” to “Log” using the drop-down in the bottom right. This allows us to see the long tail of alleles with 7 or more repeats:
 
-[TODO add image]
+\[TODO add image]
 
-The normal and pathogenic ranges are indicated by horizontal arrows at the top of the plot, as well as by dashed vertical lines at the thresholds. It should be noted that compared with larger expansions,  OPMD caused by 7 repeats has been shown to present with reduced  penetrance, later onset, or milder disease unless identified in homozygosity [Richard 2017]. Because the Allele Size Distribution counts each allele independently, it does not tell us diplotypes (e.g. how many individuals have a 6/7 compound heterozygous genotype vs a 7/7 homozygous genotype). However, if we scroll down to the Genotype Distribution and look at bin x=7, y=6, we see that it’s darker than the bin at x=7, y=7, which means more individuals have the 6/7 genotype. If we mouse over the bins, we can see the exact counts: 67 individuals have a 6/7 genotype and 1 individual has a 7/7 genotype. 
+The normal and pathogenic ranges are indicated by horizontal arrows at the top of the plot, as well as by dashed vertical lines at the thresholds. It should be noted that compared with larger expansions,  OPMD caused by 7 repeats has been shown to present with reduced  penetrance, later onset, or milder disease unless identified in homozygosity \[Richard 2017]. Because the Allele Size Distribution counts each allele independently, it does not tell us diplotypes (e.g. how many individuals have a 6/7 compound heterozygous genotype vs a 7/7 homozygous genotype). However, if we scroll down to the Genotype Distribution and look at bin x=7, y=6, we see that it’s darker than the bin at x=7, y=7, which means more individuals have the 6/7 genotype. If we mouse over the bins, we can see the exact counts: 67 individuals have a 6/7 genotype and 1 individual has a 7/7 genotype. 
 
 Given that the prevalence of OMPD in the general population is estimated at 1 in 100,000, we expect to see fewer than 2 individuals in the pathogenic range, especially since the gnomAD dataset attempts to exclude cases with rare disease.
 
 However, the typical age of onset for OPMD is 40 to 60 years old, so genotype positive individuals are less likely to be affected when recruited and therefore less likely to be excluded from gnomAD. If we scroll down to the Age Distribution, we see a plot where the y-axis represents age bins. 
 
-[TODO add image]
+\[TODO add image]
 
 Mousing over the bins such as the one in the top-right shows several individuals of age 60-65yo, including the individual with 38 repeats, a genotype less likely to be present in the general population. However, one can evaluate the quality of the genotype data through read visualization.
 
 To evaluate this, we can scroll down to the Read Data section and click the “Show read data” button. This displays the read visualization images - starting with the sample that has the longest expansion:
 
-[TODO add image]
+\[TODO add image]
 
 Users can click “Next Sample” and “Previous Sample” buttons to see more images generated by the REViewer tool for all individuals at this locus in order of expansion size. Another option is to first use the “Min repeats” or “Max repeats” filters and the Population and Sex filters to select individuals of interest. Above each image, uses can see the population, sex, and (if available) age of the individual along with the ExpansionHunter genotype and confidence intervals for allele 1 and allele 2. Because some of the images are wider than the screen, users can scroll the image horizontally or right-click and select “Open Image in New Tab” to see the full image.
 
-
 Looking at the reads supporting the pathogenic PABPN1 genotypes we see that the first image is from the individual with the 6/38 genotype. It has two sections: the top section shows reads that support the short allele, and the bottom section shows reads that support the long allele. Here we see multiple deletions in both the repeat sequence (orange) and flanking regions (blue): 
 
-[TODO add image]
+\[TODO add image]
 
-This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect [see Supplemental Details for more information]. 
+This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect \[see Supplemental Details for more information]. 
 
 Clicking the “Next Sample” button, we see subsequent samples also have questionable alignments underlying their long allele sizes. In some cases, the reads are full of mismatches rather than deletions, but the conclusion is the same. By reviewing these images, we find that all alleles > 9 repeats are likely to be technical artifacts. Only when we reach the 6/9 genotypes do we find several well supported 9-repeat alleles with multiple spanning read alignments that lack mismatches or indels:
 
-[TODO add image]
+\[TODO add image]
 
 The age of one of these 6/9 individuals is 25-30 years old. However, there is also a high quality 6/8 genotype in a European individual with age 60-65.
 
@@ -127,11 +125,9 @@ Tools to automatically filter ExpansionHunter genotypes are needed, and are an a
 
 Although we have collected normal and pathogenic thresholds from different reference sources and provide them in the browser, these thresholds should be treated as approximate. Even for loci with long-established disease associations, it can be difficult to draw exact lines separating normal, intermediate, and pathogenic genotypes due to the variability in disease phenotypes across individuals and populations, and ambiguity in STR locus boundaries.
 
-
 Overall, we expect pathogenic thresholds and other reference information to continue to undergo revisions as STR research continues. 
 
 We hope that this release of the STR callset browser and data files will contribute to the study of STR variation and assist with using WGS for the diagnosis of STR disorders. We encourage users to write to gnomad@broadinstitute.org with any questions or comments.
-
 
 ### Acknowledgments
 
@@ -141,14 +137,9 @@ We thank Nehir Kurtas and Stephanie DiTroia for helping to curate the list of di
 
 Several details within REViewer images should be noted:
 
-* Deletion(s) within a read are shown as gaps:  . Multiple deletions within a read may indicate an erroneous alignment and raise the chances of this being an overestimated expansion size. For example, the true genotype here is 51 x CGG rather than 64 x CGG, and the deletions in two of the fully-repetitive reads (along with the G mismatches in their left halves) suggest that most of these reads are misaligned [full image]:
-
-* Insertion(s) within a read are shown as vertical black bars (analogous to the purple bar in IGV): .  When many reads contain insertions beyond the already plotted sequence, this raises the chances that the expansion size has been underestimated. For example, the true genotype below is 42 x GCA instead of 40 x CAG. All three spanning reads hint at this, due to insertions between their repetitive (orange) and right flanking (blue) regions - annotated with a red circle [full image]:
-
-* When all except one or two reads support a shorter genotype, there’s an increased chance the expansion size is overestimated. For example, the true genotype here is 22/22 x CAG instead of 22/42 [full image]. The single read supporting a 42 repeat genotype is annotated with a red circle below:
-
+* Deletion(s) within a read are shown as gaps:  . Multiple deletions within a read may indicate an erroneous alignment and raise the chances of this being an overestimated expansion size. For example, the true genotype here is 51 x CGG rather than 64 x CGG, and the deletions in two of the fully-repetitive reads (along with the G mismatches in their left halves) suggest that most of these reads are misaligned \[full image]:
+* Insertion(s) within a read are shown as vertical black bars (analogous to the purple bar in IGV): .  When many reads contain insertions beyond the already plotted sequence, this raises the chances that the expansion size has been underestimated. For example, the true genotype below is 42 x GCA instead of 40 x CAG. All three spanning reads hint at this, due to insertions between their repetitive (orange) and right flanking (blue) regions - annotated with a red circle \[full image]:
+* When all except one or two reads support a shorter genotype, there’s an increased chance the expansion size is overestimated. For example, the true genotype here is 22/22 x CAG instead of 22/42 \[full image]. The single read supporting a 42 repeat genotype is annotated with a red circle below:
 * The darker-color and lighter-color shading of reads in the example above distinguishes  reads that only support one of the two allele sizes (dark color) vs reads that equally support both allele sizes. In the example above, the reads with shorter repetitive regions are consistent with either the 22 repeat allele, or the 42 repeats, further highlighting that the long allele size estimate rests on evidence from only one read.
-
 * Mismatches with the reference (eg. SNVs) appear as letters within reads: . These are useful for exploring STR interruptions and as additional indicators of the true expansion size. In the previous example, lining up the “T” interruptions in the left-flanking reads with the “T” interruptions in the right-flanking reads suggests the correct 22 x CAG genotype instead of 42 x CAG.
-
-* Soft-clipped bases appear at the beginning or end of a read and represent bases that the aligner considered to be unaligned. They appear as a string of mismatches at the end of a read (like in IGV):  . As with deletions, the presence of soft-clipped bases may indicate poor quality alignments and therefore point to an overestimated expansion size. However, in some cases they may suggest an underestimate instead. For example, the three reads showing additional CAGs in their soft-clipped bases below hint that the true genotype may be longer than 47 x CAG. Indeed, PCR confirmed the true genotype to be 54 x CAG in this sample [full image]:
+* Soft-clipped bases appear at the beginning or end of a read and represent bases that the aligner considered to be unaligned. They appear as a string of mismatches at the end of a read (like in IGV):  . As with deletions, the presence of soft-clipped bases may indicate poor quality alignments and therefore point to an overestimated expansion size. However, in some cases they may suggest an underestimate instead. For example, the three reads showing additional CAGs in their soft-clipped bases below hint that the true genotype may be longer than 47 x CAG. Indeed, PCR confirmed the true genotype to be 54 x CAG in this sample \[full image]:
