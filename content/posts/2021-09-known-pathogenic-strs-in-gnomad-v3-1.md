@@ -20,7 +20,7 @@ This release includes:
 * Collected reference information including disease associations and inheritance modes
 * [Downloadable variant catalogs](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) for running ExpansionHunter on these 59 loci for either GRCh38 or GRCh37, with or without off-target regions
 * A specialized approach for calling loci such as RFC1 where the pathogenic motif(s) differ from the motif in the reference genome
-* Downloadable data file containing all results displayed in the browser, as well as additional results  generated using off-target regions [**TODO link**]
+* Downloadable data file [**TODO link**] containing all results displayed in the browser, as well as additional results  generated using off-target regions 
 
 ### Background
 
