@@ -97,7 +97,7 @@ Given that the prevalence of OMPD in the general population is estimated at 1 in
 
 However, the typical age of onset for OPMD is 40 to 60 years old, so genotype positive individuals are less likely to be affected when recruited and therefore less likely to be excluded from gnomAD. If we scroll down to the **Age Distribution**, we see a plot where the y-axis represents age bins. 
 
-\[TODO add image]
+<img alt="PABPN1 Age Distribution Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_age_distribution_screenshot.png" />
 
 Mousing over the bins such as the one in the top-right shows several individuals of age 60-65yo, including the individual with 38 repeats, a genotype less likely to be present in the general population. However, one can evaluate the quality of the genotype data through read visualization.
 
