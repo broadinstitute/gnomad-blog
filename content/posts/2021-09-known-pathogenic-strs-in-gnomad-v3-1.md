@@ -77,10 +77,7 @@ The STR table \[update link] is the best place to start for exploring the STR da
 
 As an example, we can look at the PABPN1 locus (chr14:23321473-23321490), which causes autosomal dominant oculopharyngeal muscular dystrophy (OPMD) when the number of GCG repeats expands to 7 or more on one allele. It should be noted that immediately to the right of the main GCG repeat sequence are 3 GCA repeats followed by a GCG. As GCA and GCG both code for alanine, early publications include these adjacent repeats in their definition of the locus, and therefore place the pathogenic threshold at  ≥ 11 repeats. Recent reviews such as \[Depienne 2021] also use this definition. On the other hand, for technical reasons involving better ExpansionHunter accuracy on pure vs. non-pure repeats, we and others include only the 6 pure GCG repeats in our definition of the locus, and therefore define the pathogenic threshold as ≥ 7 repeats.
 
-To see the PABPN1 STR page, we can scroll down in the table and click on “PABPN1”. Another option is to search the gnomAD browser for “PABPN1” and click on this note at the top of the PABPN1 gene page:
-
-\[TODO add image]
-
+To see the PABPN1 STR page, we can scroll down in the table and click on “PABPN1”. Another option is to search the gnomAD browser for “PABPN1” and click on this note at the top of the PABPN1 gene page:   <img alt="STR Loci Motif Sizes" src="/news/preview/38/images/2022/01/str_gene_page_PABPN1_link_screenshot.png" width=380/>
 The STR page shows reference information about the locus and the associated disease, followed by the Allele Size Distribution. This histogram summarizes the numbers of GCG repeats found in gnomAD individuals. The y-axis represents alleles, so each individual contributes 2 counts to the distribution, except for STR loci on the X chromosome where male genotypes are hemizygous and thus contribute only 1 count.
 
 \[TODO add 2 images]
