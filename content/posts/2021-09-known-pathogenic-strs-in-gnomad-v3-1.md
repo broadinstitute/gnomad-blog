@@ -33,18 +33,18 @@ Short tandem repeats (STRs) are nucleotide sequences that consist of a short mot
 We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 59 unique loci with the following characteristics:
 
 <figure>
-   <figcaption>STR Loci by Genomic Region</figcaption>
-   <img alt="STR Loci by Genomic Region" src="/news/preview/38/images/2022/01/str_genomic_region_pie_chart.png" height=300 />
+   <figcaption>STR Loci Inheritance Modes</figcaption>
+   <img alt="STR Loci Inheritance Modes" src="/news/preview/38/images/2022/01/str_inheritance_mode_pie_chart.png" height=280/>
 </figure>
 
 <figure>
-   <figcaption>STR Loci by Inheritance Mode</figcaption>
-   <img alt="STR Loci by Inheritance Mode" src="/news/preview/38/images/2022/01/str_inheritance_mode_pie_chart.png" height=280/>
+   <figcaption>STR Loci Genomic Regions</figcaption>
+   <img alt="STR Loci Genomic Regions" src="/news/preview/38/images/2022/01/str_genomic_region_pie_chart.png" height=300 />
 </figure>
 
 <figure>
-   <figcaption></div>STR Loci by Motif Size</figcaption>
-   <img alt="STR Loci by Motif Length" src="/news/preview/38/images/2022/01/str_motif_length_histogram.png" width=480/>
+   <figcaption></div>STR Loci Motif Sizes</figcaption>
+   <img alt="STR Loci Motif Sizes" src="/news/preview/38/images/2022/01/str_motif_length_histogram.png" width=480/>
 </figure>
 
 ### Technical Details
