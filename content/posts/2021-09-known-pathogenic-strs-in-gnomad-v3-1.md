@@ -75,17 +75,19 @@ We used the [REViewer tool](https://www.illumina.com/science/genomics-research/a
 
 The [STR table](http://34.120.124.6/short-tandem-repeats?dataset=gnomad_r3) \[TODO update link] is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s). 
 
-<img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_top_section_screenshot.png" />
+<img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_list_page_screenshot.png" />
 
-As an example, we can look at the PABPN1 locus (chr14:23321473-23321490), which causes autosomal dominant oculopharyngeal muscular dystrophy (OPMD) when the number of GCG repeats expands to 7 or more on one allele. It should be noted that immediately to the right of the main GCG repeat sequence are 3 GCA repeats followed by a GCG. As GCA and GCG both code for alanine, early publications include these adjacent repeats in their definition of the locus, and therefore place the pathogenic threshold at  ≥ 11 repeats. Recent reviews such as \[Depienne 2021] also use this definition. On the other hand, for technical reasons involving better ExpansionHunter accuracy on pure vs. non-pure repeats, we and others include only the 6 pure GCG repeats in our definition of the locus, and therefore define the pathogenic threshold as ≥ 7 repeats.
+As an example, we can look at the PABPN1 locus ([chr14:23321473-23321490](https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr14%3A23321473%2D23321490&hgsid=1256012389_xPVkREAQbc4QH9gHhkBErs2IwRwC)), which causes autosomal dominant [oculopharyngeal muscular dystrophy (OPMD)](https://www.omim.org/entry/164300) when the number of GCG repeats expands to 7 or more on one allele. It should be noted that immediately to the right of the main GCG repeat sequence are 3 GCA repeats followed by a GCG. As GCA and GCG both code for alanine, early publications include these adjacent repeats in their definition of the locus, and therefore place the pathogenic threshold at  ≥ 11 repeats. Recent reviews such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)] also use this definition. On the other hand, for technical reasons involving better ExpansionHunter accuracy on pure vs. non-pure repeats, we and [others](https://stripy.org/database/PABPN1) include only the 6 pure GCG repeats in our definition of the locus, and therefore define the pathogenic threshold as ≥ 7 repeats.
 
-To see the PABPN1 STR page, we can scroll down in the table and click on “PABPN1”. Another option is to search the gnomAD browser for “PABPN1” and click on this note at the top of the PABPN1 gene page:  
-
+To see the PABPN1 STR page, we can scroll down in the table and click on “PABPN1”. Another option is to search the gnomAD browser for “PABPN1” and click on this note at the top of the PABPN1 gene page:\
+\
 <img alt="STR page link example" src="/news/preview/38/images/2022/01/str_gene_page_PABPN1_link_screenshot.png" width=380 />
-
 
 The STR page shows reference information about the locus and the associated disease, followed by the Allele Size Distribution. This histogram summarizes the numbers of GCG repeats found in gnomAD individuals. The y-axis represents alleles, so each individual contributes 2 counts to the distribution, except for STR loci on the X chromosome where male genotypes are hemizygous and thus contribute only 1 count.
 
+<img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/38/images/2022/01/str_PABPN1_page_top_section_screenshot.png" />
+
+\
 \[TODO add 2 images]
 
 This distribution for the PABPN1 locus appears to show that all alleles are in the Normal range: ≤ 6 repeats. However, we can switch the scale from “Linear” to “Log” using the drop-down in the bottom right. This allows us to see the long tail of alleles with 7 or more repeats:
