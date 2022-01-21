@@ -68,11 +68,11 @@ As a temporary solution, we addressed these limitations by developing  [call_non
 
 ### Read Visualizations
 
-We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. Please note that we have included a section below on **“Supplemental Details for Examining Read Visualizations”** that users may find helpful.
+We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. We have included a section below -  **“Supplemental Details for Examining Read Visualizations”** - that describes how to interpret these images.
 
 ### Navigating STR Pages in the gnomAD Browser
 
-The [STR table](http://34.120.124.6/short-tandem-repeats?dataset=gnomad_r3) \[TODO update link] is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s).
+The [STR table](http://34.120.124.6/short-tandem-repeats?dataset=gnomad_r3) [**TODO update link**] is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s).
 
 <img alt="PABPN1 Page Top Section Screenshot" src="/news/preview/56/images/2022/01/str_list_page_screenshot.png" />
 
