@@ -122,7 +122,7 @@ Clicking the “Next Sample” button, we see subsequent samples also have quest
 
 The age of one of these 6/9 individuals is 25-30 years old. However, there is also a high quality 6/8 genotype in a European individual with age 60-65.
 
-In summary, these read visualizations suggest that many pathogenic-range PABPN1 alleles with lengths beyond 7 repeats are technical artifacts. They also highlight some challenges in interpreting STR calls and the importance of validating genotype calls.
+In summary, these read visualizations suggest that many pathogenic-range *PABPN1* alleles with lengths beyond 7 repeats are technical artifacts. They also highlight some challenges in interpreting STR calls and the importance of validating genotype calls.
 
 ### Discussion
 
