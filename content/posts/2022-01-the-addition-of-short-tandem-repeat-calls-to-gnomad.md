@@ -142,7 +142,7 @@ Below we list visual features of REViewer images and how these can be used to id
  ▪ Deletion(s) within a read are shown as gaps: <span><img  src="/news/preview/56/images/2022/01/str_supplementary_section_inline_image1_deletions.png" width=115 /></span>.
   Multiple deletions within a read may indicate an erroneous alignment and raise the chances of this being an overestimated expansion size. For example, the true genotype here is 51 x CGG rather than 64 x CGG, and the deletions in two of the reads located entirely within the repeat sequence (along with the G mismatches in their left halves) suggest that most of these reads are misaligned [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case623.html)]:
 
-<span><img alt="Readviz Example: Deletions" src="/news/preview/56/images/2022/01/str_supplementary_section_full_image1_deletions.svg" /></span>
+<span><img alt="Readviz Example: Deletions" src="/news/preview/56/images/2022/01/str_supplementary_section_full_image1_deletions.png" /></span>
 
 ▪ Insertion(s) within a read are shown as vertical black bars (analogous to the purple bar in IGV): <span><img  src="/news/preview/56/images/2022/01/str_supplementary_section_inline_image2_insertions.png" width=95 /></span>.  When many reads contain insertions beyond the already plotted sequence, this raises the chances that the expansion size has been underestimated. For example, the true genotype below is 42 x GCA instead of 40 x CAG. All three spanning reads hint at this, due to insertions between their repetitive (orange) and right flanking (blue) regions - annotated with a red circle [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case25.html)]:
 
