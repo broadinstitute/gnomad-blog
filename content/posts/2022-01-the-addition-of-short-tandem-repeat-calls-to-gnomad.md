@@ -22,7 +22,7 @@ This release includes:
 * A specialized approach for calling loci such as *RFC1* where the pathogenic motif(s) differ from the motif in the reference genome
 * Downloadable data table containing all results displayed in the browser, as well as additional results such as genotypes generated using off-target regions [**TODO link**]
 
-These resources can be used as a comparison set for STR calls in rare disease cohorts, allowing users to see whether particular genotypes are common or rare. Additionally, we hope the provided variant catalogs and reference information will allow more researchers to genotype these loci in their own cohorts. Finally, the plots, read visualizations, and data file are designed to enable exploration of interesting questions related to disease-associated STR loci. 
+These resources can be used as a comparison set for STR calls in rare disease cohorts, allowing users to see whether particular genotypes are common or rare. Additionally, we hope the provided variant catalogs and reference information will enable more researchers to genotype these loci in their own cohorts. Finally, the plots, read visualizations, and data file are designed to enable exploration of  questions related to disease-associated STR loci. 
 
 ### Background
 
