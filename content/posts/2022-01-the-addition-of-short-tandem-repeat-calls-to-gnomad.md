@@ -140,7 +140,7 @@ We thank Nehir Kurtas and Stephanie DiTroia for helping to curate the list of di
 Below we list visual features of REViewer images and how these can be used to identify overestimated or underestimated genotypes:  
 
  ▪ Deletion(s) within a read are shown as gaps: <span><img  src="/news/preview/56/images/2022/01/str_supplementary_section_inline_image1_deletions.png" width=115 /></span>.
-  Multiple deletions within a read may indicate an erroneous alignment and raise the chances of this being an overestimated expansion size. For example, the true genotype here is 51 x CGG rather than 64 x CGG, and the deletions in two of the reads located entirely within the repeat sequence (along with the G mismatches in their left halves) suggest that most of these reads are misaligned [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case623.html)]:
+  Multiple deletions within a read may indicate an erroneous alignment and raise the chances of this being an overestimated expansion size. For example, the true genotype here is 51 x CGG rather than 64 x CGG, and multiple deletions in reads that are located entirely within the repeat sequence (along with the G mismatches in their left halves) suggest that these reads are misaligned [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case623.html)]:
 
 <span><img alt="Readviz Example: Deletions" src="/news/preview/56/images/2022/01/str_supplementary_section_full_image1_deletions.png" /></span>
 
