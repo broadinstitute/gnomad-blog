@@ -68,7 +68,7 @@ As a temporary solution, we addressed these limitations by developing  [call_non
 
 ### Read Visualizations
 
-We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. We have included a section below, **“[Supplemental Details for Examining Read Visualizations](#supplemental-details-for-examining-read-visualizations),”** that describes how to interpret these images.
+We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. We have included a section below, **[Supplemental Details for Examining Read Visualizations](#supplemental-details-for-examining-read-visualizations)**, that describes how to interpret these images.
 
 ### Navigating STR Pages in the gnomAD Browser
 
@@ -114,7 +114,7 @@ Looking at the reads supporting the pathogenic *PABPN1* genotypes, we see that t
 
 <img alt="PABPN1 Readviz Example #1" src="/news/preview/56/images/2022/01/str_PABPN1_page_read_data_full_svg_image_example.svg" />
 
-This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect (see **Supplemental Details** for more information).
+This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect (see [**Supplemental Details**](#supplemental-details-for-examining-read-visualizations) for more information).
 
 Clicking the “Next Sample” button, we see subsequent samples also have questionable alignments underlying their long allele sizes. In some cases, the reads are full of mismatches rather than deletions, but the conclusion is the same. By reviewing these images, we find that all alleles > 9 repeats are likely to be technical artifacts. Only when we reach the 6/9 genotypes do we find several well supported 9-repeat alleles with multiple spanning read alignments that lack mismatches or indels:
 
