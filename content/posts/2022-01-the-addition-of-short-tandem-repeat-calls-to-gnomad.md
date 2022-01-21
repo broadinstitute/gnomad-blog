@@ -68,7 +68,7 @@ As a temporary solution, we addressed these limitations by developing  [call_non
 
 ### Read Visualizations
 
-We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. We have included a section below,  **“Supplemental Details for Examining Read Visualizations,”** that describes how to interpret these images.
+We used the [REViewer tool](https://www.illumina.com/science/genomics-research/articles/reviewer-alignments-short-reads-long-repeat.html) to generate read visualizations for all individuals at each locus. These images show the reads that ExpansionHunter considered when determining a genotype, and are primarily useful for identifying likely over-estimated genotypes and, to a lesser degree, under-estimated genotypes. We have included a section below, **“[Supplemental Details for Examining Read Visualizations](#supplemental-details-for-examining-read-visualizations),”** that describes how to interpret these images.
 
 ### Navigating STR Pages in the gnomAD Browser
 
