@@ -11,7 +11,7 @@ authors:
 ---
 ### Overview
 
-We have generated short tandem repeat (STR) calls for 60 disease associated loci by running ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 18,511 whole genome samples from gnomAD v3.1.
+We ran ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 18,511 whole genome samples from gnomAD v3.1 to generate  calls for 60 disease associated repeat loci. These include 56 loci that have motifs between 3 and 6bp long and   are traditionally called short tandem repeats (STRs), as well as 4 additional loci with longer motifs of between 10 and 24bp. For brevity, we refer to all 60 loci as "STRs" below. 
 
 This minor release includes:
 
@@ -162,8 +162,6 @@ Below we describe visual features of [REViewer](https://www.illumina.com/science
 ▪ Soft-clipped bases appear at the beginning or end of a read and represent bases that the aligner considered to be unaligned. They appear as a string of mismatches at the end of a read (like in IGV): <span><img  src="../images/2022/01/str_supplementary_section_inline_image4_soft_clips.png" width=125 /></span>. As with deletions, the presence of soft-clipped bases may indicate poor quality alignments and therefore point to an overestimated expansion size. However, in some cases they may suggest an underestimate instead. For example, the three reads showing additional CAGs in their soft-clipped bases below hint that the true genotype may be longer than 47 x CAG. Indeed, PCR confirmed the true genotype to be 54 x CAG in this sample [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case80.html)]:
 
   <span><img alt="Readviz Example: Soft Clips" src="../images/2022/01/str_supplementary_section_full_image4_soft_clips.png" /></span>
-
-
 
 <br /><br /><br />
 
