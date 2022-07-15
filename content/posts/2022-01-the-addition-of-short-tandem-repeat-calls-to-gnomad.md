@@ -11,7 +11,7 @@ authors:
 ---
 ### Overview
 
-We ran ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 18,511 whole genome samples from gnomAD v3.1 to generate  calls for 60 disease associated repeat loci. These include 56 loci that have motifs between 3 and 6bp long and   are traditionally called short tandem repeats (STRs), as well as 4 additional loci with longer motifs of between 10 and 24bp. For brevity, we refer to all 60 loci as "STRs" below. 
+We ran ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 18,511 whole genome samples from gnomAD v3.1 to generate  calls for 60 disease associated repeat loci. These include 56 loci that have motifs between 3 and 6bp long and   are traditionally called short tandem repeats (STRs), as well as 4 other loci with longer motifs of between 10 and 24bp. For brevity, we refer to all 60 loci as "STRs" below. 
 
 This minor release includes:
 
@@ -169,3 +169,5 @@ Below we describe visual features of [REViewer](https://www.illumina.com/science
 
 * *Removed 732 samples with 100bp read lengths which were inadvertently included in the initial release and kept only the 18,511 samples that have 150bp read lengths.* 
 * *Added data for the RILPL1 locus which was recently published as associated with* oculopharyngodistal myopathy type 4 *(*OPDM*) [[Yu 2022](https://pubmed.ncbi.nlm.nih.gov/35148830/)].*
+
+*<br /><br />*
