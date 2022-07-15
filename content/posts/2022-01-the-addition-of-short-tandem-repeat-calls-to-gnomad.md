@@ -35,23 +35,23 @@ Short tandem repeats (STRs) are nucleotide sequences that consist of a short mot
 We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 60 unique loci with the following characteristics:
 
 <figure>
-   <figcaption>STR Loci Inheritance Modes</figcaption>
+   <figcaption>Locus Inheritance Modes</figcaption>
    <img alt="STR Loci Inheritance Modes" src="../images/2022/01/str_inheritance_mode_pie_chart.png" height=280/>
 </figure>
 
 <figure>
-   <figcaption>STR Loci Genomic Regions</figcaption>
+   <figcaption>Locus Genomic Regions</figcaption>
    <img alt="STR Loci Genomic Regions" src="../images/2022/01/str_genomic_region_pie_chart.png" height=300 />
 </figure>
 
 <figure>
-   <figcaption>STR Loci Motif Sizes</figcaption>
+   <figcaption>Locus Motif Sizes</figcaption>
    <img alt="STR Loci Motif Sizes" src="../images/2022/01/str_motif_length_histogram.png" width=480 />
 </figure>
 
 ### Technical Details
 
-To genotype the 60 STR loci with disease associations, we chose to use ExpansionHunter [[Dolzhenko 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668946/)] because 1) we found that it had the best accuracy among existing tools for detecting expansions at disease-associated loci across a wide range of repeat sizes — both shorter and longer than read length, and 2) it’s now widely used for STR research and diagnosis in rare disease cohorts, including in [[Ibanez 2020](https://www.biorxiv.org/content/10.1101/2020.11.06.371716v1)], [[Stranneheim 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00855-5)], [[van der Sanden 2021](https://pubmed.ncbi.nlm.nih.gov/33846582/)].
+To genotype the 60 disease-associated repeat loci, we chose to use ExpansionHunter [[Dolzhenko 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668946/)] because 1) we found that it had the best accuracy among existing tools for detecting expansions at disease-associated loci across a wide range of repeat sizes — both shorter and longer than read length, and 2) it’s now widely used for STR research and diagnosis in rare disease cohorts, including in [[Ibanez 2020](https://www.biorxiv.org/content/10.1101/2020.11.06.371716v1)], [[Stranneheim 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00855-5)], [[van der Sanden 2021](https://pubmed.ncbi.nlm.nih.gov/33846582/)].
 
 In order to run ExpansionHunter on these 60 loci, we generated an ExpansionHunter [variant catalog](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) that specifies the reference coordinates and motif of each locus.
 
@@ -63,7 +63,7 @@ The dataset includes 12,372 (64%) PCR-free samples, 2,423 (13%) PCR-plus samples
 
 ### Loci with Non-Reference Pathogenic Motifs
 
-Nine out of the 60 STR loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [[Halman 2021](https://www.biorxiv.org/content/10.1101/2021.06.13.448220v1)]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif can vary. Other tools such as [ExpansionHunterDenovo](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02017-z) do not have this limitation, but typically cannot distinguish samples that carry two different motifs from samples with a single motif on both alleles. For example, for the *RFC1* locus, the tools would have trouble distinguishing a sample that has a homozygous expansion of the AAGGG motif from a sample that has a short AAAAG repeat on one allele and a long AAGGG repeat on the other allele — a difference that is important for distinguishing carriers from affected individuals. 
+Nine out of the 60 repeat loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [[Halman 2021](https://www.biorxiv.org/content/10.1101/2021.06.13.448220v1)]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif can vary. Other tools such as [ExpansionHunterDenovo](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02017-z) do not have this limitation, but typically cannot distinguish samples that carry two different motifs from samples with a single motif on both alleles. For example, for the *RFC1* locus, the tools would have trouble distinguishing a sample that has a homozygous expansion of the AAGGG motif from a sample that has a short AAAAG repeat on one allele and a long AAGGG repeat on the other allele — a difference that is important for distinguishing carriers from affected individuals. 
 As a temporary solution, we addressed these limitations by developing  [call_non_ref_pathogenic_motifs.py](https://github.com/broadinstitute/str-analysis/blob/main/str_analysis/call_non_ref_pathogenic_motifs.py). This script  first detects the one or two motifs present at each of these loci in a given individual and then runs ExpansionHunter for each motif to estimate its allele size as well as REViewer to generate read visualizations. The approach used by this script to detect motifs is, coincidentally, a simpler version of the approach used by the recently-released [STRling](https://www.biorxiv.org/content/10.1101/2021.11.18.469113v1) tool. Unbiased comparisons are difficult given that we have a small number of positive controls and designed the script based on the positive controls we had available. However, we found that the script had slightly better sensitivity than STRling on positive *RFC1* controls while maintaining high specificity. Additionally, it allowed us to generate read visualizations in a way not currently possible with other tools. A more detailed description of the script is available on [GitHub](https://github.com/broadinstitute/str-analysis) and in a separate [blog post](https://bw2.github.io/).
 
 ### Read Visualizations
