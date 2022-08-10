@@ -2,7 +2,7 @@
 const config = {
   pathPrefix: process.env.PATH_PREFIX || "/news",
   siteMetadata: {
-    title: "gnomAD news",
+    title: "gnomAD browser",
     description: "Announcements from the gnomAD project",
     siteUrl: "https://gnomad.broadinstitute.org/news",
   },

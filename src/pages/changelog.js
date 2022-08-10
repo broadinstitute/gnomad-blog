@@ -9,6 +9,7 @@ const ChangelogPage = ({ data }) => {
     <Layout title="Changelog">
       <div className="article-list no-sidebar">
         <h1>Changelog</h1>
+        <p>The changelog contains a record of all changes made to gnomAD, small or large.</p>
         <div className="article-list-inner">
           {data.allMarkdownRemark.edges.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug;

@@ -8,6 +8,12 @@ const ArticleList = ({ heading, posts, extraSidebarContent }) => {
   return (
     <div className="article-list">
       {heading && <h1>{heading}</h1>}
+      <h1>News</h1>
+      <p>
+        The news page highlights new features, versions, or other major announcements. See our{" "}
+        <Link to="/changelog">changelog</Link> for all changes to gnomAD, including minor ones.
+      </p>
+      <br />
       <div className="article-list-inner">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
