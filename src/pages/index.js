@@ -9,7 +9,7 @@ import RSSIcon from "../components/rss-icon";
 
 const BlogIndex = ({ data }) => {
   return (
-    <Layout title="Home">
+    <Layout title="News">
       <ArticleList
         posts={data.allMarkdownRemark.edges}
         extraSidebarContent={

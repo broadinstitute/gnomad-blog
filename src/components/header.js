@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header id="header">
       <h1 className="header-title">
-        <Link to="/">{siteTitle}</Link>
+        <Link to="https://gnomad.broadinstitute.org/">{siteTitle}</Link>
       </h1>
 
       <nav role="navigation">
@@ -25,11 +25,6 @@ const Header = ({ siteTitle }) => {
         </button>
         <ul id="nav-list" className={isExpanded ? "expanded" : undefined}>
           <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/">
-              Browser
-            </a>
-          </li>
-          <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/about">
               About
             </a>
@@ -42,6 +37,11 @@ const Header = ({ siteTitle }) => {
           <li className="nav-item">
             <Link className="nav-link" to="/">
               News
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/changelog">
+              Changelog
             </Link>
           </li>
           <li className="nav-item">
@@ -63,11 +63,6 @@ const Header = ({ siteTitle }) => {
             <a className="nav-link" href="https://gnomad.broadinstitute.org/feedback">
               Feedback
             </a>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/changelog">
-              Changelog
-            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/help">
