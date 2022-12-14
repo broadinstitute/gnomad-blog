@@ -2,6 +2,8 @@
 title: gnomAD Selected as Global Core Biodata Resource
 date: 2022-12-15
 order: 1
+categories:
+  - Announcements
 authors:
   - Samantha Baxter
 ---
