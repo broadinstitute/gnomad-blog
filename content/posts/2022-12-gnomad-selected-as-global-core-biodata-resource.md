@@ -11,5 +11,3 @@ Biodata Resources](https://globalbiodata.org/scientific-activities/global-core-b
 GBC was formed to ensure the long-term sustainability and availability of critical global data resources, and GCBRs participate in ongoing discussions on these topics and on other elements of good practice for biodata resources. These conversations and collaborations will be vital to creating better infrastructure and support for biodata resources.
 
 To learn more about all the 37 resources to be selected as GCBRs, the GBC, and its mission, you can read more [here](https://globalbiodata.org/scientific-activities/global-core-biodata-resources).
-
-<!-- end_excerpt -->
