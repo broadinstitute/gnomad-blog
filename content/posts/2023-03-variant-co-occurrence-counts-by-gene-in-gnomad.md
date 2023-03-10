@@ -1,5 +1,5 @@
 ---
-title: Variant co-occurrence counts by gene in gnomAD
+title: Variant Co-occurrence Counts by Gene in gnomAD
 date: 2023-03-15
 order: 1
 categories:
