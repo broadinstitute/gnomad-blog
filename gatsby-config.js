@@ -140,9 +140,11 @@ const config = {
 
 if (process.env.GA_TRACKING_ID) {
   config.plugins.push({
-    resolve: "gatsby-plugin-google-analytics",
+    resolve: "gatsby-plugin-google-gtag",
     options: {
-      trackingId: process.env.GA_TRACKING_ID,
+      trackingIds: [
+        process.env.GA_TRACKING_ID,
+      ],
     },
   });
 }
