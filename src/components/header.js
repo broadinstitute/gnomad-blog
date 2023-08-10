@@ -35,8 +35,18 @@ const Header = ({ siteTitle }) => {
             </a>
           </li>
           <li className="nav-item">
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/policies">
+              Policies
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/publications">
+              Publications
+            </a>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/">
-              News
+              Blog
             </Link>
           </li>
           <li className="nav-item">
@@ -50,23 +60,13 @@ const Header = ({ siteTitle }) => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/policies">
-              Policies
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/publications">
-              Publications
-            </a>
-          </li>
-          <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/feedback">
-              Feedback
+              Contact
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/help">
-              Help
+              Help/FAQ
             </a>
           </li>
         </ul>
