@@ -5,9 +5,24 @@ order: 1
 ---
 
 
-Previously, the reference genome build for a particular dataset was only displayed after selection. This led to confusion with differing results between GRCh37 and GRCh38. 
+Previously, when selecting a gnomAD variant dataset in the search bar or in the dataset selection dropdown, the dataset's reference genome version was not displayed.
 
-Now, when selecting a version or dataset, the genome reference build is now visible. This informs users what build they are searching on before selecting a version or dataset. 
-
+With this change, the reference genome version (GRCh37 or GRCh38) is now visible next to the gnomAD variant dataset version, making it more clear to users which dataset to select.
 
 <!-- end_excerpt -->
+
+<div align="center">
+<figure>
+   <img src="../../static/images/2023/08/genome_build_homepage.png" />
+   <figcaption>The search bar</figcaption>
+</figure>
+
+<figure>
+   <img src="../../static/images/2023/08/genome_build_dataset_1.png" />
+   <img src="../../static/images/2023/08/genome_build_dataset_2.png" />
+   <figcaption>The dataset selection dropdown</figcaption>
+</figure>
+
+</div>
+
+
