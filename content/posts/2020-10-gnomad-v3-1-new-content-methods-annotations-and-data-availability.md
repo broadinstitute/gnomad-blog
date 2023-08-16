@@ -65,9 +65,9 @@ Users can access the entire repository with a simple command:
 
 We’re delighted to provide, for the first time, [downloads](https://gnomad.broadinstitute.org/downloads) with individual-level genotypes for a subset of gnomAD that is available to the public with no access restrictions. We hope this resource will be useful for a broad range of research applications — serving as a diverse reference panel for haplotype phasing and genotype imputation, for example, or as a training set for ancestry inference.
 
-The samples included in this subset are drawn from the [1000 Genomes Project](https://www.nature.com/articles/nature15393) (n=2,435) and the [Human Genome Diversity Project](https://science.sciencemag.org/content/367/6484/eaay5012) (n=780), which contain some of the most genetically diverse populations present in gnomAD. Collectively they represent human genetic diversity sampled across >60 distinct populations from Africa, Europe, the Middle East, South and Central and South Asia, East Asia, Oceania, and the Americas.
+The samples included in this subset are drawn from the [1000 Genomes Project](https://www.nature.com/articles/nature15393) (n=2,500) and the [Human Genome Diversity Project](https://science.sciencemag.org/content/367/6484/eaay5012) (n=780), which contain some of the most genetically diverse populations present in gnomAD. Collectively they represent human genetic diversity sampled across >60 distinct populations from Africa, Europe, the Middle East, South and Central and South Asia, East Asia, Oceania, and the Americas.
 
-To create this callset, we re-processed raw data from the 1000 Genomes Project and HGDP to meet the [functional equivalence](https://www.nature.com/articles/s41467-018-06159-4) standard and joint-called the re-processed data with the rest of the gnomAD callset. (See “Incremental joint calling” above for more details on the joint-calling process.) The callset contains all high-quality samples (n=3942) from these projects that passed gnomAD sample QC filters. These files therefore contain data for individuals (n=662) that we did not ultimately include in the gnomAD v3.1 aggregate allele frequencies, as these individuals were found to be second-degree related (or closer) to other individuals in 1000 Genomes, HGDP, or the larger gnomAD callset. We have provided a sample metadata table containing each sample’s status of inclusion or exclusion in the v3.1 release, along with sample-level quality control metrics and ancestry labels to accompany the VCF. (This information is directly annotated as column annotations in the Matrix Table version of the callset.)
+To create this callset, we re-processed raw data from the 1000 Genomes Project and HGDP to meet the [functional equivalence](https://www.nature.com/articles/s41467-018-06159-4) standard and joint-called the re-processed data with the rest of the gnomAD callset. (See “Incremental joint calling” above for more details on the joint-calling process.) The callset contains all high-quality samples (n=3,942) from these projects that passed gnomAD sample QC filters. These files therefore contain data for individuals (n=662) that we did not ultimately include in the gnomAD v3.1 aggregate allele frequencies, as these individuals were found to be second-degree related (or closer) to other individuals in 1000 Genomes, HGDP, or the larger gnomAD callset. We have provided a sample metadata table containing each sample’s status of inclusion or exclusion in the v3.1 release, along with sample-level quality control metrics and ancestry labels to accompany the VCF. (This information is directly annotated as column annotations in the Matrix Table version of the callset.)
 
 All variants found in this cohort of samples are included, along with the variant filter status, metrics used to assess variant quality, and gnomAD v3.1 allele frequencies.
 
@@ -164,10 +164,12 @@ Additionally, samples were filtered if they had a mean coverage on chromosome 20
 The process of imputing sex was the same as the method used for gnomAD v3, with slightly modified cutoffs. In previous releases, we used cutoffs on F-stat to determine XX and XY. The current pipeline uses a rough F-stat cutoff of 0.5 to split samples into the XX and XY categories. The final X and Y ploidy cutoffs are then determined from the means and standard deviations of those XX and XY distributions. Sex was assigned based on the following cutoffs:
 
 * XY:
+
   * normalized X coverage < 1.29 &
   * normalized Y coverage > 0.1 &
   * normalized Y coverage < 1.16
 * XX:
+
   * normalized X coverage > 1.45 &
   * normalized X coverage < 2.4 &
   * normalized Y coverage < 0.1
@@ -179,6 +181,7 @@ The plot below overlays the new v3.1 samples onto the normalized X coverage vs. 
 #### Ancestry inference
 
 The method for ancestry assignment was similar to the method used for v3, with some slight changes in parameters and evaluation. 30 principal components (PCs) were computed using principal components analysis (PCA) as implemented by the [`hwe_normalized_pca()`](https://hail.is/docs/0.2/methods/genetics.html#hail.methods.hwe_normalized_pca) Hail function on 76,419 high-quality variants selected as follows:
+
 1. We took all sites that were used for gnomAD v2.1 and lifted them over to GRCh38
 2. We added [~5k sites](https://www.nature.com/articles/nature12975) widely used for quality control of GWAS data defined by Shaun Purcell and lifted these sites over to GRCh38
 3. From these two sets of sites, we then selected all bi-allelic SNVs with an Inbreeding coefficient > -0.25 (no excess of heterozygotes)
@@ -202,7 +205,7 @@ As with gnomAD v3, we performed variant QC using the allele-specific version of 
 
 We used the standard GATK training resources (HapMap, Omni, 1000 Genomes, Mills indels) in addition to ~19M transmitted singletons (alleles confidently observed exactly twice in gnomAD, once in a parent and once in a child) from 6,743 trios present in the raw data.
 
-The figure below shows the precision and recall curves for the allele-specific VQSR model (AS\_VQSR\_TS) using a truth sample ([NA12878](https://github.com/genome-in-a-bottle/giab_latest_release)) present in our data. The lines at 90 (SNVs) and 80 (indels) indicate the cutoffs we chose for filtering.
+The figure below shows the precision and recall curves for the allele-specific VQSR model (AS_VQSR_TS) using a truth sample ([NA12878](https://github.com/genome-in-a-bottle/giab_latest_release)) present in our data. The lines at 90 (SNVs) and 80 (indels) indicate the cutoffs we chose for filtering.
 
 ![](../images/2020/10/variant_pr_curves_v3_1.jpg) The same variant hard filters were applied:
 
@@ -211,4 +214,7 @@ The figure below shows the precision and recall curves for the allele-specific V
 
 These filtering criteria excluded 12.2% of SNVs and 32.5% of indels, resulting in 569,860,911 SNVs and 74,407,067 indels that passed all filters in the v3.1 release.
 
-*Updated on December 17, 2021 to provide additional details to the [ancestry inference section](#ancestry-inference) of this post.*
+*Updates:*
+
+* *August 14, 2023 to correct the number of 1000 Genomes Project samples from 2,435 to 2,500.*
+* *December 17, 2021 to provide additional details to the [ancestry inference section](#ancestry-inference) of this post.*
