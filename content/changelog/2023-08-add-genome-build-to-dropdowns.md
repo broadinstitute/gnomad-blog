@@ -13,13 +13,14 @@ With this change, the reference genome version (GRCh37 or GRCh38) is now visible
 
 <div align="center">
 <figure>
-   <img src="../../static/images/2023/08/genome_build_homepage.png" />
+   <img alt="Genome Build Feature In Search Bar"
+   src="../images/2023/08/genome_build_homepage.png" />
    <figcaption>The search bar</figcaption>
 </figure>
 
 <figure>
-   <img src="../../static/images/2023/08/genome_build_dataset_1.png" />
-   <img src="../../static/images/2023/08/genome_build_dataset_2.png" />
+   <img alt="Genome Build Feature In Dataset Selection Dropdown" src="../images/2023/08/genome_build_dataset_1.png" />
+   <img alt="Genome Build Feature In Dataset Selection Dropdown For SVs" src="../images/2023/08/genome_build_dataset_2.png" />
    <figcaption>The dataset selection dropdown</figcaption>
 </figure>
 
