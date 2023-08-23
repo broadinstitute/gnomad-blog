@@ -1,5 +1,5 @@
 ---
-title: Allele frequency table display modified
+title: Population frequency display modified
 date: "2023-08-24"
 order: 1
 ---
