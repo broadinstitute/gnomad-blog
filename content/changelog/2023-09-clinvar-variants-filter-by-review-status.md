@@ -1,6 +1,6 @@
 ---
 title: Filter ClinVar Variants by review status
-date: "2023-09-19"
+date: "2023-09-22"
 order: 1
 ---
 
