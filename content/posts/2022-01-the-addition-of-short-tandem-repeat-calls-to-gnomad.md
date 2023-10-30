@@ -1,5 +1,5 @@
 ---
-title: The Addition of Short Tandem Repeat Calls to gnomAD
+title: The Addition of Short Tandem Repeat Calls to gnomAD (v3.1.3)
 date: 2022-01-21
 order: 1
 categories:
@@ -11,14 +11,14 @@ authors:
 ---
 ### Overview
 
-We have generated short tandem repeat (STR) calls for 59 disease associated loci by running ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 19,241 whole genome samples from gnomAD v3.1.
+We ran ExpansionHunter [[Dolzhenko 2019](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)] on 18,511 whole genome samples from gnomAD v3.1 to generate  calls for 60 disease associated repeat loci. These include 56 loci that have motifs between 3 and 6bp long and   are traditionally called short tandem repeats (STRs), as well as 4 other loci with longer motifs of between 10 and 24bp. For brevity, we refer to all 60 loci as "STRs" below. 
 
-This release includes:
+This minor release includes:
 
 * Distributions of STR genotypes in the general population, with subsets by ancestry group and sex
-* Visualizations of the read data for all samples at all 59 loci
+* Visualizations of the read data for all samples at all 60 loci
 * Collected reference information including disease associations and inheritance modes
-* [Downloadable variant catalogs](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) for running ExpansionHunter on these 59 loci for either GRCh38 or GRCh37, with or without off-target regions
+* [Downloadable variant catalogs](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) for running ExpansionHunter on these 60 loci for either GRCh38 or GRCh37, with or without off-target regions
 * A specialized approach for calling loci such as *RFC1* where the pathogenic motif(s) differ from the motif in the reference genome
 * [Downloadable data table](https://gnomad.broadinstitute.org/downloads#v3-short-tandem-repeats) containing all results displayed in the browser, as well as additional results such as genotypes generated using off-target regions
 
@@ -32,30 +32,30 @@ Short tandem repeats (STRs) are nucleotide sequences that consist of a short mot
 
 ### Disease-Associated Loci
 
-We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 59 unique loci with the following characteristics:
+We collected and curated known pathogenic loci from sources such as [[Depienne 2021](https://pubmed.ncbi.nlm.nih.gov/33811808/)], [STRipy](https://stripy.org/database), [OMIM](https://www.omim.org/), and [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/). This yielded a catalog of 60 unique loci with the following characteristics:
 
 <figure>
-   <figcaption>STR Loci Inheritance Modes</figcaption>
+   <figcaption>Locus Inheritance Modes</figcaption>
    <img alt="STR Loci Inheritance Modes" src="../images/2022/01/str_inheritance_mode_pie_chart.png" height=280/>
 </figure>
 
 <figure>
-   <figcaption>STR Loci Genomic Regions</figcaption>
+   <figcaption>Locus Genomic Regions</figcaption>
    <img alt="STR Loci Genomic Regions" src="../images/2022/01/str_genomic_region_pie_chart.png" height=300 />
 </figure>
 
 <figure>
-   <figcaption>STR Loci Motif Sizes</figcaption>
+   <figcaption>Locus Motif Sizes</figcaption>
    <img alt="STR Loci Motif Sizes" src="../images/2022/01/str_motif_length_histogram.png" width=480 />
 </figure>
 
 ### Technical Details
 
-To genotype the 59 STR loci with disease associations, we chose to use ExpansionHunter [[Dolzhenko 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668946/)] because 1) we found that it had the best accuracy among existing tools for detecting expansions at disease-associated loci across a wide range of repeat sizes — both shorter and longer than read length, and 2) it’s now widely used for STR research and diagnosis in rare disease cohorts, including in [[Ibanez 2020](https://www.biorxiv.org/content/10.1101/2020.11.06.371716v1)], [[Stranneheim 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00855-5)], [[van der Sanden 2021](https://pubmed.ncbi.nlm.nih.gov/33846582/)].
+To genotype the 60 disease-associated repeat loci, we chose to use ExpansionHunter [[Dolzhenko 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668946/)] because 1) we found that it had the best accuracy among existing tools for detecting expansions at disease-associated loci across a wide range of repeat sizes — both shorter and longer than read length, and 2) it’s now widely used for STR research and diagnosis in rare disease cohorts, including in [[Ibanez 2020](https://www.biorxiv.org/content/10.1101/2020.11.06.371716v1)], [[Stranneheim 2021](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-021-00855-5)], [[van der Sanden 2021](https://pubmed.ncbi.nlm.nih.gov/33846582/)].
 
-In order to run ExpansionHunter on these 59 loci, we generated an ExpansionHunter [variant catalog](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) that specifies the reference coordinates and motif of each locus.
+In order to run ExpansionHunter on these 60 loci, we generated an ExpansionHunter [variant catalog](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) that specifies the reference coordinates and motif of each locus.
 
-We then ran an [I/O-optimized version](https://github.com/bw2/ExpansionHunter#note) of [ExpansionHunter v5](https://github.com/Illumina/ExpansionHunter) on the 19,241 gnomAD v3.1 samples for which the raw read data files were still available. We also ran [REViewer](https://github.com/Illumina/REViewer) to generate read visualizations for all samples at all 59 loci. Finally, we used python scripts in the [STR-analysis repo](https://github.com/broadinstitute/str-analysis) to aggregate results and generate the STR data file available for download.
+We then ran an [I/O-optimized version](https://github.com/bw2/ExpansionHunter#note) of [ExpansionHunter v5](https://github.com/Illumina/ExpansionHunter) on the 18,511 gnomAD v3.1 samples for which the raw read data files were still available. We also ran [REViewer](https://github.com/Illumina/REViewer) to generate read visualizations for all samples at all 60 loci. Finally, we used python scripts in the [STR-analysis repo](https://github.com/broadinstitute/str-analysis) to aggregate results and generate the STR data file available for download.
 
 ExpansionHunter gives users the option to specify off-target regions which allow it to more accurately estimate large expansion sizes beyond fragment length (> ~350bp). However, off-target regions also increase the chance that ExpansionHunter will overestimate some genotypes. For more information about off-target regions, see [[Dolzhenko 2017](https://pubmed.ncbi.nlm.nih.gov/28887402/)] and [[Mousavi 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6735967/)]. In our experience with STR genotyping in rare disease cohorts, we have found that it is best to first run ExpansionHunter without off-target regions, even for loci such as *DMPK* or *C9orf72* where we see very large expansions. Although this produces underestimated genotypes in some highly-expanded samples, these genotypes still turn out to be outliers relative to other individuals in the cohort, and can therefore be flagged and re-genotyped later using off-target regions. After considering the trade-offs, we chose to display only the results generated without using off-target regions. However, we provide results from running ExpansionHunter both with and without off-target regions in the [downloadable data file](https://gnomad.broadinstitute.org/downloads#v3-short-tandem-repeats). Additionally, we share two sets of [variant catalogs](https://github.com/broadinstitute/str-analysis/tree/main/str_analysis/variant_catalogs) — both with and without off-target regions.
 
@@ -63,7 +63,7 @@ The dataset includes 12,372 (64%) PCR-free samples, 2,423 (13%) PCR-plus samples
 
 ### Loci with Non-Reference Pathogenic Motifs
 
-Nine out of the 59 STR loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [[Halman 2021](https://www.biorxiv.org/content/10.1101/2021.06.13.448220v1)]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif can vary. Other tools such as [ExpansionHunterDenovo](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02017-z) do not have this limitation, but typically cannot distinguish samples that carry two different motifs from samples with a single motif on both alleles. For example, for the *RFC1* locus, the tools would have trouble distinguishing a sample that has a homozygous expansion of the AAGGG motif from a sample that has a short AAAAG repeat on one allele and a long AAGGG repeat on the other allele — a difference that is important for distinguishing carriers from affected individuals. 
+Nine out of the 60 repeat loci are unusual in that they vary among individuals not just in the allele sizes, but also in the motifs present at the locus. These have been termed “replaced/nested” loci by [[Halman 2021](https://www.biorxiv.org/content/10.1101/2021.06.13.448220v1)]. Existing STR genotyping tools such as ExpansionHunter and GangSTR require users to pre-specify the motif, and so do not work well for loci where the motif can vary. Other tools such as [ExpansionHunterDenovo](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02017-z) do not have this limitation, but typically cannot distinguish samples that carry two different motifs from samples with a single motif on both alleles. For example, for the *RFC1* locus, the tools would have trouble distinguishing a sample that has a homozygous expansion of the AAGGG motif from a sample that has a short AAAAG repeat on one allele and a long AAGGG repeat on the other allele — a difference that is important for distinguishing carriers from affected individuals. 
 As a temporary solution, we addressed these limitations by developing  [call_non_ref_pathogenic_motifs.py](https://github.com/broadinstitute/str-analysis/blob/main/str_analysis/call_non_ref_pathogenic_motifs.py). This script  first detects the one or two motifs present at each of these loci in a given individual and then runs ExpansionHunter for each motif to estimate its allele size as well as REViewer to generate read visualizations. The approach used by this script to detect motifs is, coincidentally, a simpler version of the approach used by the recently-released [STRling](https://www.biorxiv.org/content/10.1101/2021.11.18.469113v1) tool. Unbiased comparisons are difficult given that we have a small number of positive controls and designed the script based on the positive controls we had available. However, we found that the script had slightly better sensitivity than STRling on positive *RFC1* controls while maintaining high specificity. Additionally, it allowed us to generate read visualizations in a way not currently possible with other tools. A more detailed description of the script is available on [GitHub](https://github.com/broadinstitute/str-analysis) and in a separate [blog post](https://bw2.github.io/).
 
 ### Read Visualizations
@@ -72,7 +72,7 @@ We used the [REViewer tool](https://www.illumina.com/science/genomics-research/a
 
 ### Navigating STR Pages in the gnomAD Browser
 
-The [STR table](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r3) is the best place to start for exploring the STR data. It contains the list of 59 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s).
+The [STR table](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r3) is the best place to start for exploring the STR data. It contains the list of 60 disease-associated loci, their repeat motif, genomic region, inheritance mode, and disease association(s).
 
 <img alt="PABPN1 Page Top Section Screenshot" src="../images/2022/01/str_list_page_screenshot.png" />
 
@@ -114,7 +114,7 @@ Looking at the reads supporting the pathogenic *PABPN1* genotypes, we see that t
 
 <img alt="PABPN1 Readviz Example #1" src="../images/2022/01/str_PABPN1_page_read_data_full_svg_image_example.svg" />
 
-This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect (see [**Supplemental Details**](#supplemental-details-for-examining-read-visualizations) for more information).
+This suggests that most or all reads supporting the long allele are misaligned, and that the genotype is very likely to be incorrect (see **[Supplemental Details](#supplemental-details-for-examining-read-visualizations)** for more information).
 
 Clicking the “Next Sample” button, we see subsequent samples also have questionable alignments underlying their long allele sizes. In some cases, the reads are full of mismatches rather than deletions, but the conclusion is the same. By reviewing these images, we find that all alleles > 9 repeats are likely to be technical artifacts. Only when we reach the 6/9 genotypes do we find several well supported 9-repeat alleles with multiple spanning read alignments that lack mismatches or indels:
 
@@ -162,3 +162,12 @@ Below we describe visual features of [REViewer](https://www.illumina.com/science
 ▪ Soft-clipped bases appear at the beginning or end of a read and represent bases that the aligner considered to be unaligned. They appear as a string of mismatches at the end of a read (like in IGV): <span><img  src="../images/2022/01/str_supplementary_section_inline_image4_soft_clips.png" width=125 /></span>. As with deletions, the presence of soft-clipped bases may indicate poor quality alignments and therefore point to an overestimated expansion size. However, in some cases they may suggest an underestimate instead. For example, the three reads showing additional CAGs in their soft-clipped bases below hint that the true genotype may be longer than 47 x CAG. Indeed, PCR confirmed the true genotype to be 54 x CAG in this sample [[full image](https://broadinstitute.github.io/StrPileups/page_GE_case80.html)]:
 
   <span><img alt="Readviz Example: Soft Clips" src="../images/2022/01/str_supplementary_section_full_image4_soft_clips.png" /></span>
+
+<br /><br /><br />
+
+*July 2022 Update:*
+
+* *Removed 732 samples with 100bp read lengths which were inadvertently included in the initial release and kept only the 18,511 samples that have 150bp read lengths.* 
+* *Added data for the RILPL1 locus which was recently published as associated with* oculopharyngodistal myopathy type 4 *(*OPDM*) [[Yu 2022](https://pubmed.ncbi.nlm.nih.gov/35148830/)].*
+
+*<br /><br />*
