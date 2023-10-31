@@ -3,6 +3,8 @@ title: Advancing the AI/ML-Readiness of gnomAD Data with GA4GH Genomic Knowledge
   Standards
 date: 2023-11-01
 order: 5
+categories:
+  - Announcements
 authors:
   - Alex Wagner
   - Wesley Goar
