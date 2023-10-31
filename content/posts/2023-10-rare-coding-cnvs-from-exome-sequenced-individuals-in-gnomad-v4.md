@@ -45,7 +45,30 @@ Fig. 2. The performance of GATK-gCNV reported in Babadi et al. and repeated for 
 
 In total, we discovered 66,903 high-quality, rare coding CNV sites across the 464,297 individuals released here, including 30,877 are deletions and 36,026 duplications. We observed more large duplications than deletions, where on average deletions spanned 6 exons, while duplications spanned 10 exons, which is consistent with an expectation of stronger selection against large deletions. On average, we observed 1 rare coding CNV per individual, with 32% of samples harboring a rare coding deletion, while 46% of samples carried a rare coding duplication. We observe 0.6 genes to be deleted on average per individual, and 1.2 genes duplicated. When leveraging the loss of function observed/expected upper-bound fraction (LOEUF, Karczewski et al. Nature, 2020) constraint metric introduced in gnomAD v2, we observe 0.02 constrained genes to be deleted on average per individual and 0.07 genes duplicated amongst the most constrained set of 2,968 genes defined as LOEUF < 0.35.
 
-Importantly, in this dataset, we have significant improvements of representation of individuals from a range of genetic ancestry groups (Table 1), including 83,968 samples of non-European genetic ancestry, allowing us to uncover significant differences in the rate of certain variants by groups. In aggregate, while genetic ancestry groups differ as expected in terms of the number of rare deletions and duplications, when CNV discovery is restricted to those variants that alter the coding sequence of constrained genes, we observe minimal difference in the CNV rates between groups, consistent with previous short variant analyses. 
+Importantly, in this dataset, we have significant improvements of representation of individuals from a range of genetic ancestry groups (Table 1), including 83,968 samples of non-European genetic ancestry, allowing us to uncover significant differences in the rate of certain variants by groups. In aggregate, while genetic ancestry groups differ as expected in terms of the number of rare deletions and duplications, when CNV discovery is restricted to those variants that alter the coding sequence of constrained genes, we observe minimal difference in the CNV rates between groups, consistent with previous short variant analyses.
+
+<style type="text/css">
+table {
+  border: solid black 2px;
+  padding: 0.2em;
+}
+
+th {
+  padding: 0.4em;
+  border: solid black 1px;
+}
+
+td {
+  padding: 0.4em;
+  border: solid black 1px;
+}
+
+td:first-child {
+  font-weight: bold
+}
+
+</style>
+ 
 
 |     | afr    | amr    | asj    | eas    | fin    | mid   | nfe     | sas    |
 | --- | ------ | ------ | ------ | ------ | ------ | ----- | ------- | ------ |
