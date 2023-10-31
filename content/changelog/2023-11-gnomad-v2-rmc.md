@@ -18,3 +18,8 @@ Note that regional missense constraint was only calculated on **canonical** tran
 The updated track has a new color scheme to more clearly visualize regions of missense intolerance and a more detailed hover-over to provide more information about each domain of regional missense constraint.
 
 For more information about how these data were generated, please see the RMC help [page](https://gnomad.broadinstitute.org/help/regional-constraint).
+
+<figure>
+   <img alt="alt text" src="../images/2023/rmc_track.jpg" />
+   <figcaption>The location of the RMC track</figcaption>
+</figure>
