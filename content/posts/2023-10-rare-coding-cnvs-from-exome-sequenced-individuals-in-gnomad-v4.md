@@ -7,7 +7,13 @@ categories:
   - Releases
 authors:
   - Jack Fu
+  - Cal Liao
+  - Ryan Collins
+  - Lily Wang
+  - Harrison Brand
+  - Michael Talkowski
   - Elissa Alarmani
+  - gnomAD SV team
 ---
 As a part of gnomAD V4, we are excited to include our first gnomAD release of rare (<1% overall site frequency) autosomal coding copy number variants (CNVs) from exome-sequencing (ES) in 464,297 individuals. These data are available to explore in the user-friendly gnomAD browser (https://gnomad.broadinstitute.org/), while the complete annotated rare CNV callset can be downloaded directly from the [downloads page](https://gnomad.broadinstitute.org/downloads#v4-structural-variants).
 
