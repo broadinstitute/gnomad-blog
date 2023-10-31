@@ -34,6 +34,8 @@ The new SV dataset for gnomAD v4 was generated using a cloud-based SV joint call
 
 The v4 SV callset represents 1,199,117 high-quality variant sites that have fully resolved alternate allele structures (Figure 2A, Table 1), including deletions (DEL), tandem duplications (DUP), insertions (INS), inversions (INV), multiallelic copy number variants (mCNV), reciprocal translocations (CTX), and complex rearrangements (CPX) (Figure 2A). An average of 11,844 SVs were detected in the individual genome across all SV types (Figure 2B). Consistent with our prior analyses in gnomAD v2 and other studies such as the 1000 Genomes Project [(](https://paperpile.com/c/KfhVWM/raxz)[Byrska-Bishop et al. 2022, PMID 36055201](https://pubmed.ncbi.nlm.nih.gov/36055201/)[)](https://paperpile.com/c/KfhVWM/raxz), SVs in the human genomes are predominantly small and rare: the median SV size in gnomAD-SV v4 is 306 bp, and 96.0% of SVs in gnomAD v4 appear at allele frequencies (AF) below 1% in the population (Table 1). 
 
+![](../images/blogposttable1.jpg)
+
 ## Complex SVs and translocations
 
 We have identified and resolved a total of 13,116 high-quality complex SV (CPX) sites that involve either two or more breakpoints or canonical SV signatures that cannot be explained by a single end-joining event. Approximately two-thirds of all events involve inversions (69.6%) while the remaining third are composed of various subtypes of dispersed duplications or insertions. We have also manually identified and resolved 92 canonical reciprocal translocations (CTX) in the 63,046 unrelated individuals of this callset, resulting in an estimated frequency of approximately 1.5 CTX per 1,000 individuals discovered at sequencing resolution. 
@@ -55,3 +57,5 @@ We have annotated the predicted functional impact of SVs using the GATK SVAnnota
 Frequent users of the gnomAD browser will be glad to hear that the functionality for querying the gnomAD v4 SV callset has remained consistent with the gnomAD v2 SVs, which was originally described here:
 
 <https://gnomad.broadinstitute.org/news/2019-03-structural-variants-in-gnomad/>.
+
+![](../images/blogposttable2.jpg)
