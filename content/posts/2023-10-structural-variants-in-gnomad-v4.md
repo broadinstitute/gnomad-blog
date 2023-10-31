@@ -48,6 +48,8 @@ We extensively evaluated the quality of the gnomAD v4 SV call set. Discovery of 
 
 We have annotated the predicted functional impact of SVs using the GATK SVAnnotate tool with GENCODE release 39 (Figure 4). We found an average of 188 genes per genome in which the open reading frame was predicted to be altered by SVs and resulted in probable loss-of-function (pLoF), as well as 34 full gene duplications in each genome (Copy Gain \[CG]). We have also annotated variants and genes with less clear functional impacts such as genes harboring nested duplications of one or more complete exons (Intragenic Exon Dup \[IED]), or intragenic duplications for which at least one exon harbored a duplication breakpoint (Partial Exon Dup \[PED]), duplications that include a transcription start site (TSS) but do not duplicate the entire gene (TSS Dup, TSSD), those that duplicate parts of a gene without the TSS (Dup Partial, DP), and genes inverted but fully intact (INV Span, IS). Counts of different functional classifications per person in v4 are displayed in Table 2. 
 
+![](../images/blogpostfig4.jpg "Figure 4. Illustration of functional impact of SVs")
+
 ## Query SVs in gnomAD browser
 
 Frequent users of the gnomAD browser will be glad to hear that the functionality for querying the gnomAD v4 SV callset has remained consistent with the gnomAD v2 SVs, which was originally described here:
