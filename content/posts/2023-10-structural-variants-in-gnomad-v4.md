@@ -8,8 +8,12 @@ categories:
 authors:
   - Xuefang Zhao
   - Ryan Collins
+  - Mark Walker
   - Phil Darnowsky
+  - Katherine Chao
   - Harrison Brand
+  - Michael Talkowski
+  - gnomAD SV team
 ---
 Today, we are thrilled to announce the release of genome-wide structural variants (SVs) for **63,046** unrelated samples with genome sequencing (GS) data. All site-level information for **1,199,117** high-quality SVs discovered in these samples is browsable in the gnomAD browser (gnomAD SV v4) and downloadable from the gnomAD downloads [page](https://gnomad.broadinstitute.org/downloads#v4-structural-variants). For the full details of the v4 GS cohort (previously the v3 cohort), please refer to the prior blog [posts](https://gnomad.broadinstitute.org/news/2020-10-gnomad-v3-1/) regarding short variants (SNVs/indels) in gnomAD. These data represent the first SV dataset released as part of gnomAD that is native to the GRCh38 reference genome and should supersede the previous (hg19-based) gnomAD v2 SV callset for all GRCh38-based applications.
 
