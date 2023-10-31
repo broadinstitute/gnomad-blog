@@ -17,7 +17,7 @@ Today, we are thrilled to announce the release of genome-wide structural variant
 
 Before diving into the technical specifics of the GS-based SVs in gnomAD v4, we highlight some of the biggest improvements over the prior SV callset in gnomAD v2, including: 
 
-![](../images/blogpostfig1.jpg "Figure 1. Count of samples across genetic ancestry groups annotated in gnomAD")
+![Figure 1. Count of samples across genetic ancestry groups annotated in gnomAD](../images/blogpostfig1.jpg "Figure 1. Count of samples across genetic ancestry groups annotated in gnomAD")
 
 * Significantly greater scale: a total of 63,046 samples were jointly processed for SV discovery in v4 to produce ~1.2M SVs. 
 * Increased representation of SVs across a greater diversity of populations than gnomAD v2 (Figure 1).
