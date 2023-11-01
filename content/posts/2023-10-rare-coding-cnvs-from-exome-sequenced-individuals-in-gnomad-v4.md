@@ -10,6 +10,7 @@ authors:
   - Cal Liao
   - Ryan Collins
   - Lily Wang
+  - Daniel Ben-Isvy
   - Harrison Brand
   - Michael Talkowski
   - Elissa Alarmani
