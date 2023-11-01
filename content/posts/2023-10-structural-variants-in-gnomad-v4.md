@@ -62,4 +62,4 @@ Frequent users of the gnomAD browser will be glad to hear that the functionality
 
 <https://gnomad.broadinstitute.org/news/2019-03-structural-variants-in-gnomad/>.
 
-![](../images/blogposttable2.jpg)
+![](../images/blogposttable2.png)
