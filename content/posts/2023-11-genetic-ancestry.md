@@ -88,7 +88,7 @@ As mentioned above, any methods that attempt to create discrete groups using gen
 We share the following table in order to present how our inferred genetic ancestry groups correspond to descriptors provided by each contributing [study](https://gnomad.broadinstitute.org/about). The table below lists the total number of individuals in each genetic ancestry group and the percentage of samples per group with each study-provided descriptor. Any descriptors that contribute to fewer than 1% of the samples per group have been aggregated into the column "Study-provided labels that make up less than 1%". Note that the study-provided descriptors in the table below were not used to train our genetic inference model.
 
 <figure>
-   <img alt="v4 genetic ancestry" src="../images/2023/v4-genetic-ancestry-group-size-table.png" />
+   <img alt="v4 genetic ancestry" src="../images/v4-genetic-ancestry-group-size-table.png" />
    <figcaption>Genetic Ancestries in v4</figcaption>
 </figure>
 
