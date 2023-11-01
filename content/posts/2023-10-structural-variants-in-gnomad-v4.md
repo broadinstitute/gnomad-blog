@@ -38,7 +38,7 @@ The new SV dataset for gnomAD v4 was generated using a cloud-based SV joint call
 
 The v4 SV callset represents 1,199,117 high-quality variant sites that have fully resolved alternate allele structures (Figure 2A, Table 1), including deletions (DEL), tandem duplications (DUP), insertions (INS), inversions (INV), multiallelic copy number variants (mCNV), reciprocal translocations (CTX), and complex rearrangements (CPX) (Figure 2A). An average of 11,844 SVs were detected in the individual genome across all SV types (Figure 2B). Consistent with our prior analyses in gnomAD v2 and other studies such as the 1000 Genomes Project [(](https://paperpile.com/c/KfhVWM/raxz)[Byrska-Bishop et al. 2022, PMID 36055201](https://pubmed.ncbi.nlm.nih.gov/36055201/)[)](https://paperpile.com/c/KfhVWM/raxz), SVs in the human genomes are predominantly small and rare: the median SV size in gnomAD-SV v4 is 306 bp, and 96.0% of SVs in gnomAD v4 appear at allele frequencies (AF) below 1% in the population (Table 1). 
 
-![](../images/blogposttable1.jpg)
+![](../images/blogposttable1.png)
 
 ## Complex SVs and translocations
 
