@@ -1,7 +1,7 @@
 ---
 title: Rare coding CNVs from exome sequenced individuals in gnomAD V4
 date: 2023-11-01
-order: 1
+order: 4
 categories:
   - Announcements
   - Releases
