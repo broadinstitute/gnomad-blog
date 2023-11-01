@@ -38,7 +38,7 @@ The new SV dataset for gnomAD v4 was generated using a cloud-based SV joint call
 
 The v4 SV callset represents 1,199,117 high-quality variant sites that have fully resolved alternate allele structures (Figure 2A, Table 1), including deletions (DEL), tandem duplications (DUP), insertions (INS), inversions (INV), multiallelic copy number variants (mCNV), reciprocal translocations (CTX), and complex rearrangements (CPX) (Figure 2A). An average of 11,844 SVs were detected in the individual genome across all SV types (Figure 2B). Consistent with our prior analyses in gnomAD v2 and other studies such as the 1000 Genomes Project [(](https://paperpile.com/c/KfhVWM/raxz)[Byrska-Bishop et al. 2022, PMID 36055201](https://pubmed.ncbi.nlm.nih.gov/36055201/)[)](https://paperpile.com/c/KfhVWM/raxz), SVs in the human genomes are predominantly small and rare: the median SV size in gnomAD-SV v4 is 306 bp, and 96.0% of SVs in gnomAD v4 appear at allele frequencies (AF) below 1% in the population (Table 1). 
 
-![](../images/blogpostfig3.jpg)
+![](../images/blogpostfig3.png)
 
 ## Complex SVs and translocations
 
@@ -54,7 +54,7 @@ We extensively evaluated the quality of the gnomAD v4 SV call set. Discovery of 
 
 We have annotated the predicted functional impact of SVs using the GATK SVAnnotate tool with GENCODE release 39 (Figure 4). We found an average of 188 genes per genome in which the open reading frame was predicted to be altered by SVs and resulted in probable loss-of-function (pLoF), as well as 34 full gene duplications in each genome (Copy Gain \[CG]). We have also annotated variants and genes with less clear functional impacts such as genes harboring nested duplications of one or more complete exons (Intragenic Exon Dup \[IED]), or intragenic duplications for which at least one exon harbored a duplication breakpoint (Partial Exon Dup \[PED]), duplications that include a transcription start site (TSS) but do not duplicate the entire gene (TSS Dup, TSSD), those that duplicate parts of a gene without the TSS (Dup Partial, DP), and genes inverted but fully intact (INV Span, IS). Counts of different functional classifications per person in v4 are displayed in Table 2. 
 
-![](../images/blogpostfig4.jpg "Figure 4. Illustration of functional impact of SVs")
+![](../images/blogpostfig4.png "Figure 4. Illustration of functional impact of SVs")
 
 ## Query SVs in gnomAD browser
 
