@@ -1,5 +1,5 @@
 ---
-title: v4.0 exome's chromosome Y VCF fixed
+title: Fixed chromosome Y VCF for v4.0 exomes
 date: "2023-11-16"
 order: 1
 ---
