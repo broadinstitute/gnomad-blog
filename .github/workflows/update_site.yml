@@ -36,11 +36,15 @@ jobs:
         run: |
           PATH_PREFIX="/news" yarn run build
 
-      - name: Setup gcloud
-        uses: google-github-actions/setup-gcloud@v0.3
+      - name: gcloud auth
+        uses: google-github-actions/auth@v2
         with:
-          service_account_email: ${{ secrets.GCS_SA_EMAIL }}
-          service_account_key: ${{ secrets.GCS_SA_KEY }}
+          # Format for this secret is: projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider
+          workload_identity_provider: '${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}'
+          service_account: '${{ secrets.GCS_SA_EMAIL }}'
+
+      - name: Setup gcloud
+        uses: google-github-actions/setup-gcloud@v2
 
       - name: Deploy site
         run: |
