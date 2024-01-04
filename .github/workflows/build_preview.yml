@@ -8,6 +8,9 @@ on:
 jobs:
   build-preview:
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -57,12 +60,17 @@ jobs:
           pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           PATH_PREFIX="/news/preview/${pr_number}" yarn run build
 
+      - name: gcloud auth
+        if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
+        uses: google-github-actions/auth@v2
+        with:
+          # Format for this secret is: projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider
+          workload_identity_provider: '${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}'
+          service_account: '${{ secrets.GCS_SA_EMAIL }}'
+
       - name: Setup gcloud
         if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
-        uses: google-github-actions/setup-gcloud@v0.3
-        with:
-          service_account_email: ${{ secrets.GCS_SA_EMAIL }}
-          service_account_key: ${{ secrets.GCS_SA_KEY }}
+        uses: google-github-actions/setup-gcloud@v2
 
       - name: Deploy preview
         if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
