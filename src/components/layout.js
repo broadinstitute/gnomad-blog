@@ -48,8 +48,12 @@ const Banner = styled.div`
 
 const BANNER_CONTENT = (
   <>
-    gnomAD v4 is here! Read our {/* @ts-expect-error */}
-    <ExternalLink href="/news/2023-11-gnomad-v4-0">blog post</ExternalLink> for more details
+    We are aware of an {/* @ts-expect-error */}
+    <ExternalLink href="https://docs.google.com/document/d/1Xm5ZIhmkh7hv2qEfCDS6J2T0IUZYiXP8pNClTlNvCGQ/edit?usp=sharing">
+      issue{" "}
+    </ExternalLink>{" "}
+    in the gnomAD v4.0 exomes where well covered variants have lower than expected allele numbers.
+    This issue will be fixed in the upcoming v4.1 release.
   </>
 );
 
