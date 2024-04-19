@@ -46,17 +46,12 @@ const Banner = styled.div`
   }
 `;
 
-
 const BANNER_CONTENT = (
   <>
     gnomAD v4.1.0 is now available. Read our {/* @ts-expect-error */}
-    <ExternalLink href="/news/2024-04-gnomad-v4-1">
-      blog post
-    </ExternalLink>{' '}
-    for more details
+    <ExternalLink href="/news/2024-04-gnomad-v4-1">blog post</ExternalLink> for more details
   </>
-)j
-
+);
 
 const Layout = ({ children, title }) => {
   const { site } = useStaticQuery(
