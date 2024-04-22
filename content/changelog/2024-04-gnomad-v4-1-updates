@@ -1,0 +1,20 @@
+---
+title: gnomAD v4.1 updates
+date: "2024-04-??"
+order: 1
+---
+
+This changelog entry discusses additional smaller updates to gnomAD added with the v4.1 release that were not discussed in the [blog post](https://gnomad.broadinstitute.org/news/2024-04-gnomad-v4-1/).
+
+<!-- end_excerpt -->
+
+As part of gnomAD v4.1, we have added the following new features:
+- Browser display of non-UK Biobank (UKB) subset of gnomAD v4 exomes
+- Supplementary files containing REVEL scores for variants in 2,414 transcripts that weren't scored in the v4.0 release
+- New joint exome + genome frequency resources with statistical tests flagging variants with [discrepant frequencies](https://gnomad.broadinstitute.org/help/combined-freq-stats)
+
+We have also updated the following features:
+- Gene constraint metrics
+- Exome copy number variants
+- Genome structural variants
+- [Stats page](https://gnomad.broadinstitute.org/stats)
