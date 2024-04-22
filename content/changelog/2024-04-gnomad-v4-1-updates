@@ -24,3 +24,8 @@ As part of gnomAD v4.1, we have exposed the non-UK Biobank (UKB) subset of the g
 
 Example [variant](https://gnomad.broadinstitute.org/variant/1-55051215-G-GA?dataset=gnomad_r4_non_ukb):
 ![Screenshot showing variant page with non-UKB subset selected](../images/2024/non_ukb_variant.png "Non-UKB variant example")
+
+### Supplementary REVEL files
+We used a combination of MANE select or canonical transcript information from Ensembl v105 and variant information (locus and alleles combination) to ascertain REVEL scores for variants in gnomAD v4.0 and v4.1 (exomes and genomes). However, REVEL was computed using Ensembl v64. This means that variants within 2,414 MANE select transcripts in gnomAD v4.0 and v4.1 are missing REVEL scores because they were present in Ensembl v105 but not in Ensembl v64.
+
+To address this, we annotated the variants within the 2,414 genes with the maximum REVEL score found at the specific locus and allele, rather than the score for the MANE Select transcript. We have released two [TSVs](https://gnomad.broadinstitute.org/downloads#v4-resources); the exomes TSV adds REVEL scores to 1,936,321 out of 2,284,296 (87.77%) missense variants within the 2,414 genes. The genomes TSV adds REVEL scores to 528,204 out of 620,799 ( 85.08%) missense variants within the 2,414 genes.
