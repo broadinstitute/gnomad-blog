@@ -43,3 +43,8 @@ The genome structural variants (SV) have been updated to include:
 - Updated genetic ancestry (e.g., "Other" to "Remaining") and sex karyotype terminology ("XX" and "XY" instead of "Male" and "Female")
 - Updated gene annotations (using the same gene list as used for the short variants)
 - Updated metric annotation order (e.g., updating "nfe_AF" to "AF_nfe")
+
+### Stats page
+We have added the average number of variants per person to the [stats page](https://gnomad.broadinstitute.org/stats).
+
+# TODO: insert screenshot?
