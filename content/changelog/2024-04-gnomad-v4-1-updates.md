@@ -36,15 +36,21 @@ To address this, we annotated the variants within the 2,414 genes with the maxim
 We reran the gene constraint metrics using gnomAD v4.1 frequencies and have updated the constraint table on the gene and transcript pages. Note that these updated metrics have the same caveats as the v4.0 metrics; for more details, please see our [blog post](https://gnomad.broadinstitute.org/news/2024-03-gnomad-v4-0-gene-constraint/).
 
 ### Exome copy number variants
-# TODO: ask Jack -- he says he maintains an internal changelog
+The exome copy number variants (CNVs) have been updated to include:
+
+- Variant 193076__DUP relabeled as 16p12.2_DUP
+- Refined annotation of 15q11 and 22q11 loci
+- Updated N_EXN_VAR and N_INT_VAR labels for size of events to be consistent with genic annotation used by short variant team
+- Updated sex karyotype terminology ("XX" and "XY" instead of "Male" and "Female")
+- SC (site count), SN (site number), and SF (site frequency) labels reformatted to match short variant VCF format (e.g., updating "afr_SC" to "SC_afr")
 
 ### Genome structural variants
 The genome structural variants (SV) have been updated to include:
 
 - Genotype information for multiallelic CNVs (mCNVs)
-- Updated genetic ancestry (e.g., "Other" to "Remaining") and sex karyotype terminology ("XX" and "XY" instead of "Male" and "Female")
+- Updated genetic ancestry (e.g., "Other" to "Remaining") and sex karyotype terminology (same as CNVs above)
 - Updated gene annotations (using the same gene list as used for the short variants)
-- Updated metric annotation order (e.g., updating "nfe_AF" to "AF_nfe")
+- Updated metric annotation order to match short variant VCF format (e.g., updating "nfe_AF" to "AF_nfe")
 
 ### Stats page
 We have added the average number of variants per person to the [stats page](https://gnomad.broadinstitute.org/stats).
