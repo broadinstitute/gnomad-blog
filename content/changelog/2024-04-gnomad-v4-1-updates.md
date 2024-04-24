@@ -1,8 +1,10 @@
 ---
 title: gnomAD v4.1 updates
-date: "2024-04-??"
+date: "2024-04-26"
 order: 1
 ---
+
+# TODO: update date to actual release date (current date is holder)
 
 This changelog entry discusses additional smaller updates to gnomAD added with the v4.1 release that were not discussed in the [blog post](https://gnomad.broadinstitute.org/news/2024-04-gnomad-v4-1/).
 
