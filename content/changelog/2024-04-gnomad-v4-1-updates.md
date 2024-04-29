@@ -11,7 +11,7 @@ This changelog entry discusses smaller updates to gnomAD added with the v4.1 rel
 <!-- end_excerpt -->
 
 As part of gnomAD v4.1, we have added the following new features:
-- Browser display of non-UK Biobank (UKB) subset of gnomAD v4 exomes
+- Browser display of non-UK Biobank (non-UKB) subset of gnomAD v4 exomes
 - Supplementary files containing REVEL scores for variants in 2,414 transcripts that weren't scored in the v4.0 release
 - New joint exome + genome frequency resources with statistical tests flagging variants with [discrepant frequencies](https://gnomad.broadinstitute.org/help/combined-freq-stats)
 
