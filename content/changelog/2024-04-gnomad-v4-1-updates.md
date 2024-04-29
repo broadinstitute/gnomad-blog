@@ -22,7 +22,7 @@ We have also updated the following features:
 - [Stats page](https://gnomad.broadinstitute.org/stats)
 
 ### Browser display of non-UK Biobank subset
-As part of gnomAD v4.1, we have exposed the non-UK Biobank (non-UKB) subset of the gnomAD v4 exomes. This subset was previously only available in our downloadable files but is now available in the ["Dataset"](https://gnomad.broadinstitute.org/help/dataset-selection) toggle on gene, transcript, region, and variant pages.
+As part of gnomAD v4.1, we have exposed the non-UK Biobank (non-UKB) subset of the gnomAD v4 exomes. This subset was previously only available in our downloadable files but is now available in the ["Dataset"](https://gnomad.broadinstitute.org/help/dataset-selection) toggle on gene, transcript, region, and variant pages. Note that this subset only impacts variant frequencies in the exomes; none of the genome samples were from the UK Biobank. Therefore, when the non-UKB subset is selected, the exome variant frequencies will update to reflect counts from the non-UKB subset, and the genome numbers will remain unchanged.
 
 Example [variant](https://gnomad.broadinstitute.org/variant/1-55051215-G-GA?dataset=gnomad_r4_non_ukb):
 ![Screenshot showing variant page with non-UKB subset selected](../images/2024/non_ukb_variant.png "Non-UKB variant example")
