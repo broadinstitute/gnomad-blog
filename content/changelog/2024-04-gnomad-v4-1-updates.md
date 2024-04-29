@@ -50,7 +50,7 @@ The genome structural variants (SV) have been updated to include:
 - Genotype information for multiallelic CNVs (mCNVs)
 - Updated genetic ancestry (e.g., "Other" to "Remaining") and sex karyotype terminology (same as CNVs above)
 - Updated gene annotations (using the same gene list as used for the short variants)
-- Updated metric annotation order to match short variant VCF format (e.g., updating "nfe_AF" to "AF_nfe")
+- Updated metric annotation order to match the short variant VCF format (e.g., updating "nfe_AF" to "AF_nfe")
 
 ### Stats page
 We have added the average number of variants per person to the [stats page](https://gnomad.broadinstitute.org/stats).
