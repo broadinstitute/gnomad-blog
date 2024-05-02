@@ -30,6 +30,9 @@ We used a combination of transcript information (MANE select or canonical) from 
 
 To address this, we annotated the variants within the 2,414 genes with the maximum REVEL score found at the specific locus and allele, rather than the score for the MANE Select or canonical transcript. We have released two [TSVs](https://gnomad.broadinstitute.org/downloads#v4-resources); the exomes TSV adds REVEL scores to 1,936,321 out of 2,284,296 (87.77%) missense variants within the 2,414 genes. The genomes TSV adds REVEL scores to 528,204 out of 620,799 (85.08%) missense variants within the 2,414 genes.
 
+### Joint frequency VCFs
+We have released [downloadable](https://gnomad.broadinstitute.org/downloads#v4-joint-freq-stats) Hail Table and VCFs containing statistical tests that flag variants with discordant frequencies in the gnomAD exomes and genomes. For more information about these tests, please see our [blog post](https://gnomad.broadinstitute.org/news/2024-04-gnomad-v4-1/#joint-combined-exome--genome-frequencies) and [help page](https://gnomad.broadinstitute.org/help/combined-freq-stats).
+
 ### Gene constraint metrics
 We regenerated the gene constraint metrics using gnomAD v4.1 frequencies and have updated the constraint table on the gene and transcript pages. Note that these updated metrics have the same caveats as the v4.0 metrics; for more details, please see our [blog post](https://gnomad.broadinstitute.org/news/2024-03-gnomad-v4-0-gene-constraint/).
 
