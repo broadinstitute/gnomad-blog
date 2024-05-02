@@ -1,10 +1,8 @@
 ---
 title: gnomAD v4.1 updates
-date: "2024-04-26"
+date: "2024-05-02"
 order: 1
 ---
-
-# TODO: update date to actual release date (current date is holder)
 
 This changelog entry discusses smaller updates to gnomAD added with the v4.1 release that were not discussed in the [blog post](https://gnomad.broadinstitute.org/news/2024-04-gnomad-v4-1/).
 
@@ -51,8 +49,3 @@ The genome structural variants (SVs) have been updated to include:
 - Updated genetic ancestry (e.g., "Other" to "Remaining") and sex karyotype terminology (same as CNVs above)
 - Updated gene annotations (using the same gene list used for the short variants)
 - Updated metric annotation order to match the short variant VCF format (e.g., updating "nfe_AF" to "AF_nfe")
-
-### Stats page
-We have added the average number of variants per person to the [stats page](https://gnomad.broadinstitute.org/stats).
-
-# TODO: insert screenshot?
