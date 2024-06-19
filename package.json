@@ -10,7 +10,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^3.5.0",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-catch-links": "^3.5.0",
     "gatsby-plugin-feed": "^3.5.0",
     "gatsby-plugin-google-gtag": "3.5.0",
@@ -21,11 +21,11 @@
     "gatsby-remark-responsive-iframe": "^4.2.0",
     "gatsby-remark-smartypants": "^4.2.0",
     "gatsby-source-filesystem": "^3.5.0",
-    "gatsby-transformer-remark": "^4.2.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "lodash": "^4.17.21",
     "netlify-cms-app": "^2.15.6",
     "normalize.css": "^8.0.1",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.27.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
