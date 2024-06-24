@@ -58,7 +58,7 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/changelog/" } }
-      sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
+      sort: [{ frontmatter: { date: DESC } }, { frontmatter: { order: ASC } }]
     ) {
       edges {
         node {

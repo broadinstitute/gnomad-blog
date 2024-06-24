@@ -42,7 +42,7 @@ const config = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-plugin-netlify-cms",
+      resolve: "gatsby-plugin-decap-cms",
       options: {
         modulePath: `${__dirname}/src/cms.js`,
       },
@@ -80,7 +80,7 @@ const config = {
               {
                 allMarkdownRemark(
                   filter: { fileAbsolutePath: { regex: "/posts/" } }
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: [{frontmatter: { date: DESC}}],
                 ) {
                   edges {
                     node {
@@ -115,7 +115,7 @@ const config = {
               {
                 allMarkdownRemark(
                   filter: { fileAbsolutePath: { regex: "/changelog/" } }
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: [{ frontmatter: { date: DESC }}],
                 ) {
                   edges {
                     node {
@@ -142,9 +142,7 @@ if (process.env.GA_TRACKING_ID) {
   config.plugins.push({
     resolve: "gatsby-plugin-google-gtag",
     options: {
-      trackingIds: [
-        process.env.GA_TRACKING_ID,
-      ],
+      trackingIds: [process.env.GA_TRACKING_ID],
     },
   });
 }

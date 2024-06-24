@@ -44,7 +44,7 @@ export default Categories;
 export const pageQuery = graphql`
   query {
     allMarkdownRemark {
-      group(field: frontmatter___categories) {
+      group(field: { frontmatter: { categories: SELECT } }) {
         fieldValue
         totalCount
       }

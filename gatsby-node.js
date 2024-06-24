@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/posts/" } }
-          sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
+          sort: [{ frontmatter: { date: DESC } }, { frontmatter: { order: ASC } }]
           limit: 1000
         ) {
           edges {
@@ -25,8 +25,8 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
           }
-          categories: distinct(field: frontmatter___categories)
-          authors: distinct(field: frontmatter___authors)
+          categories: distinct(field: { frontmatter: { categories: SELECT } })
+          authors: distinct(field: { frontmatter: { authors: SELECT } })
         }
       }
     `
@@ -85,7 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/changelog/" } }
-          sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
+          sort: [{ frontmatter: { date: DESC } }, { frontmatter: { order: ASC } }]
           limit: 1000
         ) {
           edges {
@@ -98,8 +98,8 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
           }
-          categories: distinct(field: frontmatter___categories)
-          authors: distinct(field: frontmatter___authors)
+          categories: distinct(field: { frontmatter: { categories: SELECT } })
+          authors: distinct(field: { frontmatter: { authors: SELECT } })
         }
       }
     `

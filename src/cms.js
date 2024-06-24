@@ -1,8 +1,8 @@
-import CMS from "netlify-cms-app";
+import CMS from "decap-cms-app";
 import React from "react";
 
 // Imported styles are automatically applied to the editor preview as if they had been registered with `registerPreviewStyle`.
-// https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/#modulepath
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-decap-cms/#modulepath
 import "./styles/global.css";
 
 import BlogPost from "./components/blog-post";

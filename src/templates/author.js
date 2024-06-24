@@ -31,7 +31,7 @@ export const pageQuery = graphql`
   query ($author: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { authors: { in: [$author] } } }
-      sort: { fields: [frontmatter___date, frontmatter___order], order: DESC }
+      sort: [{ frontmatter: { date: DESC } }, { frontmatter: { order: ASC } }]
     ) {
       edges {
         node {
