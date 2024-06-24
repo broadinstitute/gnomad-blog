@@ -10,11 +10,12 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "decap-cms-app": "^3.1.10",
     "gatsby": "^5.13.6",
     "gatsby-plugin-catch-links": "^5.13.1",
+    "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-feed": "^5.13.1",
     "gatsby-plugin-google-gtag": "^5.13.1",
-    "gatsby-plugin-netlify-cms": "^7.12.1",
     "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-remark-autolink-headers": "^6.13.1",
     "gatsby-remark-prismjs": "^7.13.1",
@@ -23,7 +24,6 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "lodash": "^4.17.21",
-    "netlify-cms-app": "^2.15.6",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.27.0",
     "react": "^17.0.2",
