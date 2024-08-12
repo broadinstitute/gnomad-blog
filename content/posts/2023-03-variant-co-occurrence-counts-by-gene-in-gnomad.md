@@ -19,7 +19,7 @@ Today we are pleased to announce the incorporation of cumulative counts of gnomA
 
 A pair of variants in a gene can occur in *cis* (same copy of the gene) or *trans* (different copies of the gene), and the variants can be damaging to gene function (e.g., loss-of-function) or can be neutral. These distinctions have important consequences for interpreting the potential of a variant pair to cause an autosomal recessive disease, whereby both copies of a gene must carry a variant (i.e., occur in *trans*) and the variants must be damaging.
 
-![](../images/2023/1_inheritance_figure.png)
+![](../images/2023/03/1_inheritance_figure.png)
 
 In *cis* and in *trans* variant pairs are often indistinguishable when using short read sequencing data. In the vast majority of scenarios, the two variants are too far apart to be captured on the same short read. However, with the release of [variant co-occurrence (inferred phasing) information](https://gnomad.broadinstitute.org/news/2021-07-variant-co-occurrence-phasing-information-in-gnomad/) for gnomAD v2 exomes, it is now possible to infer phase with high confidence. This presents the opportunity to determine whether individuals in gnomAD carry compound heterozygous (in *trans*) rare damaging variants in a gene—a scenario that would not be expected for genes implicated in autosomal recessive conditions in a reference population depleted for severe Mendelian disease.
 
@@ -39,7 +39,7 @@ For comparison, we tabulated the number of individuals with homozygous variants 
 
 As depicted below, we found only a small number of genes carrying rare predicted in *trans* damaging variants: 32 genes with pLoF and/or strong missense variants at ≤ 1% allele frequency, in comparison to a substantially higher number in *cis* (1,922 genes). The majority of genes with variants in *trans* (26/32 genes) are not disease associated in OMIM, in keeping with our expectation for a reference population depleted of severe Mendelian disease.
 
-![](../images/2023/2_all_gene_counts.png)
+![](../images/2023/03/2_all_gene_counts.png)
 
 In this display, both variants in the variant pair must be annotated with a consequence at least as severe as the consequence listed (i.e., a variant pair consisting of a pLoF variant and a strong missense variant is not counted in "pLoF” but is counted in "strong missense" and all other displayed less severe consequences).
 
@@ -51,7 +51,7 @@ Importantly, individuals are counted once within each category. Therefore, if an
 
 Let’s use the recessive disease gene *GBA1* as an example. When searching for *GBA1* on the main gnomAD landing page and clicking on the “Variant co-occurrence” tab on the right, you will see the display below. Two counts tables are displayed broken down by allele frequency and functional consequence, one for two heterozygous rare variants (above) and one for homozygous variants (below).
 
-![](../images/2023/3_GBA1_entire_display.png)
+![](../images/2023/03/3_GBA1_entire_display.png)
 
 Focusing on the two heterozygous rare variants table, for each gene we list the number of individuals carrying any two variants, irrespective of phase, followed in parentheses by the number of individuals carrying two variants with evidence of being in *trans*. Hovering over these counts will also display the number of individuals carrying variants that are unphased and the number that have evidence of being in *cis*.
 
@@ -59,15 +59,15 @@ These counts tables can be used to determine the probability of observing a spec
 
 For example, let’s say you have a proband with two rare heterozygous missense variants with REVEL scores in the moderate range in *GBA1*. The counts table demonstrates that, at ≤ 5% allele frequency, 5/125,748 individuals in gnomAD carry two variants of this type, all of which have evidence of being in *cis*. Overall, low levels of co-occurrence in the reference population indicate low probability that your observation in the proband has occurred by chance.
 
-![](../images/2023/4_GBA1_collapsed_tables.png)
+![](../images/2023/03/4_GBA1_collapsed_tables.png)
 
 Clicking “expand” just below the table, will display additional allele frequency thresholds (5%, 2%, 1.5%, 1%, and 0.5%) and additional combinations of functional consequences.
 
-![](../images/2023/5_GBA1_expanded_table.png)
+![](../images/2023/03/5_GBA1_expanded_table.png)
 
 Now let’s say you have a proband with two rare heterozygous missense variants in the disease gene *TTN*. Here, at ≤ 1% allele frequency, the counts table demonstrates that 44,514/125,748 individuals in gnomAD carry two rare heterozygous missense variants, and that 2,689/44,514 have evidence of being in *trans*, making this a more frequent event. Here, higher levels of co-occurrence in the reference population indicate a higher probability that your observation in the proband has occurred by chance, cautioning against the overinterpretation of an observation of this nature in a patient without further evidence of pathogenicity.
 
-![](../images/2023/6_TTN_collapsed_tables.png)
+![](../images/2023/03/6_TTN_collapsed_tables.png)
 
 The complete download table for all genes in the gnomAD v2 browser, encompassing five allele frequency thresholds (range ≤ 0.5% - ≤ 5%) and 26 functional variant consequence combinations can be found [here](https://gnomad.broadinstitute.org/downloads#v2-variant-cooccurrence).
 
