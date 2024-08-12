@@ -5,7 +5,7 @@ steps:
       [
         'build',
         '-t',
-        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog',
+        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog:$SHORT_SHA',
         '-f',
         'blog.dockerfile',
         '.',
@@ -16,8 +16,11 @@ steps:
       [
         'build',
         '-t',
-        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog-auth',
+        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog-auth:$SHORT_SHA',
         '-f',
         'auth.dockerfile',
         '.',
       ]
+images:
+  - 'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog:$SHORT_SHA'
+  - 'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog-auth:$SHORT_SHA'
