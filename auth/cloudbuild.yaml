@@ -1,0 +1,22 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    dir: 'auth'
+    args:
+      [
+        'build',
+        '-t',
+        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog',
+        '-f',
+        'blog.dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'us-docker.pkg.dev/$PROJECT_ID/gnomad/gnomad-blog-auth',
+        '-f',
+        'auth.dockerfile',
+        '.',
+      ]
