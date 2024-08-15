@@ -5,6 +5,8 @@ on:
       - opened
       - synchronize
       - reopened
+    paths-ignore:
+      - 'auth/**'
 jobs:
   build-preview:
     runs-on: ubuntu-latest

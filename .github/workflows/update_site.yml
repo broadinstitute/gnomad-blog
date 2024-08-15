@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'auth/**'
 jobs:
   update-site:
     runs-on: ubuntu-latest

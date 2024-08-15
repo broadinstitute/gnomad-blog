@@ -4,6 +4,8 @@ on:
     types:
       - opened
       - synchronize
+    paths-ignore:
+      - 'auth/**'
 jobs:
   check-image-sizes:
     runs-on: ubuntu-latest
