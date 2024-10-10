@@ -23,9 +23,9 @@ The new local ancestry-informed frequency data includes 24,204,574 bi-allelic va
 
 We adapted the [previously described](https://gnomad.broadinstitute.org/news/2021-12-local-ancestry-inference-for-latino-admixed-american-samples-in-gnomad/) gnomAD LAI pipeline for the African/African American genetic ancestry group to account for the sample composition and the larger sample size when compared to the Admixed American genetic ancestry group. The reference panel was composed of [harmonized AFR and EUR supergroups](https://docs.google.com/spreadsheets/d/1jenSz_HnbA1kBESaUmur3Ob72-EPXJgfUWhbz5UdltA/edit?gid=0#gid=0) from the Human Genome Diversity Project and the 1000 Genomes Project<sup>1</sup>. We did not include groups with recent admixture events, specifically the Americans of African Ancestry in Southwest USA (ASW) and African Caribbean in Barbados (ACB) groups in order to avoid an EM iteration in RFMix2 and therefore additional computational cost. For more information on our genetic ancestry groups, our reference panels, and how we think about genetic ancestry, please visit our [genetic ancestry blog post](https://gnomad.broadinstitute.org/news/2023-11-genetic-ancestry/). The updated computational pipeline, written in Hail Batch, is publicly available via [GitHub](github.com/broadinstitute/gnomad_local_ancestry). 
 
-![](../images/lai_afr_admixture.png)
-
 **Results**
+
+![](../images/lai_afr_admixture.png)
 
 We analyzed the gnomAD African/African American genetic ancestry group using [ADMIXTURE](https://dalexander.github.io/admixture/) with a 5% ancestry inclusion threshold. These samples' admixed genetic ancestry is broken down into primarily two-way African and European components, with 32% of individuals having more than 95% AFR genetic ancestry and 68% primarily two-way admixed individuals. As such, we modeled genetic ancestry for this group with a two-way AFR/EUR reference panel.
 
