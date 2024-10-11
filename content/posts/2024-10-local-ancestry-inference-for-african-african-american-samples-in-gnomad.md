@@ -25,15 +25,15 @@ We adapted the [previously described](https://gnomad.broadinstitute.org/news/202
 
 #### Results
 
-![](../images/lai_afr_admixture.png)
+![](../images/2024/10/lai_afr_admixture.png)
 
 We analyzed the gnomAD African/African American genetic ancestry group using [ADMIXTURE](https://dalexander.github.io/admixture/) with a 5% ancestry inclusion threshold. These samples' admixed genetic ancestry is broken down into primarily two-way African and European components, with 32% of individuals having more than 95% AFR genetic ancestry and 68% primarily two-way admixed individuals. As such, we modeled genetic ancestry for this group with a two-way AFR/EUR reference panel.
 
-![](../images/lai_afr_apol1.png)
+![](../images/2024/10/lai_afr_apol1.png)
 
 LAI enables identification of disease-risk variants that occur at higher frequencies within specific genetic ancestry components. For example, the gnomAD variant [22-36265860-A-G](https://gnomad.broadinstitute.org/variant/22-36265860-A-G?dataset=gnomad_r4) in *APOL1*, linked with increased susceptibility to focal segmental glomerulosclerosis (FSGS), HIV-associated nephropathy (HIVAN), and hypertensive end-stage kidney disease (ESKD)<sup>2</sup>, shows a 27% allele frequency in African haplotypes of the African/African American genetic ancestry group<sup>3</sup>, compared to a 1% gnomAD-wide ("global") frequency.
 
-![](../images/lai_afr_cftr.png)
+![](../images/2024/10/lai_afr_cftr.png)
 
 LAI is useful in resolving allele frequencies for rare variants as well as common. Another example is the gnomAD variant [7-117606754-G-A](https://gnomad.broadinstitute.org/variant/7-117606754-G-A?dataset=gnomad_r4) in *CFTR*, associated with cystic fibrosis<sup>4</sup>. This variant shows a 0.1% allele frequency in African haplotypes of the African/African American genetic ancestry group, compared to a 0.007% gnomAD-wide ("global") frequency. These variant examples highlight the importance of more precise allele frequencies in accurately identifying the distribution of genetic risk factors within diverse genetic ancestry groups. 
 
