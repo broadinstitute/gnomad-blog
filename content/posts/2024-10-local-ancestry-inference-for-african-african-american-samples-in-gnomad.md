@@ -33,7 +33,7 @@ We analyzed the gnomAD African/African American genetic ancestry group using [AD
 
 LAI enables identification of disease-risk variants that occur at higher frequencies within specific genetic ancestry components. For example, the gnomAD variant [22-36265860-A-G](https://gnomad.broadinstitute.org/variant/22-36265860-A-G?dataset=gnomad_r4) in *APOL1*, linked with increased susceptibility to focal segmental glomerulosclerosis (FSGS), HIV-associated nephropathy (HIVAN), and hypertensive end-stage kidney disease (ESKD)<sup>2</sup>, shows a 27% allele frequency in African haplotypes of the African/African American genetic ancestry group<sup>3</sup>, compared to a 1% gnomAD-wide ("global") frequency.
 
-![](../images/2024/10/lai_afr_cftr.png)
+![](../images/cftr.png)
 
 LAI is useful in resolving allele frequencies for rare variants as well as common. Another example is the gnomAD variant [7-117606754-G-A](https://gnomad.broadinstitute.org/variant/7-117606754-G-A?dataset=gnomad_r4) in *CFTR*, associated with cystic fibrosis<sup>4</sup>. This variant shows a 0.1% allele frequency in African haplotypes of the African/African American genetic ancestry group, compared to a 0.007% gnomAD-wide ("global") frequency. These variant examples highlight the importance of more precise allele frequencies in accurately identifying the distribution of genetic risk factors within diverse genetic ancestry groups. 
 
@@ -50,4 +50,4 @@ By calculating and releasing LAI-informed data, we provide a higher-resolution v
 5. National Academies of Sciences, Engineering, and Medicine. 2023. Using Population Descriptors in Genetics and Genomics Research: A New Framework for an Evolving Field. Washington, DC: The National Academies Press. <https://doi.org/10.17226/26902>
 6. Lewis, A. C. F., Molina, S. J., Appelbaum, P. S., Dauda, B., Di Rienzo, A., Fuentes, A., Fullerton, S. M., Garrison, N. A., Ghosh, N., Hammonds, E. M., Jones, D. S., Kenny, E. E., Kraft, P., Lee, S. S., Mauro, M., Novembre, J., Panofsky, A., Sohail, M., Neale, B. M., & Allen, D. S. (2022). Getting genetic ancestry right for science and society. Science (New York, N.Y.), 376(6590), 250–252. <https://doi.org/10.1126/science.abm7530>
 
-*These authors contributed equally to this work.
+\*These authors contributed equally to this work.
