@@ -33,7 +33,7 @@ We analyzed the gnomAD African/African American genetic ancestry group using [AD
 
 LAI enables identification of disease-risk variants that occur at higher frequencies within specific genetic ancestry components. For example, the gnomAD variant [22-36265860-A-G](https://gnomad.broadinstitute.org/variant/22-36265860-A-G?dataset=gnomad_r4) in *APOL1*, linked with increased susceptibility to focal segmental glomerulosclerosis (FSGS), HIV-associated nephropathy (HIVAN), and hypertensive end-stage kidney disease (ESKD)<sup>2</sup>, shows a 27% allele frequency in African haplotypes of the African/African American genetic ancestry group<sup>3</sup>, compared to a 1% gnomAD-wide ("global") frequency.
 
-![](../images/cftr.png)
+![](../images/2024/10/lai_afr_cftr.png)
 
 LAI is useful in resolving allele frequencies for rare variants as well as common. Another example is the gnomAD variant [7-117606754-G-A](https://gnomad.broadinstitute.org/variant/7-117606754-G-A?dataset=gnomad_r4) in *CFTR*, associated with cystic fibrosis<sup>4</sup>. This variant shows a 0.1% allele frequency in African haplotypes of the African/African American genetic ancestry group, compared to a 0.007% gnomAD-wide ("global") frequency. These variant examples highlight the importance of more precise allele frequencies in accurately identifying the distribution of genetic risk factors within diverse genetic ancestry groups. 
 
