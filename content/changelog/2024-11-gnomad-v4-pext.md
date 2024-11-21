@@ -8,7 +8,7 @@ Updated transcript tissue expression and proportion expressed across transcripts
 
 <!-- end_excerpt -->
 
-The updated tracks in the gnomAD v4 browser were generated using [GTEx v10](https://gtexportal.org/home/home/news?id=530) bulk tissue transcript expression [data](https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/GTEx_Analysis_v10_RSEMv1.3.3_transcripts_tpm.txt.gz). 
+The updated tracks in the gnomAD v4 browser were generated using [GTEx v10](https://gtexportal.org/home/home/news?id=530) bulk tissue transcript expression [data](https://gtexportal.org/home/downloads/adult-gtex/bulk_tissue_expression). 
 
 ![Location of the transcript tissue expression and pext tracks](../images/2024/v4_pext.png)
 
