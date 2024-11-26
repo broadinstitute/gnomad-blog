@@ -60,8 +60,8 @@ const Header = ({ siteTitle }) => {
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/downloads">
-              Downloads
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/data">
+              Data
             </a>
           </li>
           <li className="nav-item">
