@@ -17,7 +17,7 @@ Downloading the full gnomAD short variant release is not viable for all of our u
 
 The gnomAD toolbox is a work in progress. Our initial implementation includes building functionality that calculates metrics on the short variant data requested by users via our [forum](https://discuss.gnomad.broadinstitute.org/) or email, including: 
 
-1. How to explore various release files (variants, all sites AN, coverage, etc)
+1. How to explore various release files (variants, all sites AN, coverage, etc.)
 
    ![Screenshot of Jupyter notebook with code importing gnomAD release files](../images/toolbox_screenshot_1.png "Importing gnomAD release files")
 2. How to filter variants in a specific gene
