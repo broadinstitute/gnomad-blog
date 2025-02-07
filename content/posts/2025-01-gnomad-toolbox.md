@@ -5,11 +5,9 @@ order: 1
 categories:
   - Announcements
 authors:
-  - Katherine Chao
-  - Michael Wilson
-  - Julia Goodrich
   - Qin He
-  - gnomAD Production Team
+  - Julia Goodrich
+  - Katherine Chao
 ---
 We have released a new utility, the [gnomAD toolbox](https://github.com/broadinstitute/gnomad-toolbox), to enable easier analysis of gnomAD data. Community feedback has highlighted challenges with the usage of our downloadable files, which have become increasingly difficult to parse due to their growing size. As the gnomAD project continues to scale, we expect the size of these files to increase further. To ensure continued access to these data and empower all users, we have created a new open-source repository containing utility functions that allow users to query gnomAD data without requiring any data downloads.
 
@@ -37,3 +35,9 @@ The gnomAD toolbox is a work in progress. Our initial implementation includes bu
    ![Screenshot of Jupyter notebook filtering to pLoF variants used to compute gene constraint metrics](../images/toolbox_screenshot_6.png "Filtering to pLoF variants used to compute gene constraint metrics")
 
 We are interested in crafting this toolbox with input from our community. We encourage our users to discuss any other desired functionality on our [forum](https://discuss.gnomad.broadinstitute.org/), and we highly encourage anyone interested in contributing new functionality to the toolbox to do so via [pull request](https://github.com/broadinstitute/gnomad-toolbox/pulls).
+
+#### Acknowledgments
+
+We thank the rest of the gnomAD Production team for brainstorming function ideas and specifically thank Michael Wilson for reviewing the blog post draft.
+
+*Updated in February 2025 to change author list ordering to reflect contributions to the gnomAD toolbox rather than blog post authorship.*
