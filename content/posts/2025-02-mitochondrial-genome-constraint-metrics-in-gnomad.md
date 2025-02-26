@@ -51,6 +51,7 @@ Regional constraint metrics are visible on the gene landing page under the trans
 ![Screenshot of MT-ND6 gene page](../images/mt-nd6.png "Figure 3: Example of regional missense constraint in the browser for a protein-coding gene.")
 
 *Figure 3: Example of regional missense constraint in the browser for a protein-coding gene.*
+
 The regional constraint track displays regionally constrained intervals in the gene in maroon. Hovering over an interval will reveal its coordinates, `oe` ratio, and 90% CI (Figure 3). These regionally constrained intervals are enriched for pathogenic variants and functionally important residues<sup>1</sup>. Knowing if a variant falls within an interval of regional constraint can thus help prioritize variants most likely to have a deleterious functional impact.
 
 More detailed information on the mitochondrial regional constraint metrics can be found [here](https://gnomad.broadinstitute.org/help/mitochondrial-regional-constraint).
