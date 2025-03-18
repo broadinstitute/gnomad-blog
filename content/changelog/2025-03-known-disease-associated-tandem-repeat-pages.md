@@ -6,7 +6,7 @@ order: 1
 
 **Loci**
 
-We have update the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) to include 9 recently discovered disease-associated TR loci:  
+We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) to include 9 recently discovered disease-associated TR loci:  
 [RILPL1](https://gnomad.broadinstitute.org/short-tandem-repeat/RILPL1?dataset=gnomad_r4), 
 [THAP11](https://gnomad.broadinstitute.org/short-tandem-repeat/THAP11?dataset=gnomad_r4), 
 [ZFHX3](https://gnomad.broadinstitute.org/short-tandem-repeat/ZFHX3?dataset=gnomad_r4),
