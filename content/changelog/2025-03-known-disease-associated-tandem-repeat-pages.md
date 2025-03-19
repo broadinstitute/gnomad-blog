@@ -33,7 +33,7 @@ We added two genotype quality scores: **Q** and **ManualReviewGenotypeQuality**.
 
 The **Q** score ranges between 0 (low quality) and 1 (high quality) and is based on the ratio between the allele size and the width of the confidence interval reported by ExpansionHunter. It is described in more detail in [[Jam 2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC10028971)] and is evaluated in [[Weisburd 2023](https://pubmed.ncbi.nlm.nih.gov/37214979/)].
 
-The **ManualReviewGenotypeQuality** is available for 4,819 out of 1,411,171 (0.3%) of genotypes, and was produced through manual review of read visualizations.
+The **ManualReviewGenotypeQuality** is available for 4,819 out of 1,411,171 (0.3%) genotypes, and is based on manual review of read visualizations.
 To select which genotypes to review for each locus, we started with the longest alleles at the tail of the allele size distribution and then 
 reviewed progressively shorter alleles either until we reached a natural stopping point, or until we had reviewed over 100 genotypes for that locus. 
 We looked for informative image features described in [[Dolzhenko 2022](https://pubmed.ncbi.nlm.nih.gov/35948990/)] and recorded the genotype quality as:  
