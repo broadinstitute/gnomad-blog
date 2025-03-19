@@ -4,11 +4,10 @@ date: 2025-03-20
 order: 1
 ---
 
-We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) by: 
+We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4). These changes include: 
 - Adding 9 recently discovered disease-associated TR loci  
 - Introducing a "Color by" feature to the allele size histograms which allows users to see basic genotype quality scores derived from either manual review of read visualizations or from ExpansionHunter confidence intervals
 - Removing all PCR-plus samples and samples with 100bp reads
-- Other minor changes (described below)
 
 <!-- end_excerpt -->
 
