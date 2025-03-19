@@ -15,7 +15,7 @@ We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-ta
 [NAXE](https://gnomad.broadinstitute.org/short-tandem-repeat/NAXE?dataset=gnomad_r4), 
 [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4), 
 [FAM193B](https://gnomad.broadinstitute.org/short-tandem-repeat/FAM193B?dataset=gnomad_r4), 
-and [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4)
+and [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4).
 
 We also added 9 other TR loci, including [NOTCH2NLA](https://gnomad.broadinstitute.org/short-tandem-repeat/NOTCH2NLA?dataset=gnomad_r4), [FRA10AC1](https://gnomad.broadinstitute.org/short-tandem-repeat/FRA10AC1?dataset=gnomad_r4), and [TMEM185A](https://gnomad.broadinstitute.org/short-tandem-repeat/TMEM185A?dataset=gnomad_r4), which, to our knowledge, are not currently linked to rare diseases, but have historically appeared in various STR catalogs as suspected disease-causing loci. 
 
