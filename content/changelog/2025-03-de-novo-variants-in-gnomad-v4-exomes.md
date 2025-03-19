@@ -9,6 +9,6 @@ After applying a series of filters, we obtained a high-quality set of 1,955 codi
 
 Our team is currently working on implementing a more sophisticated algorithm developed by Mark Daly’s group. This approach will integrate a parent-specific de novo prior and account for false homozygous reference genotypes in the proband to further improve accuracy.
 
-For more details on our de novo detection methods, visit our [GitHub repository]().
+For more details on our de novo detection methods, visit our [gnomad_qc GitHub repository](https://github.com/broadinstitute/gnomad_qc/blob/main/gnomad_qc/v4/create_release/create_de_novo_release.py).
 
 To download the DNV dataset, visit our [downloads page]().
