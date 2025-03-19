@@ -47,12 +47,10 @@ For most loci, two people reviewed the genotypes, and the average of their respo
 
 The user interface now includes a new "Color by" selector under the allele size histogram, enabling a color overlay based on genotype quality scores or other annotations. 
 Then, in addition to "Linear" and "Log" options in the y-Scale selector, users can now choose "Linear: truncated" to more easily see the tail of the distribution. 
-The External Resources section now contains links to STRchive - a new website that provides up-to-date information on pathogenic thresholds, phenotypes, ages of onset, and other important details.  
-Finally, the Read Visualization section includes new options and metadata related to the genotype quality scores.
+The External Resources section now includes a link to STRchive - a new website that provides up-to-date information on pathogenic thresholds, phenotypes, ages of onset, and other important aspects of known disease-associated loci.  Finally, the Read Data section includes new options and metadata related to the genotype quality scores.
 
 **Downloads**
 
-The updated Downloads table - which contains 1 row for each TR genotype - has several new columns.
-`ManualReviewGenotypeQuality` and `Q` columns contain the newly-added genotype qualities, while the `PublicProjectId` and `PublicSampleId` columns 
-(example: "Human Genome Diversity Project" and "HGDP01400") contain the source project and individual ids for 3,102 samples from the HGDP and 1000 Genomes projects.
+The updated Downloads table (which contains 1 row for each TR genotype) has several new columns.
+`ManualReviewGenotypeQuality` and `Q` columns contain the newly-added genotype qualities, while the `PublicProjectId` and `PublicSampleId` columns contain the source project and individual ids (example: "Human Genome Diversity Project" and "HGDP01400") for 3,102 samples from the HGDP and 1000 Genomes projects.
 
