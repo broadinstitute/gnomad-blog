@@ -4,9 +4,17 @@ date: 2025-03-20
 order: 1
 ---
 
+We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) by 
+- adding 9 recently discovered disease-associated TR loci  
+- introducing a "Color by" feature to the allele size histograms which allows users to see basic genotype quality scores derived from either manual review of read visualizations or from ExpansionHunter confidence intervals
+- removing all PCR-plus samples and samples with 100bp reads
+- other minor changes
+
+<!-- end_excerpt -->
+
 **Loci**
 
-We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) to include 9 recently discovered disease-associated TR loci:  
+We added these 9 recently discovered disease-associated TR loci:  
 [RILPL1](https://gnomad.broadinstitute.org/short-tandem-repeat/RILPL1?dataset=gnomad_r4), 
 [THAP11](https://gnomad.broadinstitute.org/short-tandem-repeat/THAP11?dataset=gnomad_r4), 
 [ZFHX3](https://gnomad.broadinstitute.org/short-tandem-repeat/ZFHX3?dataset=gnomad_r4),
