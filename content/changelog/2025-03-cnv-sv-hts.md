@@ -1,5 +1,5 @@
 ---
-title: Release CNV and SV browser tables
+title: Release v4.1 CNV and SV browser tables
 date: 2025-03-20
 order: 1
 ---
