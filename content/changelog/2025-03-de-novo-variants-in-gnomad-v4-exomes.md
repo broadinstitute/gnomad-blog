@@ -1,6 +1,6 @@
 ---
 title: De novo variants from gnomAD v4.1 exomes
-date: 2025-03-21
+date: 2025-03-20
 order: 1
 ---
 To expand the number of publicly available control *de novo* variants, we have released 1,953 coding *de novo* variants (DNVs) called from 1,517 trios in the gnomAD v4.1 exomes.
