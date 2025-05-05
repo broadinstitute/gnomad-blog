@@ -51,3 +51,5 @@ By calculating and releasing LAI-informed data, we provide a higher-resolution v
 6. Lewis, A. C. F., Molina, S. J., Appelbaum, P. S., Dauda, B., Di Rienzo, A., Fuentes, A., Fullerton, S. M., Garrison, N. A., Ghosh, N., Hammonds, E. M., Jones, D. S., Kenny, E. E., Kraft, P., Lee, S. S., Mauro, M., Novembre, J., Panofsky, A., Sohail, M., Neale, B. M., & Allen, D. S. (2022). Getting genetic ancestry right for science and society. Science (New York, N.Y.), 376(6590), 250–252. <https://doi.org/10.1126/science.abm7530>
 
 \*These authors contributed equally to this work.
+
+*Updated in May 2025 to change the gnomAD downloadable file hyperlink target to reflect a minor reorganization*
