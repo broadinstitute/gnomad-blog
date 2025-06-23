@@ -17,7 +17,7 @@ We have now released an extension of local ancestry-informed frequency work from
 
 <!-- end_excerpt -->
 
-The new local ancestry-informed frequency data includes 24,204,574 bi-allelic variants with low genotype missingness (call rate > 0.9) and an allele frequency greater than 0.1% within this genetic ancestry group. The dataset is accessible through the frequency tables on the variant pages in the browser and also as a [downloadable VCF](https://gnomad.broadinstitute.org/downloads#v4-local-ancestry). This release of gnomAD LAI-informed data provides alternate allele counts, allele numbers, and frequencies partitioned by continental genetic ancestries, with the extension of fine-scale ancestry resolution to the African/African American genetic ancestry group aiming to further improve the interpretation of genetic variation within admixed individuals.
+The new local ancestry-informed frequency data includes 24,204,574 bi-allelic variants with low genotype missingness (call rate > 0.9) and an allele frequency greater than 0.1% within this genetic ancestry group. The dataset is accessible through the frequency tables on the variant pages in the browser and also as a [downloadable VCF](https://gnomad.broadinstitute.org/downloads#v3-local-ancestry). This release of gnomAD LAI-informed data provides alternate allele counts, allele numbers, and frequencies partitioned by continental genetic ancestries, with the extension of fine-scale ancestry resolution to the African/African American genetic ancestry group aiming to further improve the interpretation of genetic variation within admixed individuals.
 
 #### Methods
 
@@ -51,3 +51,5 @@ By calculating and releasing LAI-informed data, we provide a higher-resolution v
 6. Lewis, A. C. F., Molina, S. J., Appelbaum, P. S., Dauda, B., Di Rienzo, A., Fuentes, A., Fullerton, S. M., Garrison, N. A., Ghosh, N., Hammonds, E. M., Jones, D. S., Kenny, E. E., Kraft, P., Lee, S. S., Mauro, M., Novembre, J., Panofsky, A., Sohail, M., Neale, B. M., & Allen, D. S. (2022). Getting genetic ancestry right for science and society. Science (New York, N.Y.), 376(6590), 250–252. <https://doi.org/10.1126/science.abm7530>
 
 \*These authors contributed equally to this work.
+
+*Updated in May 2025 to change the gnomAD downloadable file hyperlink target to reflect a minor reorganization*
