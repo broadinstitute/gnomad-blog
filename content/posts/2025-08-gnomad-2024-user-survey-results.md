@@ -27,7 +27,7 @@ We sought feedback for three main areas in this survey: prioritization of [featu
 * Regional missense constraint and MPC scores  
 * Pharmacogenomic (PGx) named alleles
 
-![Ranking of non-MVP features. 1 indicates that a feature is top priority, and 7 indicates that a feature is lowest priority](../images/feature_importance.png "gnomAD v4 non-MVP feature ranking")
+![Ranking of gnomAD non-MVP features. 1 indicates that a feature is top priority, and 7 indicates that a feature is lowest priority.](../images/feature_importance.png "Ranking of gnomAD v4 non-MVP features. 1 indicates that a feature is top priority, and 7 indicates that a feature is lowest priority.")
 
 The prioritized list of features based on mean user ranking is:
 
@@ -43,20 +43,20 @@ The prioritized list of features based on mean user ranking is:
 
 User requests for new features or modifications of current gnomAD features generally fell into one of the following categories:
 
-- Variant search-related requests: Users expressed the desire to streamline variant searching by implementing a more flexible variant search option (e.g., allowing searches on HGVS nomenclature) or support for [RefSeq](https://www.ncbi.nlm.nih.gov/refseq/) transcripts.  
-- Phenotype-related requests: Users expressed interest in knowing the cohort of origin for samples or phenotype information where available.   
-- Dataset subsets: Users expressed interest in stratifying gnomAD v4 using non-disease subsets.  
-- Re-implementation of gnomAD v4.0 non-MVP feature requests: Users requested re-implementation of the features prioritized above.  
-- New data or feature requests: Users requested more data (e.g., increased sample sizes; more *in silico* prediction scores) and new features (e.g., more links out to external resources; displaying exon numbers).  
-- Documentation requests: Users requested tutorial videos and additional documentation to maximize usage of the gnomAD resource.
+* Variant search-related requests: Users expressed the desire to streamline variant searching by implementing a more flexible variant search option (e.g., allowing searches on HGVS nomenclature) or support for [RefSeq](https://www.ncbi.nlm.nih.gov/refseq/) transcripts.  
+* Phenotype-related requests: Users expressed interest in knowing the cohort of origin for samples or phenotype information where available.   
+* Dataset subsets: Users expressed interest in stratifying gnomAD v4 using non-disease subsets.  
+* Re-implementation of gnomAD v4.0 non-MVP feature requests: Users requested re-implementation of the features prioritized above.  
+* New data or feature requests: Users requested more data (e.g., increased sample sizes; more *in silico* prediction scores) and new features (e.g., more links out to external resources; displaying exon numbers).  
+* Documentation requests: Users requested tutorial videos and additional documentation to maximize usage of the gnomAD resource.
 
 #### Pain points
 
 The reported pain points fell into three main categories:
 
-- Browser performance: Users reported issues loading the gnomAD browser or slow loading of pages.  
-- Downloads: Users reported issues with the downloadable file size and the inability to download specific data without downloading large files.  
-- Perception that v4 is not as healthy as previous datasets: Users expressed concern at the increased inclusion of biobank samples in v4.
+* Browser performance: Users reported issues loading the gnomAD browser or slow loading of pages.  
+* Downloads: Users reported issues with the downloadable file size and the inability to download specific data without downloading large files.  
+* Perception that v4 is not as healthy as previous datasets: Users expressed concern at the increased inclusion of biobank samples in v4.
 
 ### Addressing User Feedback: Actions Taken and Planned
 
@@ -78,7 +78,7 @@ We are actively working on addressing user requests for new features and modific
 
 ##### More data
 
-The gnomAD production team is actively developing the next major release, v5, which will substantially expand the resource by incorporating the [All of Us](https://allofus.nih.gov/) v8 release (414,830 genomes). The inclusion of All of Us data will enhance ancestral representation within gnomAD and introduce new structural variation. It will enable users with access to All of Us data to link genotype and phenotype information. Furthermore, in response to user feedback, we will incorporate [AlphaMissense](https://doi.org/10.1038/s41597-024-03327-8) scores into v5. We anticipate that v5 will be released in 2026\.
+The gnomAD production team is actively developing the next major release, v5, which will substantially expand the resource by incorporating the [All of Us](https://allofus.nih.gov/) v8 release (414,830 genomes). The inclusion of All of Us data will enhance ancestral representation within gnomAD and introduce new structural variation. It will enable users with access to All of Us data to link genotype and phenotype information. Furthermore, in response to user feedback, we will incorporate [AlphaMissense](https://doi.org/10.1038/s41597-024-03327-8) scores into v5. We anticipate that v5 will be released in 2026.
 
 ##### Non-MVP feature re-implementation
 
@@ -90,10 +90,10 @@ We are also planning to regenerate variant co-occurrence and multinucleotide var
 
 A few new browser features that are actively being implemented are:
 
-- Inclusion of ClinVar variants track on copy number variant and structural variant gene pages  
-- Inclusion of exon numbers and exon start and end coordinates in the transcript track  
-- Inclusion of [HGVS](https://hgvs-nomenclature.org/stable/background/simple/) coding sequence consequence on variant pages  
-- Updating the behavior of control+f on gene pages to search all variants in a gene, not just currently displayed variants
+* Inclusion of ClinVar variants track on copy number variant and structural variant gene pages  
+* Inclusion of exon numbers and exon start and end coordinates in the transcript track  
+* Inclusion of [HGVS](https://hgvs-nomenclature.org/stable/background/simple/) coding sequence consequence on variant pages  
+* Updating the behavior of control+f on gene pages to search all variants in a gene, not just currently displayed variants
 
 These features will be implemented on a rolling basis, and we anticipate they will be completed by the end of this year.
 
@@ -127,7 +127,7 @@ We received feedback from several users requesting more flexible variant search 
 
 ### Contact us
 
-Your feedback is important to us\! gnomAD is always improving, and we appreciate community input.
+Your feedback is important to us! gnomAD is always improving, and we appreciate community input.
 
 Here's how you can connect with us:
 
@@ -138,4 +138,4 @@ Thank you for helping us improve gnomAD.
 
 #### References
 
-1. Carlson, J., Henn, B. M., Al-Hindi, D. R., & Ramachandran, S. (2022). Counter the weaponization of genetics research by extremists. Nature, 610(7932), 444–447. [https://doi.org/10.1038/d41586-022-03252-z](https://doi.org/10.1038/d41586-022-03252-z)
+1. Carlson, J., Henn, B. M., Al-Hindi, D. R., & Ramachandran, S. (2022). Counter the weaponization of genetics research by extremists. Nature, 610(7932), 444–447. <https://doi.org/10.1038/d41586-022-03252-z>
