@@ -103,7 +103,7 @@ There are a few points of user feedback we are unable to address.
 
 ##### Non-MVP feature re-implementation
 
-One of the top ranked features from the user survey was re-implementation of genetic ancestry subgroup information. However, we do not have plans to regenerate genetic ancestry subgroups at this time. Genetic ancestry groupings have been misappropriated with malicious intent1, and we do not believe the additional subgroups we can identify with our limited sample metadata would be valuable for clinical variant classification or risk assessment. This is an area of active community discussion.
+One of the top ranked features from the user survey was re-implementation of genetic ancestry subgroup information. However, we do not have plans to regenerate genetic ancestry subgroups at this time. Genetic ancestry groupings have been misappropriated with malicious intent<sup>1</sup>, and we do not believe the additional subgroups we can identify with our limited sample metadata would be valuable for clinical variant classification or risk assessment. This is an area of active community discussion.
 
 In addition, due to cost constraints, we will not be calculating linkage disequilibrium (LD) scores or generating pharmacogenomic haplotypes. Users needing these metrics should apply for access to the [All of Us](https://allofus.nih.gov/) (AoU) dataset. Pharmacogenomic data are available through All of Us, and the gnomAD team is currently collaborating on an effort to generate LD scores from the [AoU](https://allofus.nih.gov/) genomes.
 
@@ -113,7 +113,7 @@ The gnomAD resource does not have permission, access, or staffing to investigate
 
 ##### Disease subsets and perception that v4 is not as healthy as previous datasets
 
-In the past, the gnomAD browser has supported disease-specific subsets (e.g., non-cancer). However, we have removed support for disease-specific subsets for two reasons: sample metadata and sample size. While we had high-level study phenotype and case/control status for some samples, we do not have comprehensive phenotype metadata for most all gnomAD samples, and many samples are now derived from large biobanks, which can include individuals with disease. As such, we cannot ensure that samples in a non-disease subset do not have the specified disease. 
+In the past, the gnomAD browser has supported disease-specific subsets (e.g., non-cancer). However, we have removed support for disease-specific subsets for two reasons: sample metadata and sample size. While we had high-level study phenotype and case/control status for some samples, we do not have comprehensive phenotype metadata for most gnomAD samples, and many samples are now derived from large biobanks, which can include individuals with disease. As such, we cannot ensure that samples in a non-disease subset do not have the specified disease. 
 
 Additionally, as the dataset has grown, concerns about enrichment of any particular phenotype has decreased. We continue to remove cohorts recruited for severe pediatric disease, except for a small number of diverse cohorts where we have included unaffected relatives. We have also removed the TCGA cancer samples due to data quality. For a more detailed understanding of the cohorts included in gnomAD, please see the list shared on our [About](https://gnomad.broadinstitute.org/about) page or the “Study Diseases in gnomAD” table on our [Stats](https://gnomad.broadinstitute.org/stats#study-diseases) page.
 
