@@ -1,6 +1,6 @@
 ---
 title: gnomAD 2024 user survey results
-date: 2025-09-09
+date: 2025-09-08
 order: 1
 categories:
   - Announcements
