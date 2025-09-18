@@ -19,13 +19,6 @@ const Link = styled.a`
   }
 `;
 
-const ExternalLink = styled(Link).attrs({
-  rel: "noopener noreferrer",
-  target: "_blank",
-})`
-  /* stylelint-ignore-line block-no-empty */
-`;
-
 const TopBarWrapper = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -46,12 +39,7 @@ const Banner = styled.div`
   }
 `;
 
-const BANNER_CONTENT = (
-  <>
-    Help us continue to improve gnomAD by taking 5 minutes to fill out our {/* @ts-expect-error */}
-    <ExternalLink href="http://broad.io/2024_survey">user survey</ExternalLink>.
-  </>
-);
+const BANNER_CONTENT = null;
 
 const Layout = ({ children, title }) => {
   const { site } = useStaticQuery(
