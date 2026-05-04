@@ -35,6 +35,11 @@ const Header = ({ siteTitle }) => {
             </a>
           </li>
           <li className="nav-item">
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/federated">
+              Federated 
+            </a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="https://gnomad.broadinstitute.org/stats">
               Stats
             </a>
@@ -65,12 +70,17 @@ const Header = ({ siteTitle }) => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://discuss.gnomad.broadinstitute.org/">
+            <a 
+              className="nav-link" 
+              href="https://discuss.gnomad.broadinstitute.org/" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Forum
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://gnomad.broadinstitute.org/feedback">
+            <a className="nav-link" href="https://gnomad.broadinstitute.org/contact">
               Contact
             </a>
           </li>
