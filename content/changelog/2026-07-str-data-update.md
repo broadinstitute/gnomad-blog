@@ -43,13 +43,13 @@ This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/sho
 
   Screenshots from the [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) page. Thanks to [Helmut Grasberger](https://discuss.gnomad.broadinstitute.org/t/tandem-repeat-pre-mir7-2/747) for flagging this issue.
 
-- The [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4) locus definition was reverted from a wide region (29 x CAG repeats @ 12:132062524-132062611) to the original narrower region (21 x CAG repeats @ 12:132062548-132062611) for consistency with the TRExplorer v1 catalog ([Weisburd, Dolzhenko et al. 2026](https://pubmed.ncbi.nlm.nih.gov/42025159/)). Although narrower, purer locus definitions often yield higher-quality ExpansionHunter genotypes, the EP400 locus is an exception where the narrower definition causes ExpansionHunter to produce more low-quality overestimated allele sizes. This reduction in genotype quality is reflected in the updated genotype manual review scores on the EP400 page:
+- The [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4) locus definition was reverted from a wide region (29 x CAG repeats @ 12:132062524-132062611) to the original narrower region (21 x CAG repeats @ 12:132062548-132062611) for consistency with the TRExplorer v1 catalog [[Weisburd, Dolzhenko et al. 2026](https://pubmed.ncbi.nlm.nih.gov/42025159/)]. Although narrower, purer locus definitions often yield higher-quality ExpansionHunter genotypes, the EP400 locus is an exception where the narrower definition causes ExpansionHunter to produce more low-quality overestimated allele sizes. This reduction in genotype quality is reflected in the updated genotype manual review scores on the EP400 page:
 
-  **Before:** (wider locus definition in March, 2025 release)
+  **Before** (wider locus definition from March, 2025 release):
 
   ![EP400 allele size distribution using the wider locus definition, mostly high quality](../images/2026/ep400-wide-definition-march-2025.png)
 
-  **After:** (narrower locus definition in this release)
+  **After** (narrower locus definition in this release):
 
   ![EP400 allele size distribution using the narrower locus definition, with many more low-quality and not-reviewed alleles](../images/2026/ep400-narrow-definition-current.png)
 
