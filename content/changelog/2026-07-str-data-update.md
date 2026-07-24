@@ -1,35 +1,17 @@
 ---
 title: Update gnomAD tandem repeat (TR) data
-date: 2026-07-24
+date: 2026-07-20
 order: 1
 ---
 
-We have updated the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4). Changes include:
-- Adding a new disease-associated TR locus: RAI1
-- Additional manual review of read visualizations for PRE-MIR7-2
-- New External Resources links: TRExplorer and the ExpansionHunter catalog used to generate the callset
+This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) includes:
+- Adding a new disease-associated TR locus: [RAI1](https://strchive.org/loci/FAME8_RAI1), so there's now data for 78 total TR loci (up from 77). Also adding pathogenic thresholds for 3 loci that already had TR data but previously lacked a disease association: [AFF3](https://strchive.org/loci/FRA2A_AFF3) (300), [CBL](https://strchive.org/loci/JBS_CBL) (101), and [ZNF713](https://strchive.org/loci/FRA7A_ZNF713) (450) copied from [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff).
+- Updating pathogenic thresholds for [ATXN3](https://strchive.org/loci/SCA3_ATXN3) (56 → 60), [CACNA1A](https://strchive.org/loci/SCA6_CACNA1A) (20 → 21), [CNBP](https://strchive.org/loci/DM2_CNBP) (55 → 75), [FXN](https://strchive.org/loci/FRDA_FXN) (66 → 56), [MARCHF6](https://strchive.org/loci/FAME3_MARCHF6) (668 → 650), [NOTCH2NLC](https://strchive.org/loci/NIID_NOTCH2NLC) (90 → 66), [PHOX2B](https://strchive.org/loci/CCHS_PHOX2B) (24 → 26), [RUNX2](https://strchive.org/loci/CCD_RUNX2) (20 → 17), [SAMD12](https://strchive.org/loci/FAME1_SAMD12) (100 → 97), [TBP](https://strchive.org/loci/SCA17_TBP) (43 → 49), [XYLT1](https://strchive.org/loci/DBQD2_XYLT1) (110 → 72), and [ZFHX3](https://strchive.org/loci/SCA4_ZFHX3) (41 → 46). These changes are primarily based on syncing thresholds with [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff), while taking into account some differences in how loci are defined in gnomAD vs. STRchive (for example, [RUNX2](https://strchive.org/loci/CCD_RUNX2)).
+- Adding manual genotype quality scores based on manual review for the shortest alleles at [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) , accounting for the fact that contractions at this locus are pathogenic.
 
 <!-- end_excerpt -->
 
-**Loci**
-- Added [RAI1](https://gnomad.broadinstitute.org/short-tandem-repeat/RAI1?dataset=gnomad_r4) as a new disease-associated TR locus.
-- The dataset now includes 78 total TR loci (up from 77).
-
-**Genotype Quality Scores**
-- Reviewed an additional 66 genotypes for [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4), most of which were flagged as low quality.
-- Completed an initial manual review pass for RAI1.
-
-**External Resources**
-- Added a link to **TRExplorer**, pre-filled to search the gene's pathogenic repeats.
-- Added a link to the exact **ExpansionHunter catalog** file used to generate the current gnomAD TR callset.
-
 **Site Updates**
-- Added a data-version label to the TR list page, so it's always clear which callset a given view reflects.
 
-<!--
-TODO before publishing:
-- EP400 is currently undergoing a locus-definition change and re-review (large shifts in manual-review quality scores between releases: high 286->130, low 6->100, medium 8->14). Not finalized as of this draft -- confirm status and either add a bullet here or hold for a follow-up entry once the new definition is settled.
-- FAM193B and NAXE: verified unchanged this release (no new review, same allele counts) -- confirmed NOT part of this changelog, despite earlier assumptions.
-- Sample/genome cohort composition unchanged this release (allele totals identical for every locus except the new RAI1) -- no "Samples" section needed, unlike the March 2025 entry.
-- Numbers above computed by diffing gs://gnomad-browser/STRs/gnomAD_STR_distributions__gnomad-v2__2025_03_17.json.gz vs ..._2026_07_20.json.gz (AlleleCountHistogram per locus), not from a canonical release-notes doc -- spot check before publishing.
--->
+- Added a data-version label to the TR pages.
+
