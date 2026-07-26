@@ -39,13 +39,15 @@ This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/sho
 
   ![PRE-MIR7-2 allele size distribution showing all 3-repeat alleles flagged as low quality](../images/2026/pre-mir7-2-contracted-alleles.png)
 
+  This is an example read visualization from the PRE-MIR7-2 page showing how the 3 x TTTG allele actually has a 4th TTTG repeat that is mislabeled as a single nucleotide variant.
+
   ![Read visualization of a PRE-MIR7-2 sample genotyped as 3/4 repeats, showing a clear genotyping error](../images/2026/pre-mir7-2-genotyping-error-example.png)
 
   Screenshots from the [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) page. Thanks to [Helmut Grasberger](https://discuss.gnomad.broadinstitute.org/t/tandem-repeat-pre-mir7-2/747) for flagging this issue.
 
 - The [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4) locus definition was reverted from a wide region (29 x CAG repeats @ 12:132062524-132062611) to the original narrower region (21 x CAG repeats @ 12:132062548-132062611) for consistency with the TRExplorer v1 catalog [[Weisburd, Dolzhenko et al. 2026](https://pubmed.ncbi.nlm.nih.gov/42025159/)] and the [Illumina / DRAGEN 174k catalog](https://github.com/Illumina/RepeatCatalogs). Although narrower, purer locus definitions often yield higher-quality ExpansionHunter genotypes, the EP400 locus is an exception where the narrower definition causes ExpansionHunter to produce more low-quality overestimated allele sizes. This reduction in genotype quality is reflected in the updated genotype manual review scores on the EP400 page:
 
-  **Before** (wider locus definition from March, 2025 release):
+  **Before** (wider locus definition from the March, 2025 release):
 
   ![EP400 allele size distribution using the wider locus definition, mostly high quality](../images/2026/ep400-wide-definition-march-2025.png)
 
