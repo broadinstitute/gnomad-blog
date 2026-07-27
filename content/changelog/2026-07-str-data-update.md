@@ -5,7 +5,7 @@ order: 1
 ---
 
 This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) includes:
-- Added one more TR locus: [RAI1](https://strchive.org/loci/FAME8_RAI1), so there's now data for 78 total TR loci. Also added pathogenic thresholds for three loci that already had TR data but previously lacked a disease association: [AFF3](https://strchive.org/loci/FRA2A_AFF3) (300), [CBL](https://strchive.org/loci/JBS_CBL) (101), and [ZNF713](https://strchive.org/loci/FRA7A_ZNF713) (450) taken from [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff).
+- Added one more TR locus: [RAI1](https://strchive.org/loci/FAME8_RAI1), so there's now data for 78 total TR loci. Also added pathogenic thresholds for three loci that already had TR data but previously lacked a disease association: [AFF3](https://strchive.org/loci/FRA2A_AFF3) (GCC x 300), [CBL](https://strchive.org/loci/JBS_CBL) (CGG x 101), and [ZNF713](https://strchive.org/loci/FRA7A_ZNF713) (GCG x 450) taken from [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff).
 
 - Updated pathogenic thresholds for the following loci. These changes are primarily based on syncing thresholds with [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff), while taking into account some differences in how loci are defined in gnomAD vs. STRchive (for example, [RUNX2](https://strchive.org/loci/CCD_RUNX2) has a reference region that's narrower by three trinucleotide repeats in gnomAD compared to STRchive, so the pathogenic threshold is also reduced by three repeats in gnomAD):
 
@@ -35,7 +35,7 @@ This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/sho
   - [RUNX2](https://strchive.org/loci/CCD_RUNX2) (GCN x 17 → 14)
   - [TBP](https://strchive.org/loci/SCA17_TBP) (GCA x 42 → 40)
 
-- Added manual genotype quality scores based on manual review of the shortest alleles at [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) , since contracted alleles (TTTG x 3 repeats) at this locus are pathogenic. Unsurprisingly, all 33 alleles called as having three repeats are clear genotyping errors:
+- Added genotype quality scores based on manual review of the shortest alleles at [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) , since contracted alleles (TTTG x 3 repeats) at this locus are pathogenic. Unsurprisingly, all 33 alleles called as having three repeats are clear genotyping errors:
 
   ![PRE-MIR7-2 allele size distribution showing all 3-repeat alleles flagged as low quality](../images/2026/pre-mir7-2-contracted-alleles.png)
 
@@ -45,9 +45,9 @@ This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/sho
 
   Thanks to [Helmut Grasberger](https://discuss.gnomad.broadinstitute.org/t/tandem-repeat-pre-mir7-2/747) for flagging this issue.
 
-- The [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4) locus definition was reverted from a wide region (29 x CAG repeats @ 12:132062524-132062611) to the original narrower region (21 x CAG repeats @ 12:132062548-132062611) for consistency with the TRExplorer v1 catalog [[Weisburd, Dolzhenko et al. 2026](https://pubmed.ncbi.nlm.nih.gov/42025159/)] and the [Illumina / DRAGEN 174k catalog](https://github.com/Illumina/RepeatCatalogs). Although narrower, purer locus definitions often yield higher-quality ExpansionHunter genotypes, the EP400 locus is an exception where the narrower definition causes ExpansionHunter to produce more low-quality overestimated allele sizes. This reduction in genotype quality is reflected in the updated genotype manual review scores on the EP400 page:
+- The [EP400](https://gnomad.broadinstitute.org/short-tandem-repeat/EP400?dataset=gnomad_r4) locus definition was reverted from a wide region (29 x CAG repeats @ 12:132062524-132062611) to the original narrower region (21 x CAG repeats @ 12:132062548-132062611) for consistency with the TRExplorer v1 catalog [[Weisburd, Dolzhenko et al. 2026](https://pubmed.ncbi.nlm.nih.gov/42025159/)] and the [Illumina / DRAGEN 174k catalog](https://github.com/Illumina/RepeatCatalogs). Although narrower, purer locus definitions often yield higher-quality ExpansionHunter genotypes, the EP400 locus is an exception where the narrower definition causes ExpansionHunter to produce more low-quality overestimated allele sizes. This reduction in genotype quality is reflected in the updated manual-review genotype quality scores on the EP400 page:
 
-  **Before** (wider locus definition from the March, 2025 release):
+  **Before** (wider locus definition from the March 2025 release):
 
   ![EP400 allele size distribution using the wider locus definition, mostly high quality](../images/2026/ep400-wide-definition-march-2025.png)
 
