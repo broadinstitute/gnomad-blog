@@ -35,7 +35,7 @@ This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/sho
   - [RUNX2](https://strchive.org/loci/CCD_RUNX2) (GCN x 17 → 14)
   - [TBP](https://strchive.org/loci/SCA17_TBP) (GCA x 42 → 40)
 
-- Added genotype quality scores based on manual review of the shortest alleles at [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4) , since contracted alleles (TTTG x 3 repeats) at this locus are pathogenic. Unsurprisingly, all 33 alleles called as having three repeats are clear genotyping errors:
+- Added genotype quality scores based on manual review of the shortest alleles at [PRE-MIR7-2](https://gnomad.broadinstitute.org/short-tandem-repeat/PRE-MIR7-2?dataset=gnomad_r4), since contracted alleles (TTTG x 3 repeats) at this locus are pathogenic. Unsurprisingly, all 33 alleles called as having three repeats are clear genotyping errors:
 
   ![PRE-MIR7-2 allele size distribution showing all 3-repeat alleles flagged as low quality](../images/2026/pre-mir7-2-contracted-alleles.png)
 
