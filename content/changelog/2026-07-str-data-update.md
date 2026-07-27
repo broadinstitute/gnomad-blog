@@ -5,7 +5,7 @@ order: 1
 ---
 
 This minor update to the [gnomAD TR pages](https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r4) includes:
-- Added one more TR locus: [RAI1](https://strchive.org/loci/FAME8_RAI1), so there's now data for 78 total TR loci. Also added pathogenic thresholds for three loci that already had TR data but previously lacked a disease association: [AFF3](https://strchive.org/loci/FRA2A_AFF3) (GCC x 300), [CBL](https://strchive.org/loci/JBS_CBL) (CGG x 101), and [ZNF713](https://strchive.org/loci/FRA7A_ZNF713) (GCG x 450) taken from [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff).
+- Added one more TR locus: [RAI1](https://strchive.org/loci/FAME8_RAI1), so there's now data for 78 total TR loci. Also added pathogenic thresholds for three loci that already had TR data but previously lacked a disease association: [AFF3](https://strchive.org/loci/FRA2A_AFF3) (GCC x 300), [CBL](https://strchive.org/loci/JBS_CBL) (CGG x 101), and [ZNF713](https://strchive.org/loci/FRA7A_ZNF713) (GCG x 450), taken from [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff).
 
 - Updated pathogenic thresholds for the following loci. These changes are primarily based on syncing thresholds with [STRchive](https://strchive.org/) [v2.24.2](https://github.com/dashnowlab/STRchive/blob/main/CITATION.cff), while taking into account some differences in how loci are defined in gnomAD vs. STRchive (for example, [RUNX2](https://strchive.org/loci/CCD_RUNX2) has a reference region that's narrower by three trinucleotide repeats in gnomAD compared to STRchive, so the pathogenic threshold is also reduced by three repeats in gnomAD):
 
