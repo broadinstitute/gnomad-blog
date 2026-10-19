@@ -74,7 +74,7 @@ The gnomAD-LR beta browser (<https://long-read-beta.gnomad.broadinstitute.org/>)
 
 ## Code and data availability
 
-We applied the AoU long-read pipeline to detect genomic variants from AoU samples, with technical details described in a recent preprint<sup>1</sup>. Short variants from HPRC and HGSVC samples were generated using the same pipeline, while the SV call sets were generated as part of the 1000 Genomes long-read project<sup>4</sup>. Pipelines for quality evaluation, phasing, and variant annotation are organized at <https://github.com/talkowski-lab/lr-pipeline/>. \[Add link to downloadable data here]
+We applied the AoU long-read pipeline to detect genomic variants from AoU samples, with technical details described in a recent preprint<sup>1</sup>. Short variants from HPRC and HGSVC samples were generated using the same pipeline, while the SV call sets were generated as part of the 1000 Genomes long-read project<sup>4</sup>. Pipelines for quality evaluation, phasing, and variant annotation are organized at <https://github.com/talkowski-lab/lr-pipeline/>. VCFs for both datasets are available for [download](https://long-read-beta.gnomad.broadinstitute.org/data#lr).
 
 ## Feedback
 
