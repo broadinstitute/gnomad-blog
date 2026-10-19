@@ -68,7 +68,7 @@ An early insight from this resource is that SVs discovered by lrGS are much bett
 
 The gnomAD-LR beta browser (<https://long-read-beta.gnomad.broadinstitute.org/>) displays all variants, from SNVs to large SVs, with site-level summary statistics and no access restrictions. Each gene page shows the per-base lrGS sequencing depth alongside srGS coverage from gnomAD, for direct comparison (**Figure 4A**). Variants in the region are listed in a variant table annotated with allele frequencies (overall and by genetic ancestry group), overlap with existing srGS resources, and predicted functional consequences (**Figure 4B**). The table can be filtered by variant type and consequence, and each variant name links to a page with its full details. Fully phased haplotypes of the HPRC and HGSVC samples are shown in the “Haplotype View”, together with per-haplotype methylation profiles for the HPRC samples (**Figure 4C**). In this view, SNVs are drawn as dots and other variants as bars. Insertions appear as single-base bars, while the length of each deletion or TR bar reflects its size. For each TR, the browser also shows the distribution of allele lengths and repeat copy numbers across the cohort (**Figure 4D**). We illustrate these features below using the *CEL* gene as an example.
 
-![Illustration of gnomAD-LR browser](../images/figure4.png "Figure 4")
+![Illustration of gnomAD-LR browser](../images/figure4_small.png "Figure 4")
 
 **Figure 4. Illustration of gnomAD-LR browser.** (a). Sequencing coverage tracks; (b) Variants and annotations displayed in a table; (c). View of phased haplotypes; (d). Tandem repeat variant pages.
 
