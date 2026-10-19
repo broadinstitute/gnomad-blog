@@ -78,7 +78,7 @@ We applied the AoU long-read pipeline to detect genomic variants from AoU sample
 
 ## Feedback
 
-The current release of gnomAD-LR is a beta version. We are continuing to refine the gnomAD-LR display and encourage users to provide feedback or ask questions on our [forum](https://discuss.gnomad.broadinstitute.org/).
+The current release of gnomAD-LR is a beta version. We are continuing to refine the gnomAD-LR display and encourage users to provide feedback or ask questions on our [forum](https://discuss.gnomad.broadinstitute.org/c/long-reads/14).
 
 ## Acknowledgements
 
