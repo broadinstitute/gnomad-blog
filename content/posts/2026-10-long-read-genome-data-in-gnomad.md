@@ -36,17 +36,17 @@ The gnomAD LR resource represents a total of **87.9 million** (M) variants, incl
 
 **Figure 1. Overview of the gnomAD-LR datasets.** Top row, HPRC/HGSVC samples; bottom row, AoU Phase I samples. **(A)** Number of variants per cohort, by variant type and size. **(B)** Per-sample variant counts, colored by inferred genetic ancestry. **(C)** Variant size distribution.
 
-| cohort     | SNV        | Indel (1-49 bp) | SV (≥50 bp) |
+**Table 1. Count of variants in gnomAD-LR split by variant type**
+
+| Cohort     | SNV        | Indel (1-49 bp) | SV (≥50 bp) |
 | ---------- | ---------- | --------------- | ----------- |
 | Combined   | 72,686,661 | 14,349,665      | 818,140     |
 | HPRC/HGSVC | 41,338,660 | 9,448,544       | 305,175     |
 | AoU        | 59,237,824 | 12,440,939      | 727,037     |
 
-**Table 1. Count of variants in gnomAD-LR split by variant type**
+## Improved variant discovery in repetitive sequences with lrGS
 
-## Variants uniquely accessible to lrGS
-
-We compared gnomAD-LR with two existing short-read variant databases, dbSNP and gnomAD v4 (including variants from over 70 thousand genome sequences)<sup>16,17</sup>. Most SNVs and indels are already present in at least one of these srGS resources. In contrast, 25.1% of SVs between 50-500 bp and 54.0% of SVs of 500 bp or larger are found only in gnomAD-LR (**Figure 2**). Most of these lrGS-specific SVs fall within SDs and TRs, accounting for 88.3% of lrGS-specific deletions and 89.2% of lrGS-specific insertions. In the remaining 90.4% of the genome outside SD/SR regions, most SVs are already captured by srGS resources (89.3% of deletions and 75.4% of insertions).
+We compared gnomAD-LR with two existing short-read variant databases, dbSNP and gnomAD.<sup>12,16,17</sup> Most SNVs and indels from gnomAD-LR were already present in at least one of these srGS resources. In contrast, 25.1% of SVs between 50-500 bp and 54.0% of SVs greater than 500 bp are unique to gnomAD-LR (**Figure 2**). Most of these lrGS-specific SVs fall within SDs and TRs. These variants localized to highly repetitive sequences in the genome accounted for 88.3% of lrGS-specific deletions and 89.2% of lrGS-specific insertions. In the remaining 90.3% of the genome outside SD/SR regions, most SVs were already captured by srGS resources (89.3% of deletions and 75.4% of insertions).
 
 ![Overlap of gnomAD-LR variants with short-read resources](../images/figure2.png "Figure 2")
 
@@ -54,27 +54,30 @@ We compared gnomAD-LR with two existing short-read variant databases, dbSNP and 
 
 ## Impact of lrGS variants on gene function
 
-We predicted the functional impact of each variant using the Ensembl Variant Effect Predictor (VEP)<sup>18</sup> and GATK SVAnnotate<sup>11</sup>. Among rare variants (allele frequency \[AF] < 1%), 30.8K SNVs, 21.4K small indels, and 9.9K SVs are predicted to have a loss-of-function mechanism (pLoF), together affecting 18,058 genes. Each genome carries rare pLoF variants in a median of 89 genes: 48 affected by SNVs, 30 by indels, and 11 by SVs (**Figure 3A**).
+We predicted the functional impact of each variant using the Ensembl Variant Effect Predictor (VEP)<sup>18</sup> and GATK SVAnnotate<sup>11</sup>. Among rare variants (allele frequency \[AF] < 1%), 30.8k of SNVs, 21.4k of small indels, and 9.9k of SVs were predicted to result in loss-of-function (pLoF) and collectively impacted 18,058 genes. On average, each genome harbored a rare pLoF variant in 89 genes: 48 altered by SNVs, 30 by indels, and 11 by SVs (**Figure 3A**).
 
-We next compared these variants with gnomAD v4 LOEUF scores<sup>17</sup>, a gene constraint metric derived from short-read data. As expected, more constrained genes are less likely to be disrupted by rare pLoF variants in the long-read data (**Figure 3B**). The same trend holds for genes disrupted by rare SVs, in both the AoU and public samples (**Figure 3C**).
-
-An early insight from this resource is that SVs discovered by lrGS are much better tagged by nearby SNVs through linkage disequilibrium (LD), particularly in highly repetitive SD and SR regions. In these regions, the median maximum r² between common (AF ≥1%) SVs and SNVs within 1 Mb is 0.56 in gnomAD-LR, compared with 0.24 for srGS in gnomAD v4. Outside SD/SR regions, SVs are well tagged by nearby SNVs in both datasets (median r² = 0.89; **Figure 3D**). Taken together, an average of 3,822 SVs per genome from srGS are in strong LD (r² ≥ 0.8) with a nearby SNV, compared with 10,235 SVs per genome from lrGS. These data suggest that lrGS genotypes SVs in repetitive sequence more accurately, with direct implications for including SVs in genome-wide association studies (GWAS) and other population-scale analyses.
+We next compared these variants with gnomAD v4 LOEUF scores<sup>17</sup>, a gene constraint metric derived from short-read data. As expected, more constrained genes are less likely to be disrupted by rare pLoF variants in the lrGS data (**Figure 3B**-**C**). We also find that SVs discovered by lrGS are better tagged by nearby SNVs in linkage disequilibrium (LD), particularly in highly repetitive SD and SR regions. In these regions, the median maximum r² between common (AF ≥1%) SVs and SNVs within 1 Mb is 0.56 in gnomAD-LR, compared with 0.24 for srGS in gnomAD v4. Outside SD/SR regions, SVs are well tagged by nearby SNVs in both datasets (median r² = 0.89; **Figure 3D**). These data suggest that SNVs and SVs localized to repetitive sequences display more accurate genotyping by lrGS and thus higher average LD, which will ultimately have implications for SV analyses in population genetic and trait association studies.
+![Impact of lrGS variants](../images/figure3.png "Figure 3")
 
 ![Impact of lrGS variants](../images/figure3.png "Figure 3")
 
-**Figure 3. Impact of lrGS variants. (A)** Median count of genes per genome disrupted by rare (AF < 1%) pLoF variants of any type (left), and by SNVs, indels (1-49 bp), and SVs (≥50 bp) separately (right). **(B)** Proportion of genes carrying rare pLoF variants in each LOEUF (gnomAD v4) decile, from most constrained (left) to least constrained (right). **(C)** Observed/expected ratio of rare pLoF SVs across LOEUF percentiles in the public (blue) and AoU Phase I (orange) samples. **(D)** LD (r²) between SVs and nearby SNVs for SVs in repetitive (SD/SR) and unique sequences, from short-read (gnomAD v4, blue) and long-read (gnomAD-LR, orange) data. White dots mark medians.
+**Figure 3. Impact of lrGS variants. (A)** Median count of genes per genome disrupted by rare (AF < 1%) pLoF variants of any type (left), and by SNVs, indels (1-49 bp), and SVs (≥50 bp) separately (right). **(B)** Proportion of genes carrying rare pLoF variants in each LOEUF decile  (gnomAD v4), from most constrained (left) to least constrained (right). **(C)** Observed/expected ratio of rare pLoF SVs across LOEUF percentiles in the public (blue) and AoU Phase I (orange) samples. **(D)** LD (r²) between SVs and nearby SNVs for SVs in repetitive (SD/SR) and unique sequences, from short-read (gnomAD v4, blue) and long-read (gnomAD-LR, orange) data. White dots mark medians.
 
 ## Exploring the data in the gnomAD-LR browser
 
-The gnomAD-LR beta browser (<https://long-read-beta.gnomad.broadinstitute.org/>) displays all variants, from SNVs to large SVs, with site-level summary statistics and no access restrictions. Each gene page shows the per-base lrGS sequencing depth alongside srGS coverage from gnomAD, for direct comparison (**Figure 4A**). Variants in the region are listed in a variant table annotated with allele frequencies (overall and by genetic ancestry group), overlap with existing srGS resources, and predicted functional consequences (**Figure 4B**). The table can be filtered by variant type and consequence, and each variant name links to a page with its full details. Fully phased haplotypes of the HPRC and HGSVC samples are shown in the “Haplotype View”, together with per-haplotype methylation profiles for the HPRC samples (**Figure 4C**). In this view, SNVs are drawn as dots and other variants as bars. Insertions appear as single-base bars, while the length of each deletion or TR bar reflects its size. For each TR, the browser also shows the distribution of allele lengths and repeat copy numbers across the cohort (**Figure 4D**). We illustrate these features below using the *CEL* gene as an example.
+The gnomAD-LR beta browser (<https://long-read-beta.gnomad.broadinstitute.org/>) displays all variants, from SNVs to large SVs, with site-level summary statistics. We illustrate these features below using the *CEL* gene as an example. Each gene page shows the per-base lrGS sequencing depth alongside srGS coverage from gnomAD for direct comparison (**Figure 5**). Variants are listed in a variant table annotated with allele frequencies (overall and by genetic ancestry group), overlap with existing srGS resources, and predicted functional consequences. The table can be filtered by variant type and consequence, and each variant name has a link to the full details. Fully phased haplotypes of the HPRC and HGSVC samples are shown in the “Haplotype View”, together with per-haplotype methylation profiles for the HPRC samples (**Figure 5**). Methylation data are not accessible in Phase I of AoU, but will be accessible in future AoU releases. In this view, SNVs are drawn as dots and other variants as bars. Insertions appear as single-base bars, while the length of each deletion or TR bar reflects its size. For each TR, the browser also shows the distribution of allele lengths and repeat copy numbers across the cohort.
 
-![Illustration of gnomAD-LR browser](../images/figure4_small.png "Figure 4")
+![Illustration of sequencing coverage tracks on gnomAD-LR browser](../images/figure5.png "Figure 4")
 
-**Figure 4. Illustration of gnomAD-LR browser.** (a). Sequencing coverage tracks; (b) Variants and annotations displayed in a table; (c). View of phased haplotypes; (d). Tandem repeat variant pages.
+**Figure 4. Illustration of sequencing coverage tracks on gnomAD-LR browser.**
+
+![View of phased haplotypes and matched methylation profile on gnomAD-LR browser](../images/figure6.png "Figure 5")
+
+**Figure 5. View of phased haplotypes and matched methylation profile on gnomAD-LR browser.**
 
 ## Code and data availability
 
-We applied the AoU long-read pipeline to detect genomic variants from AoU samples, with technical details described in a recent preprint<sup>1</sup>. Short variants from HPRC and HGSVC samples were generated using the same pipeline, while the SV call sets were generated as part of the 1000 Genomes long-read project<sup>4</sup>. Pipelines for quality evaluation, phasing, and variant annotation are organized at <https://github.com/talkowski-lab/lr-pipeline/>. VCFs for both datasets are available for [download](https://long-read-beta.gnomad.broadinstitute.org/data#lr).
+We applied the same data processing and variant discovery pipelines used in the AoU Long Read Working Group for Phase I of the AoU lrGS dataset. Technical details described in the AoU Phase I paper (see Garimella et al.<sup>1</sup>). Short variants from HPRC and HGSVC samples were generated using the same pipeline, while the SV call sets were generated as part of the 1000 Genomes Project long-read analyses.<sup>4</sup> Pipelines for quality evaluation, phasing, and variant annotation are organized at <https://github.com/talkowski-lab/lr-pipeline/>. VCFs for both datasets are available for [download](https://long-read-beta.gnomad.broadinstitute.org/data#lr).
 
 ## Feedback
 
@@ -82,7 +85,7 @@ The current release of gnomAD-LR is a beta version. We are continuing to refine 
 
 ## Acknowledgements
 
-We thank the participants of the All of Us Research Program, who donated their biological samples and data; the program would not be possible without them. The development of the gnomAD-LR browser was supported by a National Institutes of Health grant to the All of Us Genome Center (OT2OD03812) as well as a National Human Genome Research Institute grant (U24HG011450).
+We thank the participants of the All of Us Research Program, who donated their biological samples and data. The development of the gnomAD-LR browser was supported by a grant to the Broad Institute All of Us Genome Center (OT2OD03812), as well as the National Human Genome Research Institute (U24HG011450).
 
 ## References
 
