@@ -33,10 +33,9 @@ The current lrGS datasets used here include the deeply sequenced (\>30X coverage
 ## Overview of the datasets
 
 The gnomAD LR resource represents a total of **87.9M** variants. The total dataset includes 72.4M variants from 1,027 samples in AoU and 51.1M variants from the 292 HPRC/HGSVC samples, with 35.6M variants shared by both. Most variants are single nucleotide variants (SNVs; 72.7M). The resource also includes 14.3M small deletions and insertions (indels, 1-49 bp) and 818.1k structural variants (SVs) (**Figure 1A, Table 1**). On average, we discover 4.4M SNVs, 984k indels, and 26.8k SVs per genome (**Figure 1B).** As expected, larger variants that tend to have bigger functional impacts are seen less often (**Figure 1C**). By comparison to srGS from the 1000 Genomes Project and gnomAD<sup>10–12</sup>, these data represent substantial increases per genome in short variants (10% of SNVs and 20% of indels), and dramatic increases in SV per genome (\>150%;). We genotyped approximately 5.7M TR sites<sup>13–15</sup>. We found alternative alleles within 4.7M of the TR sites, including 42.6k sites that reside within coding sequences. An average of 1.3M alternative TR alleles were observed per individual genome, including 2,522 that reside within coding sequences of 1,535 genes.
-
 ![Overview of the gnomAD-LR datasets](../images/figure1.png "Figure 1")
 
-**Figure 1\. Overview of the gnomAD-LR datasets.** Top row, HPRC/HGSVC samples; bottom row, AoU Phase I samples. **(A)** Number of variants per cohort, by variant type and size. **(B)** Per-sample variant counts, colored by inferred genetic ancestry. **(C)** Variant size distribution.
+**Figure 1. Overview of the gnomAD-LR datasets.** Top row, HPRC/HGSVC samples; bottom row, AoU Phase I samples. **(A)** Number of variants per cohort, by variant type and size. **(B)** Per-sample variant counts, colored by inferred genetic ancestry. **(C)** Variant size distribution.
 
 **Table 1\. Count of variants in gnomAD-LR split by variant type**
 
